@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=lib/EasyModbusJava.jar -DgroupId=de.re.easymodbus.exceptions -DartifactId=easy-modbus -Dversion=2.8 -Dpackaging=jar -DgeneratePom=true
