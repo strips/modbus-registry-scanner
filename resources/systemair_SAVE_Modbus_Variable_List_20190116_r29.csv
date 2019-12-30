@@ -1,4 +1,4 @@
-Symbolic register name,Sig.,Modbus Reg. type,Reg.flag,Mod- bus Adr.,Min,Max,Description
+registerCode,signed,registerType,registerFlag,address,min,max,description
 REG_DEMC_RH_HIGHEST,I,Read Input Register (Function 04),INPUT_REG,1001,0,100,Highest value of all RH sensors
 REG_DEMC_CO2_HIGHEST,I,Read Input Register (Function 04),INPUT_REG,1002,0,2000,Highest value of all CO2 sensors
 REG_DEMC_RH_PI_SP,I,Read Input Register (Function 04),INPUT_REG,1011,0,100,Set point for RH demand control
