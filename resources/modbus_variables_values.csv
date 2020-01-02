@@ -1,587 +1,587 @@
 registerCode,signed,registerType,registerFlag,address,min,max,description,value,status
-REG_DEMC_RH_HIGHEST,I,Read Input Register (Function 04),INPUT_REG,1001,0,100,Highest value of all RH sensors,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_DEMC_CO2_HIGHEST,I,Read Input Register (Function 04),INPUT_REG,1002,0,2000,Highest value of all CO2 sensors,45,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_DEMC_RH_PI_SP,I,Read Input Register (Function 04),INPUT_REG,1011,0,100,Set point for RH demand control,28,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_DEMC_RH_PI_FEEDBACK,I,Read Input Register (Function 04),INPUT_REG,1012,0,100,Sensor value for RH demand control,-32,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_DEMC_RH_PI_OUTPUT,I,Read Input Register (Function 04),INPUT_REG,1019,,,"Output value for RH demand control.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_DEMC_CO2_PI_SP,I,Read Input Register (Function 04),INPUT_REG,1021,0,2000,Set point for CO2 demand control,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_DEMC_CO2_PI_FEEDBACK,I,Read Input Register (Function 04),INPUT_REG,1022,0,2000,Sensor value for CO2 demand control,-800,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_DEMC_CO2_PI_OUTPUT,I,Read Input Register (Function 04),INPUT_REG,1029,,,"Output value for CO2 demand control(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_DEMC_RH_SETTINGS_PBAND,I,Holding Register (Function 03/06/16),HOLDING_REG,1031,1,100,Pband setting for RH demand control,0,
-REG_DEMC_RH_SETTINGS_SP_SUMMER,I,Holding Register (Function 03/06/16),HOLDING_REG,1033,10,100,Set point setting for RH demand control during (temperature based) winter time,40,
-REG_DEMC_RH_SETTINGS_SP_WINTER,I,Holding Register (Function 03/06/16),HOLDING_REG,1034,10,100,Set point setting for RH demand control during (temperature based) summer time,1,
-REG_DEMC_RH_SETTINGS_ON_OFF,I,Holding Register (Function 03/06/16),HOLDING_REG,1035,0,1,Flag indicating if RH demand control is allowed,0,
-REG_SUMMER_WINTER,I,Read Input Register (Function 04),INPUT_REG,1039,0,1,Actual seasson for Demand Control0: Summer1: Winter,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_DEMC_CO2_SETTINGS_PBAND,I,Holding Register (Function 03/06/16),HOLDING_REG,1041,50,2000,Pband setting for CO2 demand control,0,
-REG_DEMC_CO2_SETTINGS_SP,I,Holding Register (Function 03/06/16),HOLDING_REG,1043,100,2000,Set point setting for CO2 demand control,0,
-REG_DEMC_CO2_SETTINGS_ON_OFF,I,Holding Register (Function 03/06/16),HOLDING_REG,1044,0,1,Flag indicating if CO2 demand control is allowed,0,
-REG_USERMODE_HOLIDAY_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1101,1,365,Time delay setting for user mode Holiday,1,
-REG_USERMODE_AWAY_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1102,1,72,Time delay setting for user mode Away,1,
-REG_USERMODE_FIREPLACE_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1103,1,60,Time delay setting for user mode Fire Place,1,
-REG_USERMODE_REFRESH_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1104,1,240,Time delay setting for user mode Refresh,1,
-REG_USERMODE_CROWDED_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1105,1,8,Time delay setting for user mode Crowded,0,
-REG_USERMODE_REMAINING_TIME_L,I,Read Input Register (Function 04),INPUT_REG,1111,,,Remaining time for the state Holiday/ Away/Fire Place/Refresh/Crowded,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_USERMODE_REMAINING_TIME_H,I,Read Input Register (Function 04),INPUT_REG,1112,,,Remaining time for the state Holiday/ Away/Fire Place/Refresh/Crowded,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_IAQ_SPEED_LEVEL_MIN,I,Holding Register (Function 03/06/16),HOLDING_REG,1121,2,3,Minimum level for Demand Control2: Low3: Normal,4,
-REG_IAQ_SPEED_LEVEL_MAX,I,Holding Register (Function 03/06/16),HOLDING_REG,1122,3,5,Maximum level for user Demand Control3: Normal4: High5: Maximum,0,
-REG_IAQ_LEVEL,I,Read Input Register (Function 04),INPUT_REG,1123,0,2,Actual IAQ level:0: Economic1: Good2: Improving,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_USERMODE_MANUAL_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1131,1,4,"Fan speed level for mode Manual, supply fan.(1): value Off only allowed if contents of register 1352 is 1.(1): Off2: Low3: Normal4: High",3,
-REG_USERMODE_MANUAL_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1132,2,4,"Fan speed level for mode Manual, extract fan.2: Low3: Normal4: High",6,
-REG_USERMODE_CROWDED_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1135,3,5,Fan speed level for mode Crowded3: Normal4: High5: Maximum,4,
-REG_USERMODE_CROWDED_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1136,3,5,Fan speed level for mode Crowded3: Normal4: High5: Maximum,5,
-REG_USERMODE_REFRESH_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1137,3,5,Fan speed level for mode Refresh3: Normal4: High5: Maximum,5,
-REG_USERMODE_REFRESH_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1138,3,5,Fan speed level for mode Refresh3: Normal4: High5: Maximum,5,
-REG_USERMODE_FIREPLACE_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1139,3,5,Fan speed level for mode Fire Place3: Normal4: High5: Maximum,1,
-REG_USERMODE_FIREPLACE_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1140,1,3,Fan speed level for mode Fire Place1: Minimum2: Low3: Normal,1,
-REG_USERMODE_AWAY_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1141,0,3,Fan speed level for mode Away.0: Off(1)1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.,1,
-REG_USERMODE_AWAY_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1142,0,3,Fan speed level for mode Away.0: Off(1)1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.,1,
-REG_USERMODE_HOLIDAY_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1143,0,3,Fan speed level for mode Holiday.0: Off(1) 1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.,1,
-REG_USERMODE_HOLIDAY_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1144,0,3,Fan speed level for mode Holiday.0: Off(1) 1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.,5,
-REG_USERMODE_COOKERHOOD_ AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1145,1,5,Fan speed level for mode Cooker Hood2: Low3: Normal4: High,1,
-REG_USERMODE_COOKERHOOD_ AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1146,1,5,Fan speed level for mode Cooker Hood1: Minimum2: Low3: Normal,5,
-REG_USERMODE_VACUUMCLEANER_ AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1147,1,5,Fan speed level for mode Vacuum Cleaner2: Low3: Normal4: High,1,
-REG_USERMODE_VACUUMCLEANER_ AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1148,1,5,Fan speed level for mode Vacuum Cleaner1: Minimum2: Low3: Normal,0,
-REG_USERMODE_CROWDED_T_OFFSET,I*,Holding Register (Function 03/06/16),HOLDING_REG,1151,-100,0,Temperature setpoint offset for user mode Crowded,0,
-REG_USERMODE_MODE,I,Read Input Register (Function 04),INPUT_REG,1161,0,12,Active User mode.0: Auto1: Manual2: Crowded3: Refresh4: Fireplace5: Away6: Holiday7: Cooker Hood8: Vacuum Cleaner9: CDI110: CDI211: CDI312: PressureGuard,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_USERMODE_HMI_CHANGE_ REQUEST,I,Holding Register (Function 03/06/16),HOLDING_REG,1162,0,7,New desired user mode as requested by HMI0: None1: AUTO2: Manual 3: Crowded4: Refresh5: Fireplace6: Away7: Holiday,0,
-REG_CDI_1_AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1171,0,5,Fan speed level for configurable digital input 1.0: Off1: Minimum2: Low3: Normal4: High5: Maximum,2,
-REG_CDI_1_AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1172,0,5,Fan speed level for configurable digital input 1.0: Off1: Minimum2: Low3: Normal4: High5: Maximum,2,
-REG_CDI_2_AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1173,0,5,Fan speed level for configurable digital input 2.0: Off1: Minimum2: Low3: Normal4: High5: Maximum,2,
-REG_CDI_2_AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1174,0,5,Fan speed level for configurable digital input 2.0: Off1: Minimum2: Low3: Normal4: High5: Maximum,2,
-REG_CDI_3_AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1175,0,5,Fan speed level for configurable digital input 3.0: Off1: Minimum2: Low3: Normal4: High5: Maximum,2,
-REG_CDI_3_AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1176,0,5,Fan speed level for configurable digital input 3.0: Off1: Minimum2: Low3: Normal4: High5: Maximum,5,
-REG_PRESSURE_GUARD_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1177,0,5,Fan speed level for configurable pressure guard function.0: Off1: Minimum2: Low3: Normal4: High5: Maximum,1,
-REG_PRESSURE_GUARD_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1178,0,5,Fan speed level for configurable pressure guard function.0: Off1: Minimum2: Low3: Normal4: High5: Maximum,0,
-REG_USERMODE_HOLIDAY_DI_OFF_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1181,0,365,Off delay for DI,8192,
-REG_USERMODE_AWAY_DI_OFF_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1182,0,72,Off delay for DI,2,
-REG_USERMODE_FIRPLACE_DI_OFF_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1183,0,60,Off delay for DI,2,
-REG_USERMODE_REFRESH_DI_OFF_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1184,0,240,Off delay for DI,-25489,
-REG_USERMODE_CROWDED_DI_OFF_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1185,0,8,Off delay for DI,0,
-REG_CDI1_OFF_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1188,0,240,Off delay for DI,8191,
-REG_CDI2_OFF_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1189,0,240,Off delay for DI,1344,
-REG_CDI3_OFF_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1190,0,240,Off delay for DI,0,
-REG_SPEED_CDI1_SAF,I,Read Input Register (Function 04),INPUT_REG,1221,,,"SAF speed value for user mode Holiday.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow",25,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SPEED_CDI1_EAF,I,Read Input Register (Function 04),INPUT_REG,1222,,,"EAF speed value for user mode Holiday.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow",25,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SPEED_CDI2_SAF,I,Read Input Register (Function 04),INPUT_REG,1223,,,"SAF speed value for mode Cooker Hood.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow",25,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SPEED_CDI2_EAF,I,Read Input Register (Function 04),INPUT_REG,1224,,,"EAF speed value for mode Cooker Hood.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow",25,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SPEED_CDI3_SAF,I,Read Input Register (Function 04),INPUT_REG,1225,,,"SAF speed value for mode Vacuum Cleaner. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow",25,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SPEED_CDI3_EAF,I,Read Input Register (Function 04),INPUT_REG,1226,,,"EAF speed value for mode Vacuum Cleaner. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow",90,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SPEED_PRESSURE_GUARD_SAF,I,Read Input Register (Function 04),INPUT_REG,1227,,,"SAF speed value for low fan speed.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow",16,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SPEED_PRESSURE_GUARD_EAF,I,Read Input Register (Function 04),INPUT_REG,1228,,,"EAF speed value for low fan speed.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FAN_OUTDOOR_COMP_TYPE,I,Holding Register (Function 03/06/16),HOLDING_REG,1251,0,1,Compensate only SF or both SF and EF0: SAF1: SAF/EAF,0,
-REG_FAN_OUTDOOR_COMP_MAX_ VALUE,I,Holding Register (Function 03/06/16),HOLDING_REG,1252,0,50,Compensation value at lowest temperature.,0,
-REG_FAN_OUTDOOR_COMP_STOP_T_ WINTER,I*,Holding Register (Function 03/06/16),HOLDING_REG,1253,-300,0,Temperature at which compensation reaches maximum value during the winter period.,0,
-REG_FAN_OUTDOOR_COMP_MAX_TEMP,I*,Holding Register (Function 03/06/16),HOLDING_REG,1254,-300,0,Temperature at which highest compensation is applied.,0,
-REG_FAN_OUTDOOR_COMP_START_T_ WINTER,I,Holding Register (Function 03/06/16),HOLDING_REG,1256,-300,0,Temperature at which compensation starts during the winter period.,1344,
-REG_FAN_OUTDOOR_COMP_START_T_ SUMMER,I,Holding Register (Function 03/06/16),HOLDING_REG,1257,150,300,Temperature at which compensation starts during the summer period.,0,
-REG_FAN_OUTDOOR_COMP_STOP_T_ SUMMER,I,Holding Register (Function 03/06/16),HOLDING_REG,1258,150,400,Temperature at which compensation reaches maximum value during the summer period.,152,
-REG_FAN_OUTDOOR_COMP_VALUE_ SUMMER,I,Holding Register (Function 03/06/16),HOLDING_REG,1259,0,50,Compensation value during summer period,0,
-REG_FAN_REGULATION_UNIT,I,Holding Register (Function 03/06/16),HOLDING_REG,1274,0,4,Type of fan control mode.0: Manual1: RPM2: VAV (Constant Pressure)3: CAV (Constant Flow)4: DCV (External),0,
-REG_FAN_LEVEL_SAF_MIN,I,Read Input Register (Function 04),INPUT_REG,1301,,,"SAF speed value for minimum fan speed. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow",16,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FAN_LEVEL_EAF_MIN,I,Read Input Register (Function 04),INPUT_REG,1302,,,"EAF speed value for minimum fan speed. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow",25,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FAN_LEVEL_SAF_LOW,I,Read Input Register (Function 04),INPUT_REG,1303,,,"SAF speed value for low fan speed.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow",25,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FAN_LEVEL_EAF_LOW,I,Read Input Register (Function 04),INPUT_REG,1304,,,"EAF speed value for low fan speed.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow",45,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FAN_LEVEL_SAF_NORMAL,I,Read Input Register (Function 04),INPUT_REG,1305,,,"SAF speed value for normal fan speed.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow",45,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FAN_LEVEL_EAF_NORMAL,I,Read Input Register (Function 04),INPUT_REG,1306,,,"EAF speed value for normal fan speed.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow",70,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FAN_LEVEL_SAF_HIGH,I,Read Input Register (Function 04),INPUT_REG,1307,,,"SAF speed value for high fan speed.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow",70,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FAN_LEVEL_EAF_HIGH,I,Read Input Register (Function 04),INPUT_REG,1308,,,"EAF speed value for high fan speed.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow",90,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FAN_LEVEL_SAF_MAX,I,Read Input Register (Function 04),INPUT_REG,1309,,,"SAF speed value for maximum fan speed. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow",90,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FAN_LEVEL_EAF_MAX,I,Read Input Register (Function 04),INPUT_REG,1310,,,"EAF speed value for maximum fan speed. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SPEED_FANS_RUNNING,I,Read Input Register (Function 04),INPUT_REG,1351,0,1,Indicates that both fans are running,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SPEED_SAF_DESIRED_OFF,I,Read Input Register (Function 04),INPUT_REG,1352,0,1,Indicates that the SAF shall be turned off once the electrical reheater is cooled down.,1,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FAN_MANUAL_STOP_ALLOWED,I,Holding Register (Function 03/06/16),HOLDING_REG,1353,0,1,Allow manual fan stop (also as selection for user modes and Week schedule).0: Manual stop not allowed1: Manual stop allowed,0,
-REG_SPEED_ELECTRICAL_HEATER_HOT_ COUNTER,I,Read Input Register (Function 04),INPUT_REG,1357,,,Electrical Heater hot counter. Count down from 120 sec.,3,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FAN_SPEED_AFTER_HEATER_ COOLING_DOWN_SAF,I,Read Input Register (Function 04),INPUT_REG,1358,0,100,Supply Air Fan Speed Level After Heater Cooling Down,3,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FAN_SPEED_AFTER_HEATER_ COOLING_DOWN_EAF,I,Read Input Register (Function 04),INPUT_REG,1359,0,100,Extract Air Fan Speed Level After Heater Cooling Down,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FAN_LEVEL_SAF_MIN_ PERCENTAGE,I,Holding Register (Function 03/06/16),HOLDING_REG,1401,16,100,SAF speed value for minimum fan speed,16,
-REG_FAN_LEVEL_EAF_MIN_ PERCENTAGE,I,Holding Register (Function 03/06/16),HOLDING_REG,1402,16,100,EAF speed value for minimum fan speed,25,
-REG_FAN_LEVEL_SAF_LOW_ PERCENTAGE,I,Holding Register (Function 03/06/16),HOLDING_REG,1403,16,100,SAF speed value for low fan speed,25,
-REG_FAN_LEVEL_EAF_LOW_ PERCENTAGE,I,Holding Register (Function 03/06/16),HOLDING_REG,1404,16,100,EAF speed value for low fan speed,45,
-REG_FAN_LEVEL_SAF_NORMAL_ PERCENTAGE,I,Holding Register (Function 03/06/16),HOLDING_REG,1405,16,100,SAF speed value for normal fan speed,45,
-REG_FAN_LEVEL_EAF_NORMAL_ PERCENTAGE,I,Holding Register (Function 03/06/16),HOLDING_REG,1406,16,100,EAF speed value for normal fan speed,70,
-REG_FAN_LEVEL_SAF_HIGH_ PERCENTAGE,I,Holding Register (Function 03/06/16),HOLDING_REG,1407,16,100,SAF speed value for high fan speed,70,
-REG_FAN_LEVEL_EAF_HIGH_ PERCENTAGE,I,Holding Register (Function 03/06/16),HOLDING_REG,1408,16,100,EAF speed value for high fan speed,90,
-REG_FAN_LEVEL_SAF_MAX_ PERCENTAGE,I,Holding Register (Function 03/06/16),HOLDING_REG,1409,16,100,SAF speed value for maximum fan speed,90,
-REG_FAN_LEVEL_EAF_MAX_ PERCENTAGE,I,Holding Register (Function 03/06/16),HOLDING_REG,1410,16,100,EAF speed value for maximum fan speed,500,
-REG_FAN_LEVEL_SAF_MIN_RPM,I,Holding Register (Function 03/06/16),HOLDING_REG,1411,500,5000,SAF speed value for minimum fan speed,500,
-REG_FAN_LEVEL_EAF_MIN_RPM,I,Holding Register (Function 03/06/16),HOLDING_REG,1412,500,5000,EAF speed value for minimum fan speed,1600,
-REG_FAN_LEVEL_SAF_LOW_RPM,I,Holding Register (Function 03/06/16),HOLDING_REG,1413,500,5000,SAF speed value for low fan speed,1600,
-REG_FAN_LEVEL_EAF_LOW_RPM,I,Holding Register (Function 03/06/16),HOLDING_REG,1414,500,5000,EAF speed value for low fan speed,2500,
-REG_FAN_LEVEL_SAF_NORMAL_RPM,I,Holding Register (Function 03/06/16),HOLDING_REG,1415,500,5000,SAF speed value for normal fan speed,2500,
-REG_FAN_LEVEL_EAF_NORMAL_RPM,I,Holding Register (Function 03/06/16),HOLDING_REG,1416,500,5000,EAF speed value for normal fan speed,3000,
-REG_FAN_LEVEL_SAF_HIGH_RPM,I,Holding Register (Function 03/06/16),HOLDING_REG,1417,500,5000,SAF speed value for high fan speed,3000,
-REG_FAN_LEVEL_EAF_HIGH_RPM,I,Holding Register (Function 03/06/16),HOLDING_REG,1418,500,5000,EAF speed value for high fan speed,5000,
-REG_FAN_LEVEL_SAF_MAX_RPM,I,Holding Register (Function 03/06/16),HOLDING_REG,1419,500,5000,SAF speed value for maximum fan speed,5000,
-REG_FAN_LEVEL_EAF_MAX_RPM,I,Holding Register (Function 03/06/16),HOLDING_REG,1420,500,5000,EAF speed value for maximum fan speed,0,
-REG_FAN_LEVEL_SAF_MIN_PRESSURE,I,Holding Register (Function 03/06/16),HOLDING_REG,1421,,,SAF speed value for minimum fan speed,0,
-REG_FAN_LEVEL_EAF_MIN_PRESSURE,I,Holding Register (Function 03/06/16),HOLDING_REG,1422,,,EAF speed value for minimum fan speed,0,
-REG_FAN_LEVEL_SAF_LOW_PRESSURE,I,Holding Register (Function 03/06/16),HOLDING_REG,1423,,,SAF speed value for low fan speed,0,
-REG_FAN_LEVEL_EAF_LOW_PRESSURE,I,Holding Register (Function 03/06/16),HOLDING_REG,1424,,,EAF speed value for low fan speed,0,
-REG_FAN_LEVEL_SAF_NORMAL_ PRESSURE,I,Holding Register (Function 03/06/16),HOLDING_REG,1425,,,SAF speed value for normal fan speed,0,
-REG_FAN_LEVEL_EAF_NORMAL_ PRESSURE,I,Holding Register (Function 03/06/16),HOLDING_REG,1426,,,EAF speed value for normal fan speed,0,
-REG_FAN_LEVEL_SAF_HIGH_PRESSURE,I,Holding Register (Function 03/06/16),HOLDING_REG,1427,,,SAF speed value for high fan speed,0,
-REG_FAN_LEVEL_EAF_HIGH_PRESSURE,I,Holding Register (Function 03/06/16),HOLDING_REG,1428,,,EAF speed value for high fan speed,0,
-REG_FAN_LEVEL_SAF_MAX_PRESSURE,I,Holding Register (Function 03/06/16),HOLDING_REG,1429,,,SAF speed value for maximum fan speed,0,
-REG_FAN_LEVEL_EAF_MAX_PRESSURE,I,Holding Register (Function 03/06/16),HOLDING_REG,1430,,,EAF speed value for maximum fan speed,0,
-REG_FAN_LEVEL_SAF_MIN_FLOW,I,Holding Register (Function 03/06/16),HOLDING_REG,1431,,,SAF speed value for minimum fan speed,0,
-REG_FAN_LEVEL_EAF_MIN_FLOW,I,Holding Register (Function 03/06/16),HOLDING_REG,1432,,,EAF speed value for minimum fan speed,0,
-REG_FAN_LEVEL_SAF_LOW_FLOW,I,Holding Register (Function 03/06/16),HOLDING_REG,1433,,,SAF speed value for low fan speed,0,
-REG_FAN_LEVEL_EAF_LOW_FLOW,I,Holding Register (Function 03/06/16),HOLDING_REG,1434,,,EAF speed value for low fan speed,0,
-REG_FAN_LEVEL_SAF_NORMAL_FLOW,I,Holding Register (Function 03/06/16),HOLDING_REG,1435,,,SAF speed value for normal fan speed,0,
-REG_FAN_LEVEL_EAF_NORMAL_FLOW,I,Holding Register (Function 03/06/16),HOLDING_REG,1436,,,EAF speed value for normal fan speed,0,
-REG_FAN_LEVEL_SAF_HIGH_FLOW,I,Holding Register (Function 03/06/16),HOLDING_REG,1437,,,SAF speed value for high fan speed,0,
-REG_FAN_LEVEL_EAF_HIGH_FLOW,I,Holding Register (Function 03/06/16),HOLDING_REG,1438,,,EAF speed value for high fan speed,0,
-REG_FAN_LEVEL_SAF_MAX_FLOW,I,Holding Register (Function 03/06/16),HOLDING_REG,1439,,,SAF speed value for maximum fan speed,0,
-REG_FAN_LEVEL_EAF_MAX_FLOW,I,Holding Register (Function 03/06/16),HOLDING_REG,1440,,,EAF speed value for maximum fan speed,0,
-REG_USERMODE_REMAINING_TIME_ CDI1_L,I,Read Input Register (Function 04),INPUT_REG,1621,,,Remaining time,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_USERMODE_REMAINING_TIME_ CDI1_H,I,Read Input Register (Function 04),INPUT_REG,1622,,,,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_USERMODE_REMAINING_TIME_ CDI2_L,I,Read Input Register (Function 04),INPUT_REG,1623,,,Remaining time,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_USERMODE_REMAINING_TIME_ CDI2_H,I,Read Input Register (Function 04),INPUT_REG,1624,,,,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_USERMODE_REMAINING_TIME_ CDI3_L,I,Read Input Register (Function 04),INPUT_REG,1625,,,Remaining time,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_USERMODE_REMAINING_TIME_ CDI3_H,I,Read Input Register (Function 04),INPUT_REG,1626,,,,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_TC_SP,I*,Holding Register (Function 03/06/16),HOLDING_REG,2001,120,300,Temperature setpoint for the supply air temperature,1,
-REG_TC_CASCADE_SP,I*,Holding Register (Function 03/06/16),HOLDING_REG,2013,120,400,"Temperature set point for SATC, as calculated by RATC/EATC during cascade control",0,
-REG_TC_CASCADE_SP_MIN,I*,Holding Register (Function 03/06/16),HOLDING_REG,2021,120,400,Minimum temperature set point for the SATC,400,
-REG_TC_CASCADE_SP_MAX,I*,Holding Register (Function 03/06/16),HOLDING_REG,2022,120,400,Maximum temperature set point for the SATC,0,
-REG_TC_CONTROL_MODE,I,Holding Register (Function 03/06/16),HOLDING_REG,2031,0,2,Unit temperature control mode0: Supply1: Room2: Extract,0,
-REG_TC_EAT_RAT_SP,I*,Read Input Register (Function 04),INPUT_REG,2051,120,400,"EAT or RAT value, used for room/extract air controller.",200,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_TC_ROOM_CTRL_SP_SATC,I*,Read Input Register (Function 04),INPUT_REG,2053,120,400,"Temperature set point for SATC, as calculated by RATC/EATC during cascade control",200,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_TC_SP_SATC,I*,Read Input Register (Function 04),INPUT_REG,2054,120,300,Temperature setpoint for the supply air temperature,37,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SATC_HEAT_DEMAND,I,Read Input Register (Function 04),INPUT_REG,2055,0,100,Output of the SATC (0-100%),39,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SATC_PI_SP,I*,Read Input Register (Function 04),INPUT_REG,2061,120,300,SATC setpoint value,190,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SATC_PI_OUTPUT,I*,Read Input Register (Function 04),INPUT_REG,2069,0,100,SATC output signal,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ROOM_CTRL_PI_SP,I*,Read Input Register (Function 04),INPUT_REG,2071,120,300,RATC setpoint value,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ROOM_CTRL_PI_OUTPUT,I*,Read Input Register (Function 04),INPUT_REG,2079,0,100,RATC output signal,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_INPUT_EXTERNAL_CTRL_SAF,I,Read Input Register (Function 04),INPUT_REG,2101,0,100,"Value from External Controller Input, SAF. In
-%.",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_INPUT_EXTERNAL_CTRL_EAF,I,Read Input Register (Function 04),INPUT_REG,2102,0,100,"Value from External Controller Input, EAF. In
-%.",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_HEATER_CIRC_PUMP_START_T,I*,Holding Register (Function 03/06/16),HOLDING_REG,2113,0,200,Temperature at which the Heater circulation pump is started,0,
-REG_HEATER_CIRC_PUMP_STOP_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,2122,0,60,Off time delay for the heater circulation pump in minutes,0,
-REG_HEAT_EXCHANGER_COOLING_ RECOVERY_ON_OFF,I,Holding Register (Function 03/06/16),HOLDING_REG,2134,0,1,Enabling of cooling recovery,0,
-REG_HEAT_EXCHANGER_RH_ TRANSFER_CTRL_ENABLED,I,Read Input Register (Function 04),INPUT_REG,2147,,,Indicates if RH trasnfer control shall be applied,100,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_PWM_TRIAC_OUTPUT,I,Read Input Register (Function 04),INPUT_REG,2149,0,100,TRIAC after manual override,40,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ROTOR_RH_TRANSFER_CTRL_ PBAND,I,Holding Register (Function 03/06/16),HOLDING_REG,2201,100-0,40,Pband setting for RH transfer control,0,
-REG_ROTOR_RH_TRANSFER_CTRL_ITIME,I,Holding Register (Function 03/06/16),HOLDING_REG,2202,120,0,Itime setting for RH transfer control,45,
-REG_ROTOR_RH_TRANSFER_CTRL_ SETPOINT,I,Holding Register (Function 03/06/16),HOLDING_REG,2203,100,45,Set point setting for RH transfer control,1,
-REG_ROTOR_RH_TRANSFER_CTRL_ON_ OFF,I,Holding Register (Function 03/06/16),HOLDING_REG,2204,1,1,Enabling of humidity transfer control,0,
-REG_COOLER_FROM_SATC,I,Read Input Register (Function 04),INPUT_REG,2311,0,100,Cooler signal,1,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_COOLER_CIRC_PUMP_START_T,I,Holding Register (Function 03/06/16),HOLDING_REG,2314,0,200,Temperature at which the cooler circulation pump is started,20,
-REG_COOLER_RECOVERY_LIMIT_T,I,Holding Register (Function 03/06/16),HOLDING_REG,2315,0,100,Temperature at which cooling recovery is allowed,120,
-REG_COOLER_OAT_INTERLOCK_T,I,Holding Register (Function 03/06/16),HOLDING_REG,2316,120,250,Temperature at which cooling is interlocked,5,
-REG_COOLER_CIRC_PUMP_STOP_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,2317,0,60,Off time delay for the cooler circulation pump in minutes,0,
-REG_EXTRA_CONTROLLER_SET_PI_ SETPOINT,I*,Holding Register (Function 03/06/16),HOLDING_REG,2403,-300,400,Set point value for the extra controller PI regulator,0,
-REG_EXTRA_CONTROLLER_CIRC_PUMP_ START_T,I*,Holding Register (Function 03/06/16),HOLDING_REG,2404,0,200,Start temperature for extra controller circulation pump,5,
-REG_EXTRA_CONTROLLER_CIRC_PUMP_ STOP_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,2405,0,60,Off time delay for the extra controller circulation pump in minutes,0,
-REG_EXTRA_CONTROLLER_PREHEATER_ SETPOINT_TYPE,I,Holding Register (Function 03/06/16),HOLDING_REG,2418,0,1,Temperature setpoint for the preheater.0: Auto1: Manual,0,
-REG_CHANGE_OVER_CIRC_PUMP_ START_T,I*,Holding Register (Function 03/06/16),HOLDING_REG,2451,0,200,Start temperature for the change-over circulation pump,5,
-REG_CHANGE_OVER_CIRC_PUMP_STOP_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,2452,0,60,Off time delay for the change-over circulation pump in minutes,300,
-REG_ECO_T_Y1_OFFSET,I*,Holding Register (Function 03/06/16),HOLDING_REG,2504,0,100,Temperature offset for heating during Eco mode,1,
-REG_ECO_MODE_ON_OFF,I,Holding Register (Function 03/06/16),HOLDING_REG,2505,0,1,Enabling of eco mode,0,
-REG_ECO_FUNCTION_ACTIVE,I,Read Input Register (Function 04),INPUT_REG,2506,0,1,Indicates if conditions for ECO mode are active (low temperature),150,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FUNCTION_ACTIVE_HEATER_COOL_ DOWN,I,Read Input Register (Function 04),INPUT_REG,3113,0,1,Active Heater Cool Down,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FUNCTION_ACTIVE_PRESSURE_ GUARD,I,Read Input Register (Function 04),INPUT_REG,3114,0,1,Indicates if function is active,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FREE_COOLING_ON_OFF,I,Holding Register (Function 03/06/16),HOLDING_REG,4101,,1,Indicates if free cooling is enabled,220,
-REG_FREE_COOLING_OUTDOOR_ DAYTIME_T,I*,Holding Register (Function 03/06/16),HOLDING_REG,4102,120,300,Minimum of highest daytime temperature for start of free cooling.,230,
-REG_FREE_COOLING_OUTDOOR_ NIGHTTIME_DEACTIVATION_HIGH_T_ LIMIT,I*,Holding Register (Function 03/06/16),HOLDING_REG,4103,70,300,Highest night temperature limit for termination free cooling,120,
-REG_FREE_COOLING_OUTDOOR_ NIGHTTIME_DEACTIVATION_LOW_T_ LIMIT,I*,Holding Register (Function 03/06/16),HOLDING_REG,4104,70,300,Lowest night temperature limit for termination free cooling,180,
-REG_FREE_COOLING_ROOM_CANCEL_T,I*,Holding Register (Function 03/06/16),HOLDING_REG,4105,120,300,Lowest temperature room temperature for termination of free cooling,21,
-REG_FREE_COOLING_START_TIME_H,I,Holding Register (Function 03/06/16),HOLDING_REG,4106,,,"Start time of free cooling night-period, hour. Valid range is from 0 to 8 and from 21 to 23.",0,
-REG_FREE_COOLING_START_TIME_M,I,Holding Register (Function 03/06/16),HOLDING_REG,4107,0,59,"Start time of free cooling night-period, Minute",8,
-REG_FREE_COOLING_END_TIME_H,I,Holding Register (Function 03/06/16),HOLDING_REG,4108,,,"End time of free cooling night-period, hour. Valid range is from 0 to 8 and from 21 to 23.",0,
-REG_FREE_COOLING_END_TIME_M,I,Holding Register (Function 03/06/16),HOLDING_REG,4109,0,59,"End time of free cooling night-period, Minute",0,
-REG_FREE_COOLING_ACTIVE,I,Read Input Register (Function 04),INPUT_REG,4111,0,1,Indicates if free cooling is being performed,3,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FREE_COOLING_MIN_SPEED_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,4112,3,5,"Minimum speed level during free cooling, SAF.3: Normal4: High5: Maximum",3,
-REG_FREE_COOLING_MIN_SPEED_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,4113,3,5,"Minimum speed level during free cooling, EAF.3: Normal4: High5: Maximum",1,
-REG_WS_T_OFFSET_ACTIVE,I*,Holding Register (Function 03/06/16),HOLDING_REG,5001,-100,0,Temperature offset during active week schedule.,0,
-REG_WS_T_OFFSET_INACTIVE,I*,Holding Register (Function 03/06/16),HOLDING_REG,5002,-100,0,Temperature offset during inactive week schedule.,0,
-REG_WS_DAY1_PRD1_START_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5003,0,23,"Monday, Period 1, start",0,
-REG_WS_DAY1_PRD1_START_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5004,0,59,,0,
-REG_WS_DAY1_PRD1_END_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5005,0,23,"Monday, Period 1, end",0,
-REG_WS_DAY1_PRD1_END_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5006,0,59,,0,
-REG_WS_DAY1_PRD2_START_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5007,0,23,"Monday, Period 2, start",0,
-REG_WS_DAY1_PRD2_START_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5008,0,59,,0,
-REG_WS_DAY1_PRD2_END_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5009,0,23,"Monday, Period 2, end",0,
-REG_WS_DAY1_PRD2_END_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5010,0,59,,0,
-REG_WS_DAY2_PRD1_START_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5011,0,23,"Tuesday, Period 1, start",0,
-REG_WS_DAY2_PRD1_START_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5012,0,59,,0,
-REG_WS_DAY2_PRD1_END_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5013,0,23,"Tuesday, Period 1, end",0,
-REG_WS_DAY2_PRD1_END_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5014,0,59,,0,
-REG_WS_DAY2_PRD2_START_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5015,0,23,"Tuesday, Period 2, start",0,
-REG_WS_DAY2_PRD2_START_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5016,0,59,,0,
-REG_WS_DAY2_PRD2_END_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5017,0,23,"Tuesday, Period 2, end",0,
-REG_WS_DAY2_PRD2_END_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5018,0,59,,0,
-REG_WS_DAY3_PRD1_START_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5019,0,23,"Wednesday, Period 1, start",0,
-REG_WS_DAY3_PRD1_START_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5020,0,59,,0,
-REG_WS_DAY3_PRD1_END_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5021,0,23,"Wednesday, Period 1, end",0,
-REG_WS_DAY3_PRD1_END_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5022,0,59,,0,
-REG_WS_DAY3_PRD2_START_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5023,0,23,"Wednesday, Period 2, start",0,
-REG_WS_DAY3_PRD2_START_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5024,0,59,,0,
-REG_WS_DAY3_PRD2_END_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5025,0,23,"Wednesday, Period 2, end",0,
-REG_WS_DAY3_PRD2_END_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5026,0,59,,0,
-REG_WS_DAY4_PRD1_START_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5027,0,23,"Thursday, Period 1, start",0,
-REG_WS_DAY4_PRD1_START_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5028,0,59,,0,
-REG_WS_DAY4_PRD1_END_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5029,0,23,"Thursday, Period 1, end",0,
-REG_WS_DAY4_PRD1_END_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5030,0,59,,0,
-REG_WS_DAY4_PRD2_START_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5031,0,23,"Thursday, Period 2, start",0,
-REG_WS_DAY4_PRD2_START_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5032,0,59,,0,
-REG_WS_DAY4_PRD2_END_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5033,0,23,"Thursday, Period 2, end",0,
-REG_WS_DAY4_PRD2_END_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5034,0,59,,0,
-REG_WS_DAY5_PRD1_START_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5035,0,23,"Friday, Period 1, start",0,
-REG_WS_DAY5_PRD1_START_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5036,0,59,,0,
-REG_WS_DAY5_PRD1_END_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5037,0,23,"Friday, Period 1, end",0,
-REG_WS_DAY5_PRD1_END_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5038,0,59,,0,
-REG_WS_DAY5_PRD2_START_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5039,0,23,"Friday, Period 2, start",0,
-REG_WS_DAY5_PRD2_START_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5040,0,59,,0,
-REG_WS_DAY5_PRD2_END_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5041,0,23,"Friday, Period 2, end",0,
-REG_WS_DAY5_PRD2_END_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5042,0,59,,0,
-REG_WS_DAY6_PRD1_START_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5043,0,23,"Saturday, Period 1, start",0,
-REG_WS_DAY6_PRD1_START_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5044,0,59,,0,
-REG_WS_DAY6_PRD1_END_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5045,0,23,"Saturday, Period 1, end",0,
-REG_WS_DAY6_PRD1_END_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5046,0,59,,0,
-REG_WS_DAY6_PRD2_START_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5047,0,23,"Saturday, Period 2, start",0,
-REG_WS_DAY6_PRD2_START_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5048,0,59,,0,
-REG_WS_DAY6_PRD2_END_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5049,0,23,"Saturday, Period 2, end",0,
-REG_WS_DAY6_PRD2_END_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5050,0,59,,0,
-REG_WS_DAY7_PRD1_START_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5051,0,23,"Sunday, Period 1, start",0,
-REG_WS_DAY7_PRD1_START_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5052,0,59,,0,
-REG_WS_DAY7_PRD1_END_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5053,0,23,"Sunday, Period 1, end",0,
-REG_WS_DAY7_PRD1_END_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5054,0,59,,0,
-REG_WS_DAY7_PRD2_START_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5055,0,23,"Sunday, Period 2, start",0,
-REG_WS_DAY7_PRD2_START_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5056,0,59,,0,
-REG_WS_DAY7_PRD2_END_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5057,0,23,"Sunday, Period 2, end",0,
-REG_WS_DAY7_PRD2_END_M,I,Holding Register (Function 03/06/16),HOLDING_REG,5058,0,59,,0,
-REG_WS_ACTIVE,I,Read Input Register (Function 04),INPUT_REG,5059,0,1,Indicates that the current time lays within the indicated intervals,3,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_WS_FAN_LEVEL_SCHEDULED,I,Holding Register (Function 03/06/16),HOLDING_REG,5060,1,5,Fan speed levels for SAF and EAF during active week schedule.1: Off(1)2: Low3: Normal4: High5: Demand(2)(1): Off available if Manual Fan Stop is enabled.(2): Demand available if demand control active or external fan control enabled.,2,
-REG_WS_FAN_LEVEL_UNSCHEDULED,I,Holding Register (Function 03/06/16),HOLDING_REG,5061,1,5,Fan speed levels for SAF and EAF during inactive week schedule.1: Off(1)2: Low3: Normal4: High5: Demand(2)(1): Off available if Manual Fan Stop is enabled.(2): Demand available if demand control active or external fan control enabled.,0,
-REG_WS_DAY1_PRD1_ENABLED,I,Holding Register (Function 03/06/16),HOLDING_REG,5101,0,1,Flag indicating if this period is enabled.,1,
-REG_WS_DAY1_PRD2_ENABLED,I,Holding Register (Function 03/06/16),HOLDING_REG,5102,0,1,Flag indicating if this period is enabled.,1,
-REG_WS_DAY2_PRD1_ENABLED,I,Holding Register (Function 03/06/16),HOLDING_REG,5103,0,1,Flag indicating if this period is enabled.,1,
-REG_WS_DAY2_PRD2_ENABLED,I,Holding Register (Function 03/06/16),HOLDING_REG,5104,0,1,Flag indicating if this period is enabled.,1,
-REG_WS_DAY3_PRD1_ENABLED,I,Holding Register (Function 03/06/16),HOLDING_REG,5105,0,1,Flag indicating if this period is enabled.,1,
-REG_WS_DAY3_PRD2_ENABLED,I,Holding Register (Function 03/06/16),HOLDING_REG,5106,0,1,Flag indicating if this period is enabled.,1,
-REG_WS_DAY4_PRD1_ENABLED,I,Holding Register (Function 03/06/16),HOLDING_REG,5107,0,1,Flag indicating if this period is enabled.,1,
-REG_WS_DAY4_PRD2_ENABLED,I,Holding Register (Function 03/06/16),HOLDING_REG,5108,0,1,Flag indicating if this period is enabled.,1,
-REG_WS_DAY5_PRD1_ENABLED,I,Holding Register (Function 03/06/16),HOLDING_REG,5109,0,1,Flag indicating if this period is enabled.,1,
-REG_WS_DAY5_PRD2_ENABLED,I,Holding Register (Function 03/06/16),HOLDING_REG,5110,0,1,Flag indicating if this period is enabled.,1,
-REG_WS_DAY6_PRD1_ENABLED,I,Holding Register (Function 03/06/16),HOLDING_REG,5111,0,1,Flag indicating if this period is enabled.,1,
-REG_WS_DAY6_PRD2_ENABLED,I,Holding Register (Function 03/06/16),HOLDING_REG,5112,0,1,Flag indicating if this period is enabled.,1,
-REG_WS_DAY7_PRD1_ENABLED,I,Holding Register (Function 03/06/16),HOLDING_REG,5113,0,1,Flag indicating if this period is enabled.,1,
-REG_WS_DAY7_PRD2_ENABLED,I,Holding Register (Function 03/06/16),HOLDING_REG,5114,0,1,Flag indicating if this period is enabled.,0,
-REG_TIME_YEAR,I,Holding Register (Function 03/06/16),HOLDING_REG,6001,0,2999,Current time,1,
-REG_TIME_MONTH,I,Holding Register (Function 03/06/16),HOLDING_REG,6002,1,12,Current time,2,
-REG_TIME_DAY,I,Holding Register (Function 03/06/16),HOLDING_REG,6003,1,31,Current time,18,
-REG_TIME_HOUR,I,Holding Register (Function 03/06/16),HOLDING_REG,6004,0,23,Current time,47,
-REG_TIME_MINUTE,I,Holding Register (Function 03/06/16),HOLDING_REG,6005,0,59,Current time,40,
-REG_TIME_SECOND,I,Holding Register (Function 03/06/16),HOLDING_REG,6006,0,59,Current time,1,
-REG_TIME_AUTO_SUM_WIN,I,Holding Register (Function 03/06/16),HOLDING_REG,6007,0,1,Flag indicating if DST is enabled.0: Daylight saving time not enabled1: Daylight saving time enabled,1,
-REG_HOUR_FORMAT,I,Holding Register (Function 03/06/16),HOLDING_REG,6008,0,1,Indicaties the presentation of time in the HMI. 24H/12H,3,
-REG_DAY_OF_THE_WEEK,I,Read Input Register (Function 04),INPUT_REG,6009,0,6,Monday (0)...Sunday (6),0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_DST_PERIOD_ACTIVE,I,Read Input Register (Function 04),INPUT_REG,6010,0,1,,-14130,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_TIME_RTC_SECONDS_L,I,Read Input Register (Function 04),INPUT_REG,6011,,,Now time in seconds. Lower 16 bits.,-29854,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_TIME_RTC_SECONDS_H,I,Read Input Register (Function 04),INPUT_REG,6012,,,Now time in seconds. Higher 16 bits.,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SYSTEM_START_UP_TIME_L,I,Read Input Register (Function 04),INPUT_REG,6021,,,,-29877,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SYSTEM_START_UP_TIME_H,I,Read Input Register (Function 04),INPUT_REG,6022,,,,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_TIME_RTC,I,Read Input Register (Function 04),INPUT_REG,6101,,,"RTC value in seconds, highest 16 bits",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FILTER_PERIOD,I,Holding Register (Function 03/06/16),HOLDING_REG,7001,3,15,Filter replacement time in months,-15774,
-REG_FILTER_REPLACEMENT_TIME_L,I,Holding Register (Function 03/06/16),HOLDING_REG,7002,,,"Timestamp of latest filter replcement, lower 16 bits",-29854,
-REG_FILTER_REPLACEMENT_TIME_H,I,Holding Register (Function 03/06/16),HOLDING_REG,7003,,,"Timestamp of latest filter replcement, higher 16 bits",0,
-REG_FILTER_PERIOD_SET,I,Read Input Register (Function 04),INPUT_REG,7004,,,Indicates that the LastFilterReplacementTime shall be set Now.,18322,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FILTER_REMAINING_TIME_L,I,Read Input Register (Function 04),INPUT_REG,7005,,,"Remaining filter time in seconds, lower 16 bits.",237,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FILTER_REMAINING_TIME_H,I,Read Input Register (Function 04),INPUT_REG,7006,,,"Remaining filter time in seconds, higher 16 bits.",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_FILTER_ALARM_WAS_DETECTED,I,Read Input Register (Function 04),INPUT_REG,7007,,,Indicates if the filter warning alarm was generated.,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SYSTEM_UNIT_FLOW,I,Holding Register (Function 03/06/16),HOLDING_REG,9001,0,2,Unit for CAV control mode.0: l/s1: m3/h2: cfm,0,
-REG_SYSTEM_UNIT_PRESSURE,I,Holding Register (Function 03/06/16),HOLDING_REG,9002,0,1,Units for VAV control mode.0: Pa1: InH2O,0,
-REG_SYSTEM_UNIT_TEMPERATURE,I,Holding Register (Function 03/06/16),HOLDING_REG,9003,0,1,Units for temperature.0: Celcius1: Fahrenheit,241,
-REG_DI_CONNECTION_1,I,Holding Register (Function 03/06/16),HOLDING_REG,11401,0,18,Indicates what kind of DI functionality is connected to DI1.0: None /Away/ BYP/ Vacuum Cleaner/ Cooker Hood/ Crowded/ EMT/ External Stop/ Extra Controller Alarm/ Fireplace/ Holiday/ Refresh/ RGS/ Change Over Feedback/ 14: Fire Alarm/ ConfigurableDI1 / ConfigurableDI2 / ConfigurableDI3 / 18: Pressure Guard,0,
-REG_DI_CONNECTION_2,I,Holding Register (Function 03/06/16),HOLDING_REG,11402,0,18,Indicates what kind of DI functionality is connected to DI1.0: None /Away/ BYP/ Vacuum Cleaner/ Cooker Hood/ Crowded/ EMT/ External Stop/ Extra Controller Alarm/ Fireplace/ Holiday/ Refresh/ RGS/ Change Over Feedback/ 14: Fire Alarm/ ConfigurableDI1 / ConfigurableDI2 / ConfigurableDI3 / 18: Pressure Guard,0,
-REG_DI_CFG_POLARITY_1,I,Holding Register (Function 03/06/16),HOLDING_REG,11421,0,1,Polarity of DI1.0: NO1: NC,0,
-REG_DI_CFG_POLARITY_2,I,Holding Register (Function 03/06/16),HOLDING_REG,11422,0,1,Polarity of DI1.0: NO1: NC,0,
-REG_INPUT_ANALOG_UI_1,I,Holding Register (Function 03/06/16),HOLDING_REG,12011,,,mV,6,
-REG_INPUT_ANALOG_UI_2,I,Holding Register (Function 03/06/16),HOLDING_REG,12012,,,mV,2,
-REG_INPUT_ANALOG_UI_3,I,Holding Register (Function 03/06/16),HOLDING_REG,12013,,,mV,6,
-REG_INPUT_ANALOG_UI_4,I,Holding Register (Function 03/06/16),HOLDING_REG,12014,,,mV,11,
-REG_INPUT_ANALOG_UI_5,I,Holding Register (Function 03/06/16),HOLDING_REG,12015,,,mV,0,
-REG_INPUT_DIGITAL_UI_1,I,Holding Register (Function 03/06/16),HOLDING_REG,12021,0,1,State of UI1,0,
-REG_INPUT_DIGITAL_UI_2,I,Holding Register (Function 03/06/16),HOLDING_REG,12022,0,1,State of UI2,0,
-REG_INPUT_DIGITAL_UI_3,I,Holding Register (Function 03/06/16),HOLDING_REG,12023,0,1,State of UI3,0,
-REG_INPUT_DIGITAL_UI_4,I,Holding Register (Function 03/06/16),HOLDING_REG,12024,0,1,State of UI4,0,
-REG_INPUT_DIGITAL_UI_5,I,Holding Register (Function 03/06/16),HOLDING_REG,12025,0,1,State of UI5,0,
-REG_INPUT_DIGITAL_DI_1,I,Read Input Register (Function 04),INPUT_REG,12031,0,1,Boolean,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_INPUT_DIGITAL_DI_2,I,Read Input Register (Function 04),INPUT_REG,12032,0,1,Boolean,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SENSOR_FPT,I*,Holding Register (Function 03/06/16),HOLDING_REG,12101,-400,800,Frost Protection Temperature sensor value (Water Heater),69,
-REG_SENSOR_OAT,I*,Holding Register (Function 03/06/16),HOLDING_REG,12102,-400,800,Outdoor Air Temperature sensor (standard),200,
-REG_SENSOR_SAT,I*,Holding Register (Function 03/06/16),HOLDING_REG,12103,-400,800,Supply Air Temperature sensor (standard),0,
-REG_SENSOR_RAT,I*,Holding Register (Function 03/06/16),HOLDING_REG,12104,-400,800,Room Air Temperature sensor (accessory),0,
-REG_SENSOR_EAT,I*,Holding Register (Function 03/06/16),HOLDING_REG,12105,-400,800,Extract Air Temperature sensor (accessory),0,
-REG_SENSOR_ECT,I*,Holding Register (Function 03/06/16),HOLDING_REG,12106,-400,800,Extra Controller Temperature sensor (accessory),0,
-REG_SENSOR_EFT,I*,Holding Register (Function 03/06/16),HOLDING_REG,12107,-400,800,Efficiency temperature sensor (accessory),200,
-REG_SENSOR_OHT,I*,Holding Register (Function 03/06/16),HOLDING_REG,12108,-400,800,Over Heat Temperature sensor (Electrical Heater),0,
-REG_SENSOR_RHS,I,Holding Register (Function 03/06/16),HOLDING_REG,12109,0,100,Relative Humidity Sensor (Accessory),0,
-REG_SENSOR_RGS,I,Read Input Register (Function 04),INPUT_REG,12112,0,1,Rotating guard Sensor input,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SENSOR_CO2S,I,Holding Register (Function 03/06/16),HOLDING_REG,12115,0,2000,CO2 value (accessory),0,
-REG_SENSOR_RHS_PDM,I,Holding Register (Function 03/06/16),HOLDING_REG,12136,0,100,PDM RHS sensor value (standard),27,
-REG_SENSOR_CO2S_1,I,Holding Register (Function 03/06/16),HOLDING_REG,12151,0,2000,CO2 sensor value - UI1 (accessory),0,
-REG_SENSOR_CO2S_2,I,Holding Register (Function 03/06/16),HOLDING_REG,12152,0,2000,CO2 sensor value - UI2 (accessory),0,
-REG_SENSOR_CO2S_3,I,Holding Register (Function 03/06/16),HOLDING_REG,12153,0,2000,CO2 sensor value - UI3 (accessory),0,
-REG_SENSOR_CO2S_4,I,Holding Register (Function 03/06/16),HOLDING_REG,12154,0,2000,CO2 sensor value - UI4 (accessory),0,
-REG_SENSOR_CO2S_5,I,Holding Register (Function 03/06/16),HOLDING_REG,12155,0,2000,CO2 sensor value - UI5 (accessory),0,
-REG_SENSOR_RHS_1,I,Holding Register (Function 03/06/16),HOLDING_REG,12161,0,100,RH sensor value - UI1 (accessory),0,
-REG_SENSOR_RHS_2,I,Holding Register (Function 03/06/16),HOLDING_REG,12162,0,100,RH sensor value - UI2 (accessory),0,
-REG_SENSOR_RHS_3,I,Holding Register (Function 03/06/16),HOLDING_REG,12163,0,100,RH sensor value - UI3 (accessory),0,
-REG_SENSOR_RHS_4,I,Holding Register (Function 03/06/16),HOLDING_REG,12164,0,100,RH sensor value - UI4 (accessory),0,
-REG_SENSOR_RHS_5,I,Holding Register (Function 03/06/16),HOLDING_REG,12165,0,100,RH sensor value - UI5 (accessory),0,
-REG_SENSOR_DI_AWAY,I,Read Input Register (Function 04),INPUT_REG,12301,0,1,Value of physical Digital Input of Away function,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SENSOR_DI_HOLIDAY,I,Read Input Register (Function 04),INPUT_REG,12302,0,1,Value of physical Digital Input of Holiday function,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SENSOR_DI_FIREPLACE,I,Read Input Register (Function 04),INPUT_REG,12303,0,1,Value of physical Digital Input of Fireplace function,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SENSOR_DI_REHRESH,I,Read Input Register (Function 04),INPUT_REG,12304,0,1,Value of physical Digital Input of Refresh function,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SENSOR_DI_CROWDED,I,Read Input Register (Function 04),INPUT_REG,12305,0,1,Value of physical Digital Input of Crowded function,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SENSOR_DI_COOKERHOOD,I,Read Input Register (Function 04),INPUT_REG,12306,0,1,Value of physical Digital Input of Cookerhood function,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SENSOR_DI_VACUUMCLEANER,I,Read Input Register (Function 04),INPUT_REG,12307,0,1,Value of physical Digital Input of Vacuum Cleaner function,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SENSOR_DI_EXTERNAL_STOP,I,Read Input Register (Function 04),INPUT_REG,12308,0,1,External Stop input value,1,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SENSOR_DI_LOAD_DETECTED,I,Read Input Register (Function 04),INPUT_REG,12309,0,1,Load Detected input value,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SENSOR_DI_EXTRA_CONTROLLER_ EMT,I,Read Input Register (Function 04),INPUT_REG,12310,0,1,Extra controller EMT input value,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SENSOR_DI_FIRE_ALARM,I,Read Input Register (Function 04),INPUT_REG,12311,0,1,Fire Alarm input value,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SENSOR_DI_CHANGE_OVER_ FEEDBACK,I,Read Input Register (Function 04),INPUT_REG,12312,0,1,Change over feedback value,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SENSOR_RPM_SAF,I,Read Input Register (Function 04),INPUT_REG,12401,0,5000,Supply Air Fan RPM indication from TACHO,1740,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SENSOR_RPM_EAF,I,Read Input Register (Function 04),INPUT_REG,12402,0,5000,Extract Air Fan RPM indication from TACHO,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SENSOR_PDM_EAT_VALUE,I,Holding Register (Function 03/06/16),HOLDING_REG,12544,-400,800,PDM EAT sensor value (standard),256,
-REG_OUTPUT_TRIAC_CONFIGURED,I,Holding Register (Function 03/06/16),HOLDING_REG,13201,0,1,Indicates if the TRIAC shall be used,0,
-REG_DO1_AFTER_MUX,I,Read Input Register (Function 04),INPUT_REG,13301,0,1,Digital output after multiplexer,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_DO2_AFTER_MUX,I,Read Input Register (Function 04),INPUT_REG,13302,0,1,Digital output after multiplexer,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_DO3_AFTER_MUX,I,Read Input Register (Function 04),INPUT_REG,13303,0,1,Digital output after multiplexer,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_DO4_AFTER_MUX,I,Read Input Register (Function 04),INPUT_REG,13304,0,1,Digital output after multiplexer,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_AO1_AFTER_MUX,I,Read Input Register (Function 04),INPUT_REG,13311,0,100,Analog output after multiplexer,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_AO2_AFTER_MUX,I,Read Input Register (Function 04),INPUT_REG,13312,0,100,Analog output after multiplexer,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_AO3_AFTER_MUX,I,Read Input Register (Function 04),INPUT_REG,13313,0,100,Analog output after multiplexer,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_AO4_AFTER_MUX,I,Read Input Register (Function 04),INPUT_REG,13314,0,100,Analog output after multiplexer,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_AO5_AFTER_MUX,I,Read Input Register (Function 04),INPUT_REG,13315,0,100,Analog output after multiplexer,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_MANUAL_OVERRIDE_OUTPUT_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,13601,0,1,SAF Override.0: Auto1: Manual,0,
-REG_MANUAL_OVERRIDE_OUTPUT_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,13602,0,1,EAF Override.0: Auto1: Manual,0,
-REG_MANUAL_OVERRIDE_OUTPUT_ SAF_VALUE,I,Holding Register (Function 03/06/16),HOLDING_REG,13801,0,100,SAF Override value in % if manual (1) selected,0,
-REG_MANUAL_OVERRIDE_OUTPUT_ EAF_VALUE,I,Holding Register (Function 03/06/16),HOLDING_REG,13802,0,100,EAF override value in % if manual (1) selected,0,
-REG_OUTPUT_SAF,I,Read Input Register (Function 04),INPUT_REG,14001,0,100,SAF fan speed,45,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_EAF,I,Read Input Register (Function 04),INPUT_REG,14002,0,100,EAF fan speed,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_ALARM,I,Read Input Register (Function 04),INPUT_REG,14003,0,1,"Sum Alarm DO
-0: Output not active 1: Output active",1,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_OUTDOOR_EXTRACT_ DAMPER,I,Read Input Register (Function 04),INPUT_REG,14004,0,1,Indicates if Outdoor/Exhaust air damper signal is On/Off,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_Y1_ANALOG,I,Read Input Register (Function 04),INPUT_REG,14101,0,100,Heater AO state.,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_Y1_DIGITAL,I,Read Input Register (Function 04),INPUT_REG,14102,0,1,Heater DO state:0: Output not active1: Output active,20,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_Y2_ANALOG,I,Read Input Register (Function 04),INPUT_REG,14103,0,100,Heat Exchanger AO state.,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_Y2_DIGITAL,I,Read Input Register (Function 04),INPUT_REG,14104,0,1,Heat Exchanger DO state.0: Output not active1: Output active,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_Y3_ANALOG,I,Read Input Register (Function 04),INPUT_REG,14201,0,100,Cooler AO state.,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_Y3_DIGITAL,I,Read Input Register (Function 04),INPUT_REG,14202,0,1,Cooler DO state:0: Output not active1: Output active,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_Y4_ANALOG,I,Read Input Register (Function 04),INPUT_REG,14203,0,100,Extra controller AO state.,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_Y4_DIGITAL,I,Read Input Register (Function 04),INPUT_REG,14204,0,1,Extra controller DO state:0: Output not active1: Output active,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_Y1_CIRC_PUMP,I,Read Input Register (Function 04),INPUT_REG,14301,,,Heating circulation pump output,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_Y3_CIRC_PUMP,I,Read Input Register (Function 04),INPUT_REG,14302,,,Cooler circulation pump output,1,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_Y1_Y3_CIRC_PUMP,I,Read Input Register (Function 04),INPUT_REG,14303,,,Change-over circulation pump output,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_Y4_CIRC_PUMP,I,Read Input Register (Function 04),INPUT_REG,14304,,,Extra controller circulation pump output,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_AO1,I,Read Input Register (Function 04),INPUT_REG,14351,,,Voltage signal from AO1,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_AO2,I,Read Input Register (Function 04),INPUT_REG,14352,,,Voltage signal from AO2,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_AO3,I,Read Input Register (Function 04),INPUT_REG,14353,,,Voltage signal from AO3,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_AO4,I,Read Input Register (Function 04),INPUT_REG,14354,,,Voltage signal from AO4,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_AO5,I,Read Input Register (Function 04),INPUT_REG,14355,,,Voltage signal from AO5,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_DO1,I,Read Input Register (Function 04),INPUT_REG,14361,0,1,State of DO1,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_DO2,I,Read Input Register (Function 04),INPUT_REG,14362,0,1,State of DO2,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_DO3,I,Read Input Register (Function 04),INPUT_REG,14363,0,1,State of DO3,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_DO4,I,Read Input Register (Function 04),INPUT_REG,14364,0,1,State of DO4,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_FAN_SPEED1,I,Read Input Register (Function 04),INPUT_REG,14371,0,100,Supply air fan control signal in %,45,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_FAN_SPEED2,I,Read Input Register (Function 04),INPUT_REG,14372,0,100,Extract air fan control signal in %,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_OUTPUT_TRIAC,I,Read Input Register (Function 04),INPUT_REG,14381,0,1,TRIAC control signal,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_SAF_CTRL_ALARM,I,Read Input Register (Function 04),INPUT_REG,15002,0,3,"Alarm active/inactive. 0: Inactive
+"REG_DEMC_RH_HIGHEST","I","Read Input Register (Function 04)","INPUT_REG","1001","0","100","Highest value of all RH sensors","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_DEMC_CO2_HIGHEST","I","Read Input Register (Function 04)","INPUT_REG","1002","0","2000","Highest value of all CO2 sensors","45","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_DEMC_RH_PI_SP","I","Read Input Register (Function 04)","INPUT_REG","1011","0","100","Set point for RH demand control","27","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_DEMC_RH_PI_FEEDBACK","I","Read Input Register (Function 04)","INPUT_REG","1012","0","100","Sensor value for RH demand control","-33","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_DEMC_RH_PI_OUTPUT","I","Read Input Register (Function 04)","INPUT_REG","1019",,,"Output value for RH demand control.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_DEMC_CO2_PI_SP","I","Read Input Register (Function 04)","INPUT_REG","1021","0","2000","Set point for CO2 demand control","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_DEMC_CO2_PI_FEEDBACK","I","Read Input Register (Function 04)","INPUT_REG","1022","0","2000","Sensor value for CO2 demand control","-800","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_DEMC_CO2_PI_OUTPUT","I","Read Input Register (Function 04)","INPUT_REG","1029",,,"Output value for CO2 demand control(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_DEMC_RH_SETTINGS_PBAND","I","Holding Register (Function 03/06/16)","HOLDING_REG","1031","1","100","Pband setting for RH demand control","0",
+"REG_DEMC_RH_SETTINGS_SP_SUMMER","I","Holding Register (Function 03/06/16)","HOLDING_REG","1033","10","100","Set point setting for RH demand control during (temperature based) winter time","40",
+"REG_DEMC_RH_SETTINGS_SP_WINTER","I","Holding Register (Function 03/06/16)","HOLDING_REG","1034","10","100","Set point setting for RH demand control during (temperature based) summer time","1",
+"REG_DEMC_RH_SETTINGS_ON_OFF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1035","0","1","Flag indicating if RH demand control is allowed","0",
+"REG_SUMMER_WINTER","I","Read Input Register (Function 04)","INPUT_REG","1039","0","1","Actual seasson for Demand Control0: Summer1: Winter","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_DEMC_CO2_SETTINGS_PBAND","I","Holding Register (Function 03/06/16)","HOLDING_REG","1041","50","2000","Pband setting for CO2 demand control","0",
+"REG_DEMC_CO2_SETTINGS_SP","I","Holding Register (Function 03/06/16)","HOLDING_REG","1043","100","2000","Set point setting for CO2 demand control","0",
+"REG_DEMC_CO2_SETTINGS_ON_OFF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1044","0","1","Flag indicating if CO2 demand control is allowed","0",
+"REG_USERMODE_HOLIDAY_TIME","I","Holding Register (Function 03/06/16)","HOLDING_REG","1101","1","365","Time delay setting for user mode Holiday","1",
+"REG_USERMODE_AWAY_TIME","I","Holding Register (Function 03/06/16)","HOLDING_REG","1102","1","72","Time delay setting for user mode Away","1",
+"REG_USERMODE_FIREPLACE_TIME","I","Holding Register (Function 03/06/16)","HOLDING_REG","1103","1","60","Time delay setting for user mode Fire Place","1",
+"REG_USERMODE_REFRESH_TIME","I","Holding Register (Function 03/06/16)","HOLDING_REG","1104","1","240","Time delay setting for user mode Refresh","1",
+"REG_USERMODE_CROWDED_TIME","I","Holding Register (Function 03/06/16)","HOLDING_REG","1105","1","8","Time delay setting for user mode Crowded","0",
+"REG_USERMODE_REMAINING_TIME_L","I","Read Input Register (Function 04)","INPUT_REG","1111",,,"Remaining time for the state Holiday/ Away/Fire Place/Refresh/Crowded","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_USERMODE_REMAINING_TIME_H","I","Read Input Register (Function 04)","INPUT_REG","1112",,,"Remaining time for the state Holiday/ Away/Fire Place/Refresh/Crowded","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_IAQ_SPEED_LEVEL_MIN","I","Holding Register (Function 03/06/16)","HOLDING_REG","1121","2","3","Minimum level for Demand Control2: Low3: Normal","4",
+"REG_IAQ_SPEED_LEVEL_MAX","I","Holding Register (Function 03/06/16)","HOLDING_REG","1122","3","5","Maximum level for user Demand Control3: Normal4: High5: Maximum","0",
+"REG_IAQ_LEVEL","I","Read Input Register (Function 04)","INPUT_REG","1123","0","2","Actual IAQ level:0: Economic1: Good2: Improving","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_USERMODE_MANUAL_AIRFLOW_ LEVEL_SAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1131","1","4","Fan speed level for mode Manual, supply fan.(1): value Off only allowed if contents of register 1352 is 1.(1): Off2: Low3: Normal4: High","4",
+"REG_USERMODE_MANUAL_AIRFLOW_ LEVEL_EAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1132","2","4","Fan speed level for mode Manual, extract fan.2: Low3: Normal4: High","6",
+"REG_USERMODE_CROWDED_AIRFLOW_ LEVEL_SAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1135","3","5","Fan speed level for mode Crowded3: Normal4: High5: Maximum","4",
+"REG_USERMODE_CROWDED_AIRFLOW_ LEVEL_EAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1136","3","5","Fan speed level for mode Crowded3: Normal4: High5: Maximum","5",
+"REG_USERMODE_REFRESH_AIRFLOW_ LEVEL_SAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1137","3","5","Fan speed level for mode Refresh3: Normal4: High5: Maximum","5",
+"REG_USERMODE_REFRESH_AIRFLOW_ LEVEL_EAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1138","3","5","Fan speed level for mode Refresh3: Normal4: High5: Maximum","5",
+"REG_USERMODE_FIREPLACE_AIRFLOW_ LEVEL_SAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1139","3","5","Fan speed level for mode Fire Place3: Normal4: High5: Maximum","1",
+"REG_USERMODE_FIREPLACE_AIRFLOW_ LEVEL_EAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1140","1","3","Fan speed level for mode Fire Place1: Minimum2: Low3: Normal","1",
+"REG_USERMODE_AWAY_AIRFLOW_ LEVEL_SAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1141","0","3","Fan speed level for mode Away.0: Off(1)1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.","1",
+"REG_USERMODE_AWAY_AIRFLOW_ LEVEL_EAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1142","0","3","Fan speed level for mode Away.0: Off(1)1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.","1",
+"REG_USERMODE_HOLIDAY_AIRFLOW_ LEVEL_SAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1143","0","3","Fan speed level for mode Holiday.0: Off(1) 1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.","1",
+"REG_USERMODE_HOLIDAY_AIRFLOW_ LEVEL_EAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1144","0","3","Fan speed level for mode Holiday.0: Off(1) 1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.","5",
+"REG_USERMODE_COOKERHOOD_ AIRFLOW_LEVEL_SAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1145","1","5","Fan speed level for mode Cooker Hood2: Low3: Normal4: High","1",
+"REG_USERMODE_COOKERHOOD_ AIRFLOW_LEVEL_EAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1146","1","5","Fan speed level for mode Cooker Hood1: Minimum2: Low3: Normal","5",
+"REG_USERMODE_VACUUMCLEANER_ AIRFLOW_LEVEL_SAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1147","1","5","Fan speed level for mode Vacuum Cleaner2: Low3: Normal4: High","1",
+"REG_USERMODE_VACUUMCLEANER_ AIRFLOW_LEVEL_EAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1148","1","5","Fan speed level for mode Vacuum Cleaner1: Minimum2: Low3: Normal","0",
+"REG_USERMODE_CROWDED_T_OFFSET","I*","Holding Register (Function 03/06/16)","HOLDING_REG","1151","-100","0","Temperature setpoint offset for user mode Crowded","0",
+"REG_USERMODE_MODE","I","Read Input Register (Function 04)","INPUT_REG","1161","0","12","Active User mode.0: Auto1: Manual2: Crowded3: Refresh4: Fireplace5: Away6: Holiday7: Cooker Hood8: Vacuum Cleaner9: CDI110: CDI211: CDI312: PressureGuard","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_USERMODE_HMI_CHANGE_ REQUEST","I","Holding Register (Function 03/06/16)","HOLDING_REG","1162","0","7","New desired user mode as requested by HMI0: None1: AUTO2: Manual 3: Crowded4: Refresh5: Fireplace6: Away7: Holiday","0",
+"REG_CDI_1_AIRFLOW_LEVEL_SAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1171","0","5","Fan speed level for configurable digital input 1.0: Off1: Minimum2: Low3: Normal4: High5: Maximum","2",
+"REG_CDI_1_AIRFLOW_LEVEL_EAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1172","0","5","Fan speed level for configurable digital input 1.0: Off1: Minimum2: Low3: Normal4: High5: Maximum","2",
+"REG_CDI_2_AIRFLOW_LEVEL_SAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1173","0","5","Fan speed level for configurable digital input 2.0: Off1: Minimum2: Low3: Normal4: High5: Maximum","2",
+"REG_CDI_2_AIRFLOW_LEVEL_EAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1174","0","5","Fan speed level for configurable digital input 2.0: Off1: Minimum2: Low3: Normal4: High5: Maximum","2",
+"REG_CDI_3_AIRFLOW_LEVEL_SAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1175","0","5","Fan speed level for configurable digital input 3.0: Off1: Minimum2: Low3: Normal4: High5: Maximum","2",
+"REG_CDI_3_AIRFLOW_LEVEL_EAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1176","0","5","Fan speed level for configurable digital input 3.0: Off1: Minimum2: Low3: Normal4: High5: Maximum","5",
+"REG_PRESSURE_GUARD_AIRFLOW_ LEVEL_SAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1177","0","5","Fan speed level for configurable pressure guard function.0: Off1: Minimum2: Low3: Normal4: High5: Maximum","1",
+"REG_PRESSURE_GUARD_AIRFLOW_ LEVEL_EAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","1178","0","5","Fan speed level for configurable pressure guard function.0: Off1: Minimum2: Low3: Normal4: High5: Maximum","0",
+"REG_USERMODE_HOLIDAY_DI_OFF_ DELAY","I","Holding Register (Function 03/06/16)","HOLDING_REG","1181","0","365","Off delay for DI","8192",
+"REG_USERMODE_AWAY_DI_OFF_DELAY","I","Holding Register (Function 03/06/16)","HOLDING_REG","1182","0","72","Off delay for DI","2",
+"REG_USERMODE_FIRPLACE_DI_OFF_ DELAY","I","Holding Register (Function 03/06/16)","HOLDING_REG","1183","0","60","Off delay for DI","2",
+"REG_USERMODE_REFRESH_DI_OFF_ DELAY","I","Holding Register (Function 03/06/16)","HOLDING_REG","1184","0","240","Off delay for DI","-25489",
+"REG_USERMODE_CROWDED_DI_OFF_ DELAY","I","Holding Register (Function 03/06/16)","HOLDING_REG","1185","0","8","Off delay for DI","0",
+"REG_CDI1_OFF_DELAY","I","Holding Register (Function 03/06/16)","HOLDING_REG","1188","0","240","Off delay for DI","8191",
+"REG_CDI2_OFF_DELAY","I","Holding Register (Function 03/06/16)","HOLDING_REG","1189","0","240","Off delay for DI","1344",
+"REG_CDI3_OFF_DELAY","I","Holding Register (Function 03/06/16)","HOLDING_REG","1190","0","240","Off delay for DI","0",
+"REG_SPEED_CDI1_SAF","I","Read Input Register (Function 04)","INPUT_REG","1221",,,"SAF speed value for user mode Holiday.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow","25","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SPEED_CDI1_EAF","I","Read Input Register (Function 04)","INPUT_REG","1222",,,"EAF speed value for user mode Holiday.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow","25","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SPEED_CDI2_SAF","I","Read Input Register (Function 04)","INPUT_REG","1223",,,"SAF speed value for mode Cooker Hood.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow","25","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SPEED_CDI2_EAF","I","Read Input Register (Function 04)","INPUT_REG","1224",,,"EAF speed value for mode Cooker Hood.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow","25","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SPEED_CDI3_SAF","I","Read Input Register (Function 04)","INPUT_REG","1225",,,"SAF speed value for mode Vacuum Cleaner. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow","25","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SPEED_CDI3_EAF","I","Read Input Register (Function 04)","INPUT_REG","1226",,,"EAF speed value for mode Vacuum Cleaner. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow","90","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SPEED_PRESSURE_GUARD_SAF","I","Read Input Register (Function 04)","INPUT_REG","1227",,,"SAF speed value for low fan speed.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow","16","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SPEED_PRESSURE_GUARD_EAF","I","Read Input Register (Function 04)","INPUT_REG","1228",,,"EAF speed value for low fan speed.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FAN_OUTDOOR_COMP_TYPE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1251","0","1","Compensate only SF or both SF and EF0: SAF1: SAF/EAF","0",
+"REG_FAN_OUTDOOR_COMP_MAX_ VALUE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1252","0","50","Compensation value at lowest temperature.","0",
+"REG_FAN_OUTDOOR_COMP_STOP_T_ WINTER","I*","Holding Register (Function 03/06/16)","HOLDING_REG","1253","-300","0","Temperature at which compensation reaches maximum value during the winter period.","0",
+"REG_FAN_OUTDOOR_COMP_MAX_TEMP","I*","Holding Register (Function 03/06/16)","HOLDING_REG","1254","-300","0","Temperature at which highest compensation is applied.","0",
+"REG_FAN_OUTDOOR_COMP_START_T_ WINTER","I","Holding Register (Function 03/06/16)","HOLDING_REG","1256","-300","0","Temperature at which compensation starts during the winter period.","1344",
+"REG_FAN_OUTDOOR_COMP_START_T_ SUMMER","I","Holding Register (Function 03/06/16)","HOLDING_REG","1257","150","300","Temperature at which compensation starts during the summer period.","0",
+"REG_FAN_OUTDOOR_COMP_STOP_T_ SUMMER","I","Holding Register (Function 03/06/16)","HOLDING_REG","1258","150","400","Temperature at which compensation reaches maximum value during the summer period.","152",
+"REG_FAN_OUTDOOR_COMP_VALUE_ SUMMER","I","Holding Register (Function 03/06/16)","HOLDING_REG","1259","0","50","Compensation value during summer period","0",
+"REG_FAN_REGULATION_UNIT","I","Holding Register (Function 03/06/16)","HOLDING_REG","1274","0","4","Type of fan control mode.0: Manual1: RPM2: VAV (Constant Pressure)3: CAV (Constant Flow)4: DCV (External)","0",
+"REG_FAN_LEVEL_SAF_MIN","I","Read Input Register (Function 04)","INPUT_REG","1301",,,"SAF speed value for minimum fan speed. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow","16","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FAN_LEVEL_EAF_MIN","I","Read Input Register (Function 04)","INPUT_REG","1302",,,"EAF speed value for minimum fan speed. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow","25","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FAN_LEVEL_SAF_LOW","I","Read Input Register (Function 04)","INPUT_REG","1303",,,"SAF speed value for low fan speed.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow","25","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FAN_LEVEL_EAF_LOW","I","Read Input Register (Function 04)","INPUT_REG","1304",,,"EAF speed value for low fan speed.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow","45","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FAN_LEVEL_SAF_NORMAL","I","Read Input Register (Function 04)","INPUT_REG","1305",,,"SAF speed value for normal fan speed.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow","45","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FAN_LEVEL_EAF_NORMAL","I","Read Input Register (Function 04)","INPUT_REG","1306",,,"EAF speed value for normal fan speed.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow","70","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FAN_LEVEL_SAF_HIGH","I","Read Input Register (Function 04)","INPUT_REG","1307",,,"SAF speed value for high fan speed.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow","70","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FAN_LEVEL_EAF_HIGH","I","Read Input Register (Function 04)","INPUT_REG","1308",,,"EAF speed value for high fan speed.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow","90","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FAN_LEVEL_SAF_MAX","I","Read Input Register (Function 04)","INPUT_REG","1309",,,"SAF speed value for maximum fan speed. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow","90","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FAN_LEVEL_EAF_MAX","I","Read Input Register (Function 04)","INPUT_REG","1310",,,"EAF speed value for maximum fan speed. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SPEED_FANS_RUNNING","I","Read Input Register (Function 04)","INPUT_REG","1351","0","1","Indicates that both fans are running","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SPEED_SAF_DESIRED_OFF","I","Read Input Register (Function 04)","INPUT_REG","1352","0","1","Indicates that the SAF shall be turned off once the electrical reheater is cooled down.","1","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FAN_MANUAL_STOP_ALLOWED","I","Holding Register (Function 03/06/16)","HOLDING_REG","1353","0","1","Allow manual fan stop (also as selection for user modes and Week schedule).0: Manual stop not allowed1: Manual stop allowed","0",
+"REG_SPEED_ELECTRICAL_HEATER_HOT_ COUNTER","I","Read Input Register (Function 04)","INPUT_REG","1357",,,"Electrical Heater hot counter. Count down from 120 sec.","4","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FAN_SPEED_AFTER_HEATER_ COOLING_DOWN_SAF","I","Read Input Register (Function 04)","INPUT_REG","1358","0","100","Supply Air Fan Speed Level After Heater Cooling Down","4","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FAN_SPEED_AFTER_HEATER_ COOLING_DOWN_EAF","I","Read Input Register (Function 04)","INPUT_REG","1359","0","100","Extract Air Fan Speed Level After Heater Cooling Down","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FAN_LEVEL_SAF_MIN_ PERCENTAGE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1401","16","100","SAF speed value for minimum fan speed","16",
+"REG_FAN_LEVEL_EAF_MIN_ PERCENTAGE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1402","16","100","EAF speed value for minimum fan speed","25",
+"REG_FAN_LEVEL_SAF_LOW_ PERCENTAGE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1403","16","100","SAF speed value for low fan speed","25",
+"REG_FAN_LEVEL_EAF_LOW_ PERCENTAGE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1404","16","100","EAF speed value for low fan speed","45",
+"REG_FAN_LEVEL_SAF_NORMAL_ PERCENTAGE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1405","16","100","SAF speed value for normal fan speed","45",
+"REG_FAN_LEVEL_EAF_NORMAL_ PERCENTAGE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1406","16","100","EAF speed value for normal fan speed","70",
+"REG_FAN_LEVEL_SAF_HIGH_ PERCENTAGE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1407","16","100","SAF speed value for high fan speed","70",
+"REG_FAN_LEVEL_EAF_HIGH_ PERCENTAGE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1408","16","100","EAF speed value for high fan speed","90",
+"REG_FAN_LEVEL_SAF_MAX_ PERCENTAGE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1409","16","100","SAF speed value for maximum fan speed","90",
+"REG_FAN_LEVEL_EAF_MAX_ PERCENTAGE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1410","16","100","EAF speed value for maximum fan speed","500",
+"REG_FAN_LEVEL_SAF_MIN_RPM","I","Holding Register (Function 03/06/16)","HOLDING_REG","1411","500","5000","SAF speed value for minimum fan speed","500",
+"REG_FAN_LEVEL_EAF_MIN_RPM","I","Holding Register (Function 03/06/16)","HOLDING_REG","1412","500","5000","EAF speed value for minimum fan speed","1600",
+"REG_FAN_LEVEL_SAF_LOW_RPM","I","Holding Register (Function 03/06/16)","HOLDING_REG","1413","500","5000","SAF speed value for low fan speed","1600",
+"REG_FAN_LEVEL_EAF_LOW_RPM","I","Holding Register (Function 03/06/16)","HOLDING_REG","1414","500","5000","EAF speed value for low fan speed","2500",
+"REG_FAN_LEVEL_SAF_NORMAL_RPM","I","Holding Register (Function 03/06/16)","HOLDING_REG","1415","500","5000","SAF speed value for normal fan speed","2500",
+"REG_FAN_LEVEL_EAF_NORMAL_RPM","I","Holding Register (Function 03/06/16)","HOLDING_REG","1416","500","5000","EAF speed value for normal fan speed","3000",
+"REG_FAN_LEVEL_SAF_HIGH_RPM","I","Holding Register (Function 03/06/16)","HOLDING_REG","1417","500","5000","SAF speed value for high fan speed","3000",
+"REG_FAN_LEVEL_EAF_HIGH_RPM","I","Holding Register (Function 03/06/16)","HOLDING_REG","1418","500","5000","EAF speed value for high fan speed","5000",
+"REG_FAN_LEVEL_SAF_MAX_RPM","I","Holding Register (Function 03/06/16)","HOLDING_REG","1419","500","5000","SAF speed value for maximum fan speed","5000",
+"REG_FAN_LEVEL_EAF_MAX_RPM","I","Holding Register (Function 03/06/16)","HOLDING_REG","1420","500","5000","EAF speed value for maximum fan speed","0",
+"REG_FAN_LEVEL_SAF_MIN_PRESSURE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1421",,,"SAF speed value for minimum fan speed","0",
+"REG_FAN_LEVEL_EAF_MIN_PRESSURE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1422",,,"EAF speed value for minimum fan speed","0",
+"REG_FAN_LEVEL_SAF_LOW_PRESSURE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1423",,,"SAF speed value for low fan speed","0",
+"REG_FAN_LEVEL_EAF_LOW_PRESSURE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1424",,,"EAF speed value for low fan speed","0",
+"REG_FAN_LEVEL_SAF_NORMAL_ PRESSURE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1425",,,"SAF speed value for normal fan speed","0",
+"REG_FAN_LEVEL_EAF_NORMAL_ PRESSURE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1426",,,"EAF speed value for normal fan speed","0",
+"REG_FAN_LEVEL_SAF_HIGH_PRESSURE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1427",,,"SAF speed value for high fan speed","0",
+"REG_FAN_LEVEL_EAF_HIGH_PRESSURE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1428",,,"EAF speed value for high fan speed","0",
+"REG_FAN_LEVEL_SAF_MAX_PRESSURE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1429",,,"SAF speed value for maximum fan speed","0",
+"REG_FAN_LEVEL_EAF_MAX_PRESSURE","I","Holding Register (Function 03/06/16)","HOLDING_REG","1430",,,"EAF speed value for maximum fan speed","0",
+"REG_FAN_LEVEL_SAF_MIN_FLOW","I","Holding Register (Function 03/06/16)","HOLDING_REG","1431",,,"SAF speed value for minimum fan speed","0",
+"REG_FAN_LEVEL_EAF_MIN_FLOW","I","Holding Register (Function 03/06/16)","HOLDING_REG","1432",,,"EAF speed value for minimum fan speed","0",
+"REG_FAN_LEVEL_SAF_LOW_FLOW","I","Holding Register (Function 03/06/16)","HOLDING_REG","1433",,,"SAF speed value for low fan speed","0",
+"REG_FAN_LEVEL_EAF_LOW_FLOW","I","Holding Register (Function 03/06/16)","HOLDING_REG","1434",,,"EAF speed value for low fan speed","0",
+"REG_FAN_LEVEL_SAF_NORMAL_FLOW","I","Holding Register (Function 03/06/16)","HOLDING_REG","1435",,,"SAF speed value for normal fan speed","0",
+"REG_FAN_LEVEL_EAF_NORMAL_FLOW","I","Holding Register (Function 03/06/16)","HOLDING_REG","1436",,,"EAF speed value for normal fan speed","0",
+"REG_FAN_LEVEL_SAF_HIGH_FLOW","I","Holding Register (Function 03/06/16)","HOLDING_REG","1437",,,"SAF speed value for high fan speed","0",
+"REG_FAN_LEVEL_EAF_HIGH_FLOW","I","Holding Register (Function 03/06/16)","HOLDING_REG","1438",,,"EAF speed value for high fan speed","0",
+"REG_FAN_LEVEL_SAF_MAX_FLOW","I","Holding Register (Function 03/06/16)","HOLDING_REG","1439",,,"SAF speed value for maximum fan speed","0",
+"REG_FAN_LEVEL_EAF_MAX_FLOW","I","Holding Register (Function 03/06/16)","HOLDING_REG","1440",,,"EAF speed value for maximum fan speed","0",
+"REG_USERMODE_REMAINING_TIME_ CDI1_L","I","Read Input Register (Function 04)","INPUT_REG","1621",,,"Remaining time","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_USERMODE_REMAINING_TIME_ CDI1_H","I","Read Input Register (Function 04)","INPUT_REG","1622",,,,"0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_USERMODE_REMAINING_TIME_ CDI2_L","I","Read Input Register (Function 04)","INPUT_REG","1623",,,"Remaining time","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_USERMODE_REMAINING_TIME_ CDI2_H","I","Read Input Register (Function 04)","INPUT_REG","1624",,,,"0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_USERMODE_REMAINING_TIME_ CDI3_L","I","Read Input Register (Function 04)","INPUT_REG","1625",,,"Remaining time","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_USERMODE_REMAINING_TIME_ CDI3_H","I","Read Input Register (Function 04)","INPUT_REG","1626",,,,"0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_TC_SP","I*","Holding Register (Function 03/06/16)","HOLDING_REG","2001","120","300","Temperature setpoint for the supply air temperature","1",
+"REG_TC_CASCADE_SP","I*","Holding Register (Function 03/06/16)","HOLDING_REG","2013","120","400","Temperature set point for SATC, as calculated by RATC/EATC during cascade control","0",
+"REG_TC_CASCADE_SP_MIN","I*","Holding Register (Function 03/06/16)","HOLDING_REG","2021","120","400","Minimum temperature set point for the SATC","400",
+"REG_TC_CASCADE_SP_MAX","I*","Holding Register (Function 03/06/16)","HOLDING_REG","2022","120","400","Maximum temperature set point for the SATC","0",
+"REG_TC_CONTROL_MODE","I","Holding Register (Function 03/06/16)","HOLDING_REG","2031","0","2","Unit temperature control mode0: Supply1: Room2: Extract","0",
+"REG_TC_EAT_RAT_SP","I*","Read Input Register (Function 04)","INPUT_REG","2051","120","400","EAT or RAT value, used for room/extract air controller.","170","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_TC_ROOM_CTRL_SP_SATC","I*","Read Input Register (Function 04)","INPUT_REG","2053","120","400","Temperature set point for SATC, as calculated by RATC/EATC during cascade control","170","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_TC_SP_SATC","I*","Read Input Register (Function 04)","INPUT_REG","2054","120","300","Temperature setpoint for the supply air temperature","36","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SATC_HEAT_DEMAND","I","Read Input Register (Function 04)","INPUT_REG","2055","0","100","Output of the SATC (0-100%)","36","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SATC_PI_SP","I*","Read Input Register (Function 04)","INPUT_REG","2061","120","300","SATC setpoint value","157","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SATC_PI_OUTPUT","I*","Read Input Register (Function 04)","INPUT_REG","2069","0","100","SATC output signal","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ROOM_CTRL_PI_SP","I*","Read Input Register (Function 04)","INPUT_REG","2071","120","300","RATC setpoint value","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ROOM_CTRL_PI_OUTPUT","I*","Read Input Register (Function 04)","INPUT_REG","2079","0","100","RATC output signal","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_INPUT_EXTERNAL_CTRL_SAF","I","Read Input Register (Function 04)","INPUT_REG","2101","0","100","Value from External Controller Input, SAF. In
+%.","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_INPUT_EXTERNAL_CTRL_EAF","I","Read Input Register (Function 04)","INPUT_REG","2102","0","100","Value from External Controller Input, EAF. In
+%.","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_HEATER_CIRC_PUMP_START_T","I*","Holding Register (Function 03/06/16)","HOLDING_REG","2113","0","200","Temperature at which the Heater circulation pump is started","0",
+"REG_HEATER_CIRC_PUMP_STOP_DELAY","I","Holding Register (Function 03/06/16)","HOLDING_REG","2122","0","60","Off time delay for the heater circulation pump in minutes","0",
+"REG_HEAT_EXCHANGER_COOLING_ RECOVERY_ON_OFF","I","Holding Register (Function 03/06/16)","HOLDING_REG","2134","0","1","Enabling of cooling recovery","0",
+"REG_HEAT_EXCHANGER_RH_ TRANSFER_CTRL_ENABLED","I","Read Input Register (Function 04)","INPUT_REG","2147",,,"Indicates if RH trasnfer control shall be applied","100","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_PWM_TRIAC_OUTPUT","I","Read Input Register (Function 04)","INPUT_REG","2149","0","100","TRIAC after manual override","22","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ROTOR_RH_TRANSFER_CTRL_ PBAND","I","Holding Register (Function 03/06/16)","HOLDING_REG","2201","100-0","40","Pband setting for RH transfer control","0",
+"REG_ROTOR_RH_TRANSFER_CTRL_ITIME","I","Holding Register (Function 03/06/16)","HOLDING_REG","2202","120","0","Itime setting for RH transfer control","45",
+"REG_ROTOR_RH_TRANSFER_CTRL_ SETPOINT","I","Holding Register (Function 03/06/16)","HOLDING_REG","2203","100","45","Set point setting for RH transfer control","1",
+"REG_ROTOR_RH_TRANSFER_CTRL_ON_ OFF","I","Holding Register (Function 03/06/16)","HOLDING_REG","2204","1","1","Enabling of humidity transfer control","0",
+"REG_COOLER_FROM_SATC","I","Read Input Register (Function 04)","INPUT_REG","2311","0","100","Cooler signal","1","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_COOLER_CIRC_PUMP_START_T","I","Holding Register (Function 03/06/16)","HOLDING_REG","2314","0","200","Temperature at which the cooler circulation pump is started","20",
+"REG_COOLER_RECOVERY_LIMIT_T","I","Holding Register (Function 03/06/16)","HOLDING_REG","2315","0","100","Temperature at which cooling recovery is allowed","120",
+"REG_COOLER_OAT_INTERLOCK_T","I","Holding Register (Function 03/06/16)","HOLDING_REG","2316","120","250","Temperature at which cooling is interlocked","5",
+"REG_COOLER_CIRC_PUMP_STOP_DELAY","I","Holding Register (Function 03/06/16)","HOLDING_REG","2317","0","60","Off time delay for the cooler circulation pump in minutes","0",
+"REG_EXTRA_CONTROLLER_SET_PI_ SETPOINT","I*","Holding Register (Function 03/06/16)","HOLDING_REG","2403","-300","400","Set point value for the extra controller PI regulator","0",
+"REG_EXTRA_CONTROLLER_CIRC_PUMP_ START_T","I*","Holding Register (Function 03/06/16)","HOLDING_REG","2404","0","200","Start temperature for extra controller circulation pump","5",
+"REG_EXTRA_CONTROLLER_CIRC_PUMP_ STOP_DELAY","I","Holding Register (Function 03/06/16)","HOLDING_REG","2405","0","60","Off time delay for the extra controller circulation pump in minutes","0",
+"REG_EXTRA_CONTROLLER_PREHEATER_ SETPOINT_TYPE","I","Holding Register (Function 03/06/16)","HOLDING_REG","2418","0","1","Temperature setpoint for the preheater.0: Auto1: Manual","0",
+"REG_CHANGE_OVER_CIRC_PUMP_ START_T","I*","Holding Register (Function 03/06/16)","HOLDING_REG","2451","0","200","Start temperature for the change-over circulation pump","5",
+"REG_CHANGE_OVER_CIRC_PUMP_STOP_ DELAY","I","Holding Register (Function 03/06/16)","HOLDING_REG","2452","0","60","Off time delay for the change-over circulation pump in minutes","0",
+"REG_ECO_T_Y1_OFFSET","I*","Holding Register (Function 03/06/16)","HOLDING_REG","2504","0","100","Temperature offset for heating during Eco mode","0",
+"REG_ECO_MODE_ON_OFF","I","Holding Register (Function 03/06/16)","HOLDING_REG","2505","0","1","Enabling of eco mode","0",
+"REG_ECO_FUNCTION_ACTIVE","I","Read Input Register (Function 04)","INPUT_REG","2506","0","1","Indicates if conditions for ECO mode are active (low temperature)","130","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FUNCTION_ACTIVE_HEATER_COOL_ DOWN","I","Read Input Register (Function 04)","INPUT_REG","3113","0","1","Active Heater Cool Down","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FUNCTION_ACTIVE_PRESSURE_ GUARD","I","Read Input Register (Function 04)","INPUT_REG","3114","0","1","Indicates if function is active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FREE_COOLING_ON_OFF","I","Holding Register (Function 03/06/16)","HOLDING_REG","4101",,"1","Indicates if free cooling is enabled","220",
+"REG_FREE_COOLING_OUTDOOR_ DAYTIME_T","I*","Holding Register (Function 03/06/16)","HOLDING_REG","4102","120","300","Minimum of highest daytime temperature for start of free cooling.","230",
+"REG_FREE_COOLING_OUTDOOR_ NIGHTTIME_DEACTIVATION_HIGH_T_ LIMIT","I*","Holding Register (Function 03/06/16)","HOLDING_REG","4103","70","300","Highest night temperature limit for termination free cooling","120",
+"REG_FREE_COOLING_OUTDOOR_ NIGHTTIME_DEACTIVATION_LOW_T_ LIMIT","I*","Holding Register (Function 03/06/16)","HOLDING_REG","4104","70","300","Lowest night temperature limit for termination free cooling","180",
+"REG_FREE_COOLING_ROOM_CANCEL_T","I*","Holding Register (Function 03/06/16)","HOLDING_REG","4105","120","300","Lowest temperature room temperature for termination of free cooling","21",
+"REG_FREE_COOLING_START_TIME_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","4106",,,"Start time of free cooling night-period, hour. Valid range is from 0 to 8 and from 21 to 23.","0",
+"REG_FREE_COOLING_START_TIME_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","4107","0","59","Start time of free cooling night-period, Minute","8",
+"REG_FREE_COOLING_END_TIME_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","4108",,,"End time of free cooling night-period, hour. Valid range is from 0 to 8 and from 21 to 23.","0",
+"REG_FREE_COOLING_END_TIME_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","4109","0","59","End time of free cooling night-period, Minute","0",
+"REG_FREE_COOLING_ACTIVE","I","Read Input Register (Function 04)","INPUT_REG","4111","0","1","Indicates if free cooling is being performed","3","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FREE_COOLING_MIN_SPEED_ LEVEL_SAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","4112","3","5","Minimum speed level during free cooling, SAF.3: Normal4: High5: Maximum","3",
+"REG_FREE_COOLING_MIN_SPEED_ LEVEL_EAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","4113","3","5","Minimum speed level during free cooling, EAF.3: Normal4: High5: Maximum","3",
+"REG_WS_T_OFFSET_ACTIVE","I*","Holding Register (Function 03/06/16)","HOLDING_REG","5001","-100","0","Temperature offset during active week schedule.","0",
+"REG_WS_T_OFFSET_INACTIVE","I*","Holding Register (Function 03/06/16)","HOLDING_REG","5002","-100","0","Temperature offset during inactive week schedule.","0",
+"REG_WS_DAY1_PRD1_START_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5003","0","23","Monday, Period 1, start","0",
+"REG_WS_DAY1_PRD1_START_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5004","0","59",,"0",
+"REG_WS_DAY1_PRD1_END_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5005","0","23","Monday, Period 1, end","0",
+"REG_WS_DAY1_PRD1_END_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5006","0","59",,"0",
+"REG_WS_DAY1_PRD2_START_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5007","0","23","Monday, Period 2, start","0",
+"REG_WS_DAY1_PRD2_START_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5008","0","59",,"0",
+"REG_WS_DAY1_PRD2_END_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5009","0","23","Monday, Period 2, end","0",
+"REG_WS_DAY1_PRD2_END_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5010","0","59",,"0",
+"REG_WS_DAY2_PRD1_START_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5011","0","23","Tuesday, Period 1, start","0",
+"REG_WS_DAY2_PRD1_START_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5012","0","59",,"0",
+"REG_WS_DAY2_PRD1_END_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5013","0","23","Tuesday, Period 1, end","0",
+"REG_WS_DAY2_PRD1_END_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5014","0","59",,"0",
+"REG_WS_DAY2_PRD2_START_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5015","0","23","Tuesday, Period 2, start","0",
+"REG_WS_DAY2_PRD2_START_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5016","0","59",,"0",
+"REG_WS_DAY2_PRD2_END_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5017","0","23","Tuesday, Period 2, end","0",
+"REG_WS_DAY2_PRD2_END_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5018","0","59",,"0",
+"REG_WS_DAY3_PRD1_START_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5019","0","23","Wednesday, Period 1, start","0",
+"REG_WS_DAY3_PRD1_START_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5020","0","59",,"0",
+"REG_WS_DAY3_PRD1_END_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5021","0","23","Wednesday, Period 1, end","0",
+"REG_WS_DAY3_PRD1_END_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5022","0","59",,"0",
+"REG_WS_DAY3_PRD2_START_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5023","0","23","Wednesday, Period 2, start","0",
+"REG_WS_DAY3_PRD2_START_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5024","0","59",,"0",
+"REG_WS_DAY3_PRD2_END_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5025","0","23","Wednesday, Period 2, end","0",
+"REG_WS_DAY3_PRD2_END_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5026","0","59",,"0",
+"REG_WS_DAY4_PRD1_START_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5027","0","23","Thursday, Period 1, start","0",
+"REG_WS_DAY4_PRD1_START_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5028","0","59",,"0",
+"REG_WS_DAY4_PRD1_END_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5029","0","23","Thursday, Period 1, end","0",
+"REG_WS_DAY4_PRD1_END_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5030","0","59",,"0",
+"REG_WS_DAY4_PRD2_START_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5031","0","23","Thursday, Period 2, start","0",
+"REG_WS_DAY4_PRD2_START_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5032","0","59",,"0",
+"REG_WS_DAY4_PRD2_END_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5033","0","23","Thursday, Period 2, end","0",
+"REG_WS_DAY4_PRD2_END_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5034","0","59",,"0",
+"REG_WS_DAY5_PRD1_START_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5035","0","23","Friday, Period 1, start","0",
+"REG_WS_DAY5_PRD1_START_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5036","0","59",,"0",
+"REG_WS_DAY5_PRD1_END_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5037","0","23","Friday, Period 1, end","0",
+"REG_WS_DAY5_PRD1_END_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5038","0","59",,"0",
+"REG_WS_DAY5_PRD2_START_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5039","0","23","Friday, Period 2, start","0",
+"REG_WS_DAY5_PRD2_START_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5040","0","59",,"0",
+"REG_WS_DAY5_PRD2_END_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5041","0","23","Friday, Period 2, end","0",
+"REG_WS_DAY5_PRD2_END_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5042","0","59",,"0",
+"REG_WS_DAY6_PRD1_START_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5043","0","23","Saturday, Period 1, start","0",
+"REG_WS_DAY6_PRD1_START_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5044","0","59",,"0",
+"REG_WS_DAY6_PRD1_END_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5045","0","23","Saturday, Period 1, end","0",
+"REG_WS_DAY6_PRD1_END_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5046","0","59",,"0",
+"REG_WS_DAY6_PRD2_START_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5047","0","23","Saturday, Period 2, start","0",
+"REG_WS_DAY6_PRD2_START_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5048","0","59",,"0",
+"REG_WS_DAY6_PRD2_END_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5049","0","23","Saturday, Period 2, end","0",
+"REG_WS_DAY6_PRD2_END_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5050","0","59",,"0",
+"REG_WS_DAY7_PRD1_START_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5051","0","23","Sunday, Period 1, start","0",
+"REG_WS_DAY7_PRD1_START_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5052","0","59",,"0",
+"REG_WS_DAY7_PRD1_END_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5053","0","23","Sunday, Period 1, end","0",
+"REG_WS_DAY7_PRD1_END_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5054","0","59",,"0",
+"REG_WS_DAY7_PRD2_START_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5055","0","23","Sunday, Period 2, start","0",
+"REG_WS_DAY7_PRD2_START_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5056","0","59",,"0",
+"REG_WS_DAY7_PRD2_END_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","5057","0","23","Sunday, Period 2, end","0",
+"REG_WS_DAY7_PRD2_END_M","I","Holding Register (Function 03/06/16)","HOLDING_REG","5058","0","59",,"0",
+"REG_WS_ACTIVE","I","Read Input Register (Function 04)","INPUT_REG","5059","0","1","Indicates that the current time lays within the indicated intervals","3","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_WS_FAN_LEVEL_SCHEDULED","I","Holding Register (Function 03/06/16)","HOLDING_REG","5060","1","5","Fan speed levels for SAF and EAF during active week schedule.1: Off(1)2: Low3: Normal4: High5: Demand(2)(1): Off available if Manual Fan Stop is enabled.(2): Demand available if demand control active or external fan control enabled.","2",
+"REG_WS_FAN_LEVEL_UNSCHEDULED","I","Holding Register (Function 03/06/16)","HOLDING_REG","5061","1","5","Fan speed levels for SAF and EAF during inactive week schedule.1: Off(1)2: Low3: Normal4: High5: Demand(2)(1): Off available if Manual Fan Stop is enabled.(2): Demand available if demand control active or external fan control enabled.","0",
+"REG_WS_DAY1_PRD1_ENABLED","I","Holding Register (Function 03/06/16)","HOLDING_REG","5101","0","1","Flag indicating if this period is enabled.","1",
+"REG_WS_DAY1_PRD2_ENABLED","I","Holding Register (Function 03/06/16)","HOLDING_REG","5102","0","1","Flag indicating if this period is enabled.","1",
+"REG_WS_DAY2_PRD1_ENABLED","I","Holding Register (Function 03/06/16)","HOLDING_REG","5103","0","1","Flag indicating if this period is enabled.","1",
+"REG_WS_DAY2_PRD2_ENABLED","I","Holding Register (Function 03/06/16)","HOLDING_REG","5104","0","1","Flag indicating if this period is enabled.","1",
+"REG_WS_DAY3_PRD1_ENABLED","I","Holding Register (Function 03/06/16)","HOLDING_REG","5105","0","1","Flag indicating if this period is enabled.","1",
+"REG_WS_DAY3_PRD2_ENABLED","I","Holding Register (Function 03/06/16)","HOLDING_REG","5106","0","1","Flag indicating if this period is enabled.","1",
+"REG_WS_DAY4_PRD1_ENABLED","I","Holding Register (Function 03/06/16)","HOLDING_REG","5107","0","1","Flag indicating if this period is enabled.","1",
+"REG_WS_DAY4_PRD2_ENABLED","I","Holding Register (Function 03/06/16)","HOLDING_REG","5108","0","1","Flag indicating if this period is enabled.","1",
+"REG_WS_DAY5_PRD1_ENABLED","I","Holding Register (Function 03/06/16)","HOLDING_REG","5109","0","1","Flag indicating if this period is enabled.","1",
+"REG_WS_DAY5_PRD2_ENABLED","I","Holding Register (Function 03/06/16)","HOLDING_REG","5110","0","1","Flag indicating if this period is enabled.","1",
+"REG_WS_DAY6_PRD1_ENABLED","I","Holding Register (Function 03/06/16)","HOLDING_REG","5111","0","1","Flag indicating if this period is enabled.","1",
+"REG_WS_DAY6_PRD2_ENABLED","I","Holding Register (Function 03/06/16)","HOLDING_REG","5112","0","1","Flag indicating if this period is enabled.","1",
+"REG_WS_DAY7_PRD1_ENABLED","I","Holding Register (Function 03/06/16)","HOLDING_REG","5113","0","1","Flag indicating if this period is enabled.","1",
+"REG_WS_DAY7_PRD2_ENABLED","I","Holding Register (Function 03/06/16)","HOLDING_REG","5114","0","1","Flag indicating if this period is enabled.","0",
+"REG_TIME_YEAR","I","Holding Register (Function 03/06/16)","HOLDING_REG","6001","0","2999","Current time","1",
+"REG_TIME_MONTH","I","Holding Register (Function 03/06/16)","HOLDING_REG","6002","1","12","Current time","2",
+"REG_TIME_DAY","I","Holding Register (Function 03/06/16)","HOLDING_REG","6003","1","31","Current time","23",
+"REG_TIME_HOUR","I","Holding Register (Function 03/06/16)","HOLDING_REG","6004","0","23","Current time","59",
+"REG_TIME_MINUTE","I","Holding Register (Function 03/06/16)","HOLDING_REG","6005","0","59","Current time","5",
+"REG_TIME_SECOND","I","Holding Register (Function 03/06/16)","HOLDING_REG","6006","0","59","Current time","1",
+"REG_TIME_AUTO_SUM_WIN","I","Holding Register (Function 03/06/16)","HOLDING_REG","6007","0","1","Flag indicating if DST is enabled.0: Daylight saving time not enabled1: Daylight saving time enabled","1",
+"REG_HOUR_FORMAT","I","Holding Register (Function 03/06/16)","HOLDING_REG","6008","0","1","Indicaties the presentation of time in the HMI. 24H/12H","3",
+"REG_DAY_OF_THE_WEEK","I","Read Input Register (Function 04)","INPUT_REG","6009","0","6","Monday (0)...Sunday (6)","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_DST_PERIOD_ACTIVE","I","Read Input Register (Function 04)","INPUT_REG","6010","0","1",,"4554","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_TIME_RTC_SECONDS_L","I","Read Input Register (Function 04)","INPUT_REG","6011",,,"Now time in seconds. Lower 16 bits.","-29853","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_TIME_RTC_SECONDS_H","I","Read Input Register (Function 04)","INPUT_REG","6012",,,"Now time in seconds. Higher 16 bits.","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SYSTEM_START_UP_TIME_L","I","Read Input Register (Function 04)","INPUT_REG","6021",,,,"-29877","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SYSTEM_START_UP_TIME_H","I","Read Input Register (Function 04)","INPUT_REG","6022",,,,"0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_TIME_RTC","I","Read Input Register (Function 04)","INPUT_REG","6101",,,"RTC value in seconds, highest 16 bits","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FILTER_PERIOD","I","Holding Register (Function 03/06/16)","HOLDING_REG","7001","3","15","Filter replacement time in months","-15774",
+"REG_FILTER_REPLACEMENT_TIME_L","I","Holding Register (Function 03/06/16)","HOLDING_REG","7002",,,"Timestamp of latest filter replcement, lower 16 bits","-29854",
+"REG_FILTER_REPLACEMENT_TIME_H","I","Holding Register (Function 03/06/16)","HOLDING_REG","7003",,,"Timestamp of latest filter replcement, higher 16 bits","0",
+"REG_FILTER_PERIOD_SET","I","Read Input Register (Function 04)","INPUT_REG","7004",,,"Indicates that the LastFilterReplacementTime shall be set Now.","-363","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FILTER_REMAINING_TIME_L","I","Read Input Register (Function 04)","INPUT_REG","7005",,,"Remaining filter time in seconds, lower 16 bits.","236","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FILTER_REMAINING_TIME_H","I","Read Input Register (Function 04)","INPUT_REG","7006",,,"Remaining filter time in seconds, higher 16 bits.","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_FILTER_ALARM_WAS_DETECTED","I","Read Input Register (Function 04)","INPUT_REG","7007",,,"Indicates if the filter warning alarm was generated.","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SYSTEM_UNIT_FLOW","I","Holding Register (Function 03/06/16)","HOLDING_REG","9001","0","2","Unit for CAV control mode.0: l/s1: m3/h2: cfm","0",
+"REG_SYSTEM_UNIT_PRESSURE","I","Holding Register (Function 03/06/16)","HOLDING_REG","9002","0","1","Units for VAV control mode.0: Pa1: InH2O","0",
+"REG_SYSTEM_UNIT_TEMPERATURE","I","Holding Register (Function 03/06/16)","HOLDING_REG","9003","0","1","Units for temperature.0: Celcius1: Fahrenheit","241",
+"REG_DI_CONNECTION_1","I","Holding Register (Function 03/06/16)","HOLDING_REG","11401","0","18","Indicates what kind of DI functionality is connected to DI1.0: None /Away/ BYP/ Vacuum Cleaner/ Cooker Hood/ Crowded/ EMT/ External Stop/ Extra Controller Alarm/ Fireplace/ Holiday/ Refresh/ RGS/ Change Over Feedback/ 14: Fire Alarm/ ConfigurableDI1 / ConfigurableDI2 / ConfigurableDI3 / 18: Pressure Guard","0",
+"REG_DI_CONNECTION_2","I","Holding Register (Function 03/06/16)","HOLDING_REG","11402","0","18","Indicates what kind of DI functionality is connected to DI1.0: None /Away/ BYP/ Vacuum Cleaner/ Cooker Hood/ Crowded/ EMT/ External Stop/ Extra Controller Alarm/ Fireplace/ Holiday/ Refresh/ RGS/ Change Over Feedback/ 14: Fire Alarm/ ConfigurableDI1 / ConfigurableDI2 / ConfigurableDI3 / 18: Pressure Guard","0",
+"REG_DI_CFG_POLARITY_1","I","Holding Register (Function 03/06/16)","HOLDING_REG","11421","0","1","Polarity of DI1.0: NO1: NC","0",
+"REG_DI_CFG_POLARITY_2","I","Holding Register (Function 03/06/16)","HOLDING_REG","11422","0","1","Polarity of DI1.0: NO1: NC","0",
+"REG_INPUT_ANALOG_UI_1","I","Holding Register (Function 03/06/16)","HOLDING_REG","12011",,,"mV","5",
+"REG_INPUT_ANALOG_UI_2","I","Holding Register (Function 03/06/16)","HOLDING_REG","12012",,,"mV","3",
+"REG_INPUT_ANALOG_UI_3","I","Holding Register (Function 03/06/16)","HOLDING_REG","12013",,,"mV","5",
+"REG_INPUT_ANALOG_UI_4","I","Holding Register (Function 03/06/16)","HOLDING_REG","12014",,,"mV","7",
+"REG_INPUT_ANALOG_UI_5","I","Holding Register (Function 03/06/16)","HOLDING_REG","12015",,,"mV","0",
+"REG_INPUT_DIGITAL_UI_1","I","Holding Register (Function 03/06/16)","HOLDING_REG","12021","0","1","State of UI1","0",
+"REG_INPUT_DIGITAL_UI_2","I","Holding Register (Function 03/06/16)","HOLDING_REG","12022","0","1","State of UI2","0",
+"REG_INPUT_DIGITAL_UI_3","I","Holding Register (Function 03/06/16)","HOLDING_REG","12023","0","1","State of UI3","0",
+"REG_INPUT_DIGITAL_UI_4","I","Holding Register (Function 03/06/16)","HOLDING_REG","12024","0","1","State of UI4","0",
+"REG_INPUT_DIGITAL_UI_5","I","Holding Register (Function 03/06/16)","HOLDING_REG","12025","0","1","State of UI5","0",
+"REG_INPUT_DIGITAL_DI_1","I","Read Input Register (Function 04)","INPUT_REG","12031","0","1","Boolean","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_INPUT_DIGITAL_DI_2","I","Read Input Register (Function 04)","INPUT_REG","12032","0","1","Boolean","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SENSOR_FPT","I*","Holding Register (Function 03/06/16)","HOLDING_REG","12101","-400","800","Frost Protection Temperature sensor value (Water Heater)","73",
+"REG_SENSOR_OAT","I*","Holding Register (Function 03/06/16)","HOLDING_REG","12102","-400","800","Outdoor Air Temperature sensor (standard)","163",
+"REG_SENSOR_SAT","I*","Holding Register (Function 03/06/16)","HOLDING_REG","12103","-400","800","Supply Air Temperature sensor (standard)","0",
+"REG_SENSOR_RAT","I*","Holding Register (Function 03/06/16)","HOLDING_REG","12104","-400","800","Room Air Temperature sensor (accessory)","0",
+"REG_SENSOR_EAT","I*","Holding Register (Function 03/06/16)","HOLDING_REG","12105","-400","800","Extract Air Temperature sensor (accessory)","0",
+"REG_SENSOR_ECT","I*","Holding Register (Function 03/06/16)","HOLDING_REG","12106","-400","800","Extra Controller Temperature sensor (accessory)","0",
+"REG_SENSOR_EFT","I*","Holding Register (Function 03/06/16)","HOLDING_REG","12107","-400","800","Efficiency temperature sensor (accessory)","163",
+"REG_SENSOR_OHT","I*","Holding Register (Function 03/06/16)","HOLDING_REG","12108","-400","800","Over Heat Temperature sensor (Electrical Heater)","0",
+"REG_SENSOR_RHS","I","Holding Register (Function 03/06/16)","HOLDING_REG","12109","0","100","Relative Humidity Sensor (Accessory)","0",
+"REG_SENSOR_RGS","I","Read Input Register (Function 04)","INPUT_REG","12112","0","1","Rotating guard Sensor input","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SENSOR_CO2S","I","Holding Register (Function 03/06/16)","HOLDING_REG","12115","0","2000","CO2 value (accessory)","0",
+"REG_SENSOR_RHS_PDM","I","Holding Register (Function 03/06/16)","HOLDING_REG","12136","0","100","PDM RHS sensor value (standard)","27",
+"REG_SENSOR_CO2S_1","I","Holding Register (Function 03/06/16)","HOLDING_REG","12151","0","2000","CO2 sensor value - UI1 (accessory)","0",
+"REG_SENSOR_CO2S_2","I","Holding Register (Function 03/06/16)","HOLDING_REG","12152","0","2000","CO2 sensor value - UI2 (accessory)","0",
+"REG_SENSOR_CO2S_3","I","Holding Register (Function 03/06/16)","HOLDING_REG","12153","0","2000","CO2 sensor value - UI3 (accessory)","0",
+"REG_SENSOR_CO2S_4","I","Holding Register (Function 03/06/16)","HOLDING_REG","12154","0","2000","CO2 sensor value - UI4 (accessory)","0",
+"REG_SENSOR_CO2S_5","I","Holding Register (Function 03/06/16)","HOLDING_REG","12155","0","2000","CO2 sensor value - UI5 (accessory)","0",
+"REG_SENSOR_RHS_1","I","Holding Register (Function 03/06/16)","HOLDING_REG","12161","0","100","RH sensor value - UI1 (accessory)","0",
+"REG_SENSOR_RHS_2","I","Holding Register (Function 03/06/16)","HOLDING_REG","12162","0","100","RH sensor value - UI2 (accessory)","0",
+"REG_SENSOR_RHS_3","I","Holding Register (Function 03/06/16)","HOLDING_REG","12163","0","100","RH sensor value - UI3 (accessory)","0",
+"REG_SENSOR_RHS_4","I","Holding Register (Function 03/06/16)","HOLDING_REG","12164","0","100","RH sensor value - UI4 (accessory)","0",
+"REG_SENSOR_RHS_5","I","Holding Register (Function 03/06/16)","HOLDING_REG","12165","0","100","RH sensor value - UI5 (accessory)","0",
+"REG_SENSOR_DI_AWAY","I","Read Input Register (Function 04)","INPUT_REG","12301","0","1","Value of physical Digital Input of Away function","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SENSOR_DI_HOLIDAY","I","Read Input Register (Function 04)","INPUT_REG","12302","0","1","Value of physical Digital Input of Holiday function","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SENSOR_DI_FIREPLACE","I","Read Input Register (Function 04)","INPUT_REG","12303","0","1","Value of physical Digital Input of Fireplace function","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SENSOR_DI_REHRESH","I","Read Input Register (Function 04)","INPUT_REG","12304","0","1","Value of physical Digital Input of Refresh function","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SENSOR_DI_CROWDED","I","Read Input Register (Function 04)","INPUT_REG","12305","0","1","Value of physical Digital Input of Crowded function","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SENSOR_DI_COOKERHOOD","I","Read Input Register (Function 04)","INPUT_REG","12306","0","1","Value of physical Digital Input of Cookerhood function","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SENSOR_DI_VACUUMCLEANER","I","Read Input Register (Function 04)","INPUT_REG","12307","0","1","Value of physical Digital Input of Vacuum Cleaner function","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SENSOR_DI_EXTERNAL_STOP","I","Read Input Register (Function 04)","INPUT_REG","12308","0","1","External Stop input value","1","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SENSOR_DI_LOAD_DETECTED","I","Read Input Register (Function 04)","INPUT_REG","12309","0","1","Load Detected input value","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SENSOR_DI_EXTRA_CONTROLLER_ EMT","I","Read Input Register (Function 04)","INPUT_REG","12310","0","1","Extra controller EMT input value","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SENSOR_DI_FIRE_ALARM","I","Read Input Register (Function 04)","INPUT_REG","12311","0","1","Fire Alarm input value","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SENSOR_DI_CHANGE_OVER_ FEEDBACK","I","Read Input Register (Function 04)","INPUT_REG","12312","0","1","Change over feedback value","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SENSOR_RPM_SAF","I","Read Input Register (Function 04)","INPUT_REG","12401","0","5000","Supply Air Fan RPM indication from TACHO","2700","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SENSOR_RPM_EAF","I","Read Input Register (Function 04)","INPUT_REG","12402","0","5000","Extract Air Fan RPM indication from TACHO","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SENSOR_PDM_EAT_VALUE","I","Holding Register (Function 03/06/16)","HOLDING_REG","12544","-400","800","PDM EAT sensor value (standard)","265",
+"REG_OUTPUT_TRIAC_CONFIGURED","I","Holding Register (Function 03/06/16)","HOLDING_REG","13201","0","1","Indicates if the TRIAC shall be used","0",
+"REG_DO1_AFTER_MUX","I","Read Input Register (Function 04)","INPUT_REG","13301","0","1","Digital output after multiplexer","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_DO2_AFTER_MUX","I","Read Input Register (Function 04)","INPUT_REG","13302","0","1","Digital output after multiplexer","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_DO3_AFTER_MUX","I","Read Input Register (Function 04)","INPUT_REG","13303","0","1","Digital output after multiplexer","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_DO4_AFTER_MUX","I","Read Input Register (Function 04)","INPUT_REG","13304","0","1","Digital output after multiplexer","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_AO1_AFTER_MUX","I","Read Input Register (Function 04)","INPUT_REG","13311","0","100","Analog output after multiplexer","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_AO2_AFTER_MUX","I","Read Input Register (Function 04)","INPUT_REG","13312","0","100","Analog output after multiplexer","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_AO3_AFTER_MUX","I","Read Input Register (Function 04)","INPUT_REG","13313","0","100","Analog output after multiplexer","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_AO4_AFTER_MUX","I","Read Input Register (Function 04)","INPUT_REG","13314","0","100","Analog output after multiplexer","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_AO5_AFTER_MUX","I","Read Input Register (Function 04)","INPUT_REG","13315","0","100","Analog output after multiplexer","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_MANUAL_OVERRIDE_OUTPUT_SAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","13601","0","1","SAF Override.0: Auto1: Manual","0",
+"REG_MANUAL_OVERRIDE_OUTPUT_EAF","I","Holding Register (Function 03/06/16)","HOLDING_REG","13602","0","1","EAF Override.0: Auto1: Manual","0",
+"REG_MANUAL_OVERRIDE_OUTPUT_ SAF_VALUE","I","Holding Register (Function 03/06/16)","HOLDING_REG","13801","0","100","SAF Override value in % if manual (1) selected","0",
+"REG_MANUAL_OVERRIDE_OUTPUT_ EAF_VALUE","I","Holding Register (Function 03/06/16)","HOLDING_REG","13802","0","100","EAF override value in % if manual (1) selected","0",
+"REG_OUTPUT_SAF","I","Read Input Register (Function 04)","INPUT_REG","14001","0","100","SAF fan speed","70","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_EAF","I","Read Input Register (Function 04)","INPUT_REG","14002","0","100","EAF fan speed","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_ALARM","I","Read Input Register (Function 04)","INPUT_REG","14003","0","1","Sum Alarm DO
+0: Output not active 1: Output active","1","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_OUTDOOR_EXTRACT_ DAMPER","I","Read Input Register (Function 04)","INPUT_REG","14004","0","1","Indicates if Outdoor/Exhaust air damper signal is On/Off","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_Y1_ANALOG","I","Read Input Register (Function 04)","INPUT_REG","14101","0","100","Heater AO state.","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_Y1_DIGITAL","I","Read Input Register (Function 04)","INPUT_REG","14102","0","1","Heater DO state:0: Output not active1: Output active","19","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_Y2_ANALOG","I","Read Input Register (Function 04)","INPUT_REG","14103","0","100","Heat Exchanger AO state.","1","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_Y2_DIGITAL","I","Read Input Register (Function 04)","INPUT_REG","14104","0","1","Heat Exchanger DO state.0: Output not active1: Output active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_Y3_ANALOG","I","Read Input Register (Function 04)","INPUT_REG","14201","0","100","Cooler AO state.","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_Y3_DIGITAL","I","Read Input Register (Function 04)","INPUT_REG","14202","0","1","Cooler DO state:0: Output not active1: Output active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_Y4_ANALOG","I","Read Input Register (Function 04)","INPUT_REG","14203","0","100","Extra controller AO state.","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_Y4_DIGITAL","I","Read Input Register (Function 04)","INPUT_REG","14204","0","1","Extra controller DO state:0: Output not active1: Output active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_Y1_CIRC_PUMP","I","Read Input Register (Function 04)","INPUT_REG","14301",,,"Heating circulation pump output","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_Y3_CIRC_PUMP","I","Read Input Register (Function 04)","INPUT_REG","14302",,,"Cooler circulation pump output","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_Y1_Y3_CIRC_PUMP","I","Read Input Register (Function 04)","INPUT_REG","14303",,,"Change-over circulation pump output","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_Y4_CIRC_PUMP","I","Read Input Register (Function 04)","INPUT_REG","14304",,,"Extra controller circulation pump output","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_AO1","I","Read Input Register (Function 04)","INPUT_REG","14351",,,"Voltage signal from AO1","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_AO2","I","Read Input Register (Function 04)","INPUT_REG","14352",,,"Voltage signal from AO2","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_AO3","I","Read Input Register (Function 04)","INPUT_REG","14353",,,"Voltage signal from AO3","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_AO4","I","Read Input Register (Function 04)","INPUT_REG","14354",,,"Voltage signal from AO4","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_AO5","I","Read Input Register (Function 04)","INPUT_REG","14355",,,"Voltage signal from AO5","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_DO1","I","Read Input Register (Function 04)","INPUT_REG","14361","0","1","State of DO1","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_DO2","I","Read Input Register (Function 04)","INPUT_REG","14362","0","1","State of DO2","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_DO3","I","Read Input Register (Function 04)","INPUT_REG","14363","0","1","State of DO3","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_DO4","I","Read Input Register (Function 04)","INPUT_REG","14364","0","1","State of DO4","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_FAN_SPEED1","I","Read Input Register (Function 04)","INPUT_REG","14371","0","100","Supply air fan control signal in %","70","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_FAN_SPEED2","I","Read Input Register (Function 04)","INPUT_REG","14372","0","100","Extract air fan control signal in %","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_OUTPUT_TRIAC","I","Read Input Register (Function 04)","INPUT_REG","14381","0","1","TRIAC control signal","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_SAF_CTRL_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15002","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_SAF_CTRL_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15003,0,1,Signal to clear the alarm,0,
-REG_ALARM_EAF_CTRL_ALARM,I,Read Input Register (Function 04),INPUT_REG,15009,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_SAF_CTRL_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15003","0","1","Signal to clear the alarm","0",
+"REG_ALARM_EAF_CTRL_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15009","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_EAF_CTRL_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15010,0,1,Signal to clear the alarm,0,
-REG_ALARM_FROST_PROT_ALARM,I,Read Input Register (Function 04),INPUT_REG,15016,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_EAF_CTRL_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15010","0","1","Signal to clear the alarm","0",
+"REG_ALARM_FROST_PROT_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15016","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_FROST_PROT_CLEAR_ ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15017,0,1,Signal to clear the alarm,0,
-REG_ALARM_DEFROSTING_ALARM,I,Read Input Register (Function 04),INPUT_REG,15023,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_FROST_PROT_CLEAR_ ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15017","0","1","Signal to clear the alarm","0",
+"REG_ALARM_DEFROSTING_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15023","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_DEFROSTING_CLEAR_ ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15024,0,1,Signal to clear the alarm,0,
-REG_ALARM_SAF_RPM_ALARM,I,Read Input Register (Function 04),INPUT_REG,15030,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_DEFROSTING_CLEAR_ ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15024","0","1","Signal to clear the alarm","0",
+"REG_ALARM_SAF_RPM_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15030","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_SAF_RPM_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15031,0,1,Signal to clear the alarm,0,
-REG_ALARM_EAF_RPM_ALARM,I,Read Input Register (Function 04),INPUT_REG,15037,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_SAF_RPM_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15031","0","1","Signal to clear the alarm","0",
+"REG_ALARM_EAF_RPM_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15037","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_EAF_RPM_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15038,0,1,Signal to clear the alarm,0,
-REG_ALARM_FPT_ALARM,I,Read Input Register (Function 04),INPUT_REG,15058,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_EAF_RPM_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15038","0","1","Signal to clear the alarm","0",
+"REG_ALARM_FPT_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15058","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_FPT_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15059,0,1,Signal to clear the alarm,0,
-REG_ALARM_OAT_ALARM,I,Read Input Register (Function 04),INPUT_REG,15065,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_FPT_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15059","0","1","Signal to clear the alarm","0",
+"REG_ALARM_OAT_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15065","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_OAT_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15066,0,1,Signal to clear the alarm,0,
-REG_ALARM_SAT_ALARM,I,Read Input Register (Function 04),INPUT_REG,15072,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_OAT_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15066","0","1","Signal to clear the alarm","0",
+"REG_ALARM_SAT_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15072","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_SAT_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15073,0,1,Signal to clear the alarm,0,
-REG_ALARM_RAT_ALARM,I,Read Input Register (Function 04),INPUT_REG,15079,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_SAT_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15073","0","1","Signal to clear the alarm","0",
+"REG_ALARM_RAT_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15079","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_RAT_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15080,0,1,Signal to clear the alarm,0,
-REG_ALARM_EAT_ALARM,I,Read Input Register (Function 04),INPUT_REG,15086,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_RAT_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15080","0","1","Signal to clear the alarm","0",
+"REG_ALARM_EAT_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15086","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_EAT_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15087,0,1,Signal to clear the alarm,0,
-REG_ALARM_ECT_ALARM,I,Read Input Register (Function 04),INPUT_REG,15093,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_EAT_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15087","0","1","Signal to clear the alarm","0",
+"REG_ALARM_ECT_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15093","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_ECT_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15094,0,1,Signal to clear the alarm,0,
-REG_ALARM_EFT_ALARM,I,Read Input Register (Function 04),INPUT_REG,15100,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_ECT_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15094","0","1","Signal to clear the alarm","0",
+"REG_ALARM_EFT_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15100","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_EFT_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15101,0,1,Signal to clear the alarm,0,
-REG_ALARM_OHT_ALARM,I,Read Input Register (Function 04),INPUT_REG,15107,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_EFT_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15101","0","1","Signal to clear the alarm","0",
+"REG_ALARM_OHT_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15107","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_OHT_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15108,0,1,Signal to clear the alarm,0,
-REG_ALARM_EMT_ALARM,I,Read Input Register (Function 04),INPUT_REG,15114,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_OHT_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15108","0","1","Signal to clear the alarm","0",
+"REG_ALARM_EMT_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15114","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_EMT_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15115,0,1,Signal to clear the alarm,0,
-REG_ALARM_RGS_ALARM,I,Read Input Register (Function 04),INPUT_REG,15121,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_EMT_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15115","0","1","Signal to clear the alarm","0",
+"REG_ALARM_RGS_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15121","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_RGS_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15122,0,1,Signal to clear the alarm,0,
-REG_ALARM_BYS_ALARM,I,Read Input Register (Function 04),INPUT_REG,15128,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_RGS_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15122","0","1","Signal to clear the alarm","0",
+"REG_ALARM_BYS_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15128","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_BYS_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15129,0,1,Signal to clear the alarm,0,
-REG_ALARM_SECONDARY_AIR_ALARM,I,Read Input Register (Function 04),INPUT_REG,15135,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_BYS_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15129","0","1","Signal to clear the alarm","0",
+"REG_ALARM_SECONDARY_AIR_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15135","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_SECONDARY_AIR_CLEAR_ ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15136,0,1,Signal to clear the alarm,0,
-REG_ALARM_FILTER_ALARM,I,Read Input Register (Function 04),INPUT_REG,15142,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_SECONDARY_AIR_CLEAR_ ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15136","0","1","Signal to clear the alarm","0",
+"REG_ALARM_FILTER_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15142","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_FILTER_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15143,0,1,Signal to clear the alarm,0,
-REG_ALARM_EXTRA_CONTROLLER_ ALARM,I,Read Input Register (Function 04),INPUT_REG,15149,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_FILTER_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15143","0","1","Signal to clear the alarm","0",
+"REG_ALARM_EXTRA_CONTROLLER_ ALARM","I","Read Input Register (Function 04)","INPUT_REG","15149","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_EXTRA_CONTROLLER_ CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15150,0,1,Signal to clear the alarm,0,
-REG_ALARM_EXTERNAL_STOP_ALARM,I,Read Input Register (Function 04),INPUT_REG,15156,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_EXTRA_CONTROLLER_ CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15150","0","1","Signal to clear the alarm","0",
+"REG_ALARM_EXTERNAL_STOP_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15156","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_EXTERNAL_STOP_CLEAR_ ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15157,0,1,Signal to clear the alarm,0,
-REG_ALARM_RH_ALARM,I,Read Input Register (Function 04),INPUT_REG,15163,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_EXTERNAL_STOP_CLEAR_ ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15157","0","1","Signal to clear the alarm","0",
+"REG_ALARM_RH_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15163","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_RH_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15164,0,1,Signal to clear the alarm,0,
-REG_ALARM_CO2_ALARM,I,Read Input Register (Function 04),INPUT_REG,15170,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_RH_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15164","0","1","Signal to clear the alarm","0",
+"REG_ALARM_CO2_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15170","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_CO2_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15171,0,1,Signal to clear the alarm,0,
-REG_ALARM_LOW_SAT_ALARM,I,Read Input Register (Function 04),INPUT_REG,15177,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_CO2_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15171","0","1","Signal to clear the alarm","0",
+"REG_ALARM_LOW_SAT_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15177","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_LOW_SAT_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15178,0,1,Signal to clear the alarm,0,
-REG_ALARM_MANUAL_OVERRIDE_ OUTPUTS_ALARM,I,Read Input Register (Function 04),INPUT_REG,15502,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_LOW_SAT_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15178","0","1","Signal to clear the alarm","0",
+"REG_ALARM_MANUAL_OVERRIDE_ OUTPUTS_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15502","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_MANUAL_OVERRIDE_ OUTPUTS_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15503,0,1,Signal to clear the alarm,0,
-REG_ALARM_PDM_RHS_ALARM,I,Read Input Register (Function 04),INPUT_REG,15509,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_MANUAL_OVERRIDE_ OUTPUTS_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15503","0","1","Signal to clear the alarm","0",
+"REG_ALARM_PDM_RHS_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15509","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_PDM_RHS_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15510,0,1,Signal to clear the alarm,0,
-REG_ALARM_PDM_EAT_ALARM,I,Read Input Register (Function 04),INPUT_REG,15516,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_PDM_RHS_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15510","0","1","Signal to clear the alarm","0",
+"REG_ALARM_PDM_EAT_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15516","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_PDM_EAT_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15517,0,1,Signal to clear the alarm,0,
-REG_ALARM_MANUAL_FAN_STOP_ ALARM,I,Read Input Register (Function 04),INPUT_REG,15523,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_PDM_EAT_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15517","0","1","Signal to clear the alarm","0",
+"REG_ALARM_MANUAL_FAN_STOP_ ALARM","I","Read Input Register (Function 04)","INPUT_REG","15523","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_MANUAL_FAN_STOP_ CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15524,0,1,Signal to clear the alarm,0,
-REG_ALARM_OVERHEAT_ TEMPERATURE_ALARM,I,Read Input Register (Function 04),INPUT_REG,15530,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_MANUAL_FAN_STOP_ CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15524","0","1","Signal to clear the alarm","0",
+"REG_ALARM_OVERHEAT_ TEMPERATURE_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15530","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_OVERHEAT_ TEMPERATURE_CLEAR_ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15531,0,1,Signal to clear the alarm,0,
-REG_ALARM_FIRE_ALARM_ALARM,I,Read Input Register (Function 04),INPUT_REG,15537,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_OVERHEAT_ TEMPERATURE_CLEAR_ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15531","0","1","Signal to clear the alarm","0",
+"REG_ALARM_FIRE_ALARM_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15537","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_FIRE_ALARM_CLEAR_ ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15538,0,1,Signal to clear the alarm,0,
-REG_ALARM_FILTER_WARNING_ALARM,I,Read Input Register (Function 04),INPUT_REG,15544,0,3,"Alarm active/inactive. 0: Inactive
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_FIRE_ALARM_CLEAR_ ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15538","0","1","Signal to clear the alarm","0",
+"REG_ALARM_FILTER_WARNING_ALARM","I","Read Input Register (Function 04)","INPUT_REG","15544","0","3","Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
-3: Cleared Error Active",0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_FILTER_WARNING_CLEAR_ ALARM,I,Holding Register (Function 03/06/16),HOLDING_REG,15545,0,1,Signal to clear the alarm,0,
-REG_ALARM_FILTER_WARNING_ ALARM_ERROR_DURATION_COUNTER,I,Read Input Register (Function 04),INPUT_REG,15549,,,Counter for delay,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_TYPE_A,I,Read Input Register (Function 04),INPUT_REG,15901,0,1,Indicates if an alarm Type A is active,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_TYPE_B,I,Read Input Register (Function 04),INPUT_REG,15902,0,1,Indicates if an alarm Type B is active,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_ALARM_TYPE_C,I,Read Input Register (Function 04),INPUT_REG,15903,0,1,Indicates if an alarm Type C is active,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_PASSWD_ADMIN,I,Holding Register (Function 03/06/16),HOLDING_REG,16001,,,"Administrator password. Bit 12-15: digit 1
+3: Cleared Error Active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_FILTER_WARNING_CLEAR_ ALARM","I","Holding Register (Function 03/06/16)","HOLDING_REG","15545","0","1","Signal to clear the alarm","0",
+"REG_ALARM_FILTER_WARNING_ ALARM_ERROR_DURATION_COUNTER","I","Read Input Register (Function 04)","INPUT_REG","15549",,,"Counter for delay","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_TYPE_A","I","Read Input Register (Function 04)","INPUT_REG","15901","0","1","Indicates if an alarm Type A is active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_TYPE_B","I","Read Input Register (Function 04)","INPUT_REG","15902","0","1","Indicates if an alarm Type B is active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_ALARM_TYPE_C","I","Read Input Register (Function 04)","INPUT_REG","15903","0","1","Indicates if an alarm Type C is active","0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_PASSWD_ADMIN","I","Holding Register (Function 03/06/16)","HOLDING_REG","16001",,,"Administrator password. Bit 12-15: digit 1
 Bit 8-11: digit 2
 Bit 4-7: digit 3
-Bit 0-3: digit 4",1,
-REG_LOCKED_USER,I,Holding Register (Function 03/06/16),HOLDING_REG,16002,0,1,"Indicates if the User level is locked. 0: User menu locked
-1: User menu not locked",0,
-REG_LOCKED_FILTER,I,Holding Register (Function 03/06/16),HOLDING_REG,16003,0,1,"Indicates if the Filter menu is locked. 0: menu locked
-1: menu not locked",0,
-REG_LOCKED_WEEK_SCHEDULE,I,Holding Register (Function 03/06/16),HOLDING_REG,16004,0,1,"Indicates if the Week schedule menu is locked.
+Bit 0-3: digit 4","1",
+"REG_LOCKED_USER","I","Holding Register (Function 03/06/16)","HOLDING_REG","16002","0","1","Indicates if the User level is locked. 0: User menu locked
+1: User menu not locked","0",
+"REG_LOCKED_FILTER","I","Holding Register (Function 03/06/16)","HOLDING_REG","16003","0","1","Indicates if the Filter menu is locked. 0: menu locked
+1: menu not locked","0",
+"REG_LOCKED_WEEK_SCHEDULE","I","Holding Register (Function 03/06/16)","HOLDING_REG","16004","0","1","Indicates if the Week schedule menu is locked.
 0: menu locked
-1: menu not locked",0,
-REG_PASSWD_USER_LEVEL_REQUIRED,I,Holding Register (Function 03/06/16),HOLDING_REG,16051,0,1,Home screen lock,0,
-REG_PASSWD_FILTER_REQUIRED,I,Holding Register (Function 03/06/16),HOLDING_REG,16052,0,1,Filter Change menu lock,0,
-REG_PASSWD_WEEK_SCHEDULE_ REQUIRED,I,Holding Register (Function 03/06/16),HOLDING_REG,16053,0,1,Week schedule menu lock,0,
-REG_PASSWD_PC_SETTINGS,I,Holding Register (Function 03/06/16),HOLDING_REG,16061,,,,0,
-REG_PASSWD_PC_UNLOCKED,I,Read Input Register (Function 04),INPUT_REG,16062,0,1,,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SUW_REQUIRED,I,Holding Register (Function 03/06/16),HOLDING_REG,16101,0,1,Indicates if the start-up wizard shall be activated.,0,
-REG_COMM_MODBUS_ADDRESS,I,Holding Register (Function 03/06/16),HOLDING_REG,17001,0,255,"Modbus address of the MB.
-Only relevant if the MB is a modbus slave.",10,
-REG_COMM_MODBUS_BAUD_RATE,I,Holding Register (Function 03/06/16),HOLDING_REG,17002,0,10,"Baudrate of the modbus connection 0=1200
+1: menu not locked","0",
+"REG_PASSWD_USER_LEVEL_REQUIRED","I","Holding Register (Function 03/06/16)","HOLDING_REG","16051","0","1","Home screen lock","0",
+"REG_PASSWD_FILTER_REQUIRED","I","Holding Register (Function 03/06/16)","HOLDING_REG","16052","0","1","Filter Change menu lock","0",
+"REG_PASSWD_WEEK_SCHEDULE_ REQUIRED","I","Holding Register (Function 03/06/16)","HOLDING_REG","16053","0","1","Week schedule menu lock","0",
+"REG_PASSWD_PC_SETTINGS","I","Holding Register (Function 03/06/16)","HOLDING_REG","16061",,,,"0",
+"REG_PASSWD_PC_UNLOCKED","I","Read Input Register (Function 04)","INPUT_REG","16062","0","1",,"0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SUW_REQUIRED","I","Holding Register (Function 03/06/16)","HOLDING_REG","16101","0","1","Indicates if the start-up wizard shall be activated.","0",
+"REG_COMM_MODBUS_ADDRESS","I","Holding Register (Function 03/06/16)","HOLDING_REG","17001","0","255","Modbus address of the MB.
+Only relevant if the MB is a modbus slave.","10",
+"REG_COMM_MODBUS_BAUD_RATE","I","Holding Register (Function 03/06/16)","HOLDING_REG","17002","0","10","Baudrate of the modbus connection 0=1200
 1=2400
 2=4800
 3=9600
@@ -591,13 +591,13 @@ REG_COMM_MODBUS_BAUD_RATE,I,Holding Register (Function 03/06/16),HOLDING_REG,170
 7=38400
 8=57600
 9=76800
-10=115200",0,
-REG_COMM_MODBUS_PARITY,I,Holding Register (Function 03/06/16),HOLDING_REG,17003,0,2,"Parity setting for the modbus connection. 0: None
+10=115200","0",
+"REG_COMM_MODBUS_PARITY","I","Holding Register (Function 03/06/16)","HOLDING_REG","17003","0","2","Parity setting for the modbus connection. 0: None
 1: Even
-2: Odd",1,
-REG_FACTORY_RESET,I,Holding Register (Function 03/06/16),HOLDING_REG,30101,322-8,3228,"Activates setting of the parameters to their default values.
-Only activated by writing 3228 to this register.",0,
-REG_SET_USER_SAFE_CONFIG,I,Holding Register (Function 03/06/16),HOLDING_REG,30103,0,1,,0,
-REG_ACTIVATE_USER_SAFE_CONFIG,I,Holding Register (Function 03/06/16),HOLDING_REG,30104,0,1,,1,
-REG_USER_SAFE_CONFIG_VALID,I,Read Input Register (Function 04),INPUT_REG,30105,,,,1,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
-REG_SAFE_CONFIG_VALID,I,Read Input Register (Function 04),INPUT_REG,30106,,,,0,"ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+2: Odd","1",
+"REG_FACTORY_RESET","I","Holding Register (Function 03/06/16)","HOLDING_REG","30101","322-8","3228","Activates setting of the parameters to their default values.
+Only activated by writing 3228 to this register.","0",
+"REG_SET_USER_SAFE_CONFIG","I","Holding Register (Function 03/06/16)","HOLDING_REG","30103","0","1",,"0",
+"REG_ACTIVATE_USER_SAFE_CONFIG","I","Holding Register (Function 03/06/16)","HOLDING_REG","30104","0","1",,"1",
+"REG_USER_SAFE_CONFIG_VALID","I","Read Input Register (Function 04)","INPUT_REG","30105",,,,"1","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
+"REG_SAFE_CONFIG_VALID","I","Read Input Register (Function 04)","INPUT_REG","30106",,,,"0","ReadInputRegisters returned FunctionCodeNotSupportedException, trying ReadHoldingRegisters"
