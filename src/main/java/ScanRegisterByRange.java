@@ -10,7 +10,7 @@ public class ScanRegisterByRange {
         try {
             modbusClient.Connect();
 
-            for (int i = 1161; i <= 1162; i++) {
+            for (int i = 12401; i <= 12402; i++) {
 
                 // Test retrieving HoldingRegister
                 try {
