@@ -10,13 +10,13 @@ public class ScanRegisterByRange {
         try {
             modbusClient.Connect();
 
-            for (int i = 1000; i < 1020; i++) {
+            for (int i = 12401; i <= 12402; i++) {
 
                 // Test retrieving HoldingRegister
                 try {
                     System.out.println("HoldingRegister\t" + i + "\t" + modbusClient.ReadHoldingRegisters(i, 1)[0]);
                 } catch (FunctionCodeNotSupportedException functionCodeNotSupportedException) {
-                    // This address is not of this registry type
+                    System.out.println("HoldingRegister\t" + i + "\t" + functionCodeNotSupportedException.getMessage());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -25,7 +25,7 @@ public class ScanRegisterByRange {
                 try {
                     System.out.println("InputRegister\t" + i + "\t" + modbusClient.ReadInputRegisters(i, 1)[0]);
                 } catch (FunctionCodeNotSupportedException functionCodeNotSupportedException) {
-                    // This address is not of this registry type
+                    System.out.println("InputRegister\t" + i + "\t" + functionCodeNotSupportedException.getMessage());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

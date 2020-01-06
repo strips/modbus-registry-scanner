@@ -17,159 +17,74 @@ REG_SUMMER_WINTER,I,Read Input Register (Function 04),INPUT_REG,1039,0,1,Actual 
 REG_DEMC_CO2_SETTINGS_PBAND,I,Holding Register (Function 03/06/16),HOLDING_REG,1041,50,2000,Pband setting for CO2 demand control
 REG_DEMC_CO2_SETTINGS_SP,I,Holding Register (Function 03/06/16),HOLDING_REG,1043,100,2000,Set point setting for CO2 demand control
 REG_DEMC_CO2_SETTINGS_ON_OFF,I,Holding Register (Function 03/06/16),HOLDING_REG,1044,0,1,Flag indicating if CO2 demand control is allowed
+REG_USERMODE_HOLIDAY_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1101,1,365,Time delay setting for user mode Holiday
+REG_USERMODE_AWAY_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1102,1,72,Time delay setting for user mode Away
+REG_USERMODE_FIREPLACE_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1103,1,60,Time delay setting for user mode Fire Place
+REG_USERMODE_REFRESH_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1104,1,240,Time delay setting for user mode Refresh
+REG_USERMODE_CROWDED_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1105,1,8,Time delay setting for user mode Crowded
+REG_USERMODE_REMAINING_TIME_L,I,Read Input Register (Function 04),INPUT_REG,1111,,,Remaining time for the state Holiday/ Away/Fire Place/Refresh/Crowded
+REG_USERMODE_REMAINING_TIME_H,I,Read Input Register (Function 04),INPUT_REG,1112,,,Remaining time for the state Holiday/ Away/Fire Place/Refresh/Crowded
 REG_IAQ_SPEED_LEVEL_MIN,I,Holding Register (Function 03/06/16),HOLDING_REG,1121,2,3,Minimum level for Demand Control2: Low3: Normal
 REG_IAQ_SPEED_LEVEL_MAX,I,Holding Register (Function 03/06/16),HOLDING_REG,1122,3,5,Maximum level for user Demand Control3: Normal4: High5: Maximum
 REG_IAQ_LEVEL,I,Read Input Register (Function 04),INPUT_REG,1123,0,2,Actual IAQ level:0: Economic1: Good2: Improving
-REG_USERMODE_HOLIDAY_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1101,1,365,Time delay setting for user mode Holiday
-REG_USERMODE_AWAY_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1102,1,72,Time delay setting for user mode Away
-REG_USERMODE_FIREPLACE_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1103,1,60,Time delay setting for user mode Fire Place
-REG_USERMODE_REFRESH_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1104,1,240,Time delay setting for user mode Refresh
-REG_USERMODE_CROWDED_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1105,1,8,Time delay setting for user mode Crowded
-REG_USERMODE_REMAINING_TIME_L,I,Read Input Register (Function 04),INPUT_REG,1111,,,Remaining time for the state Holiday/ Away/Fire Place/Refresh/Crowded
-REG_USERMODE_REMAINING_TIME_H,I,Read Input Register (Function 04),INPUT_REG,1112,,,Remaining time for the state Holiday/ Away/Fire Place/Refresh/Crowded
-REG_USERMODE_CROWDED_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1135,3,5,Fan speed level for mode Crowded3: Normal4: High5: Maximum
-REG_USERMODE_CROWDED_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1136,3,5,Fan speed level for mode Crowded3: Normal4: High5: Maximum
-REG_USERMODE_REFRESH_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1137,3,5,Fan speed level for mode Refresh3: Normal4: High5: Maximum
-REG_USERMODE_REFRESH_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1138,3,5,Fan speed level for mode Refresh3: Normal4: High5: Maximum
-REG_USERMODE_FIREPLACE_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1139,3,5,Fan speed level for mode Fire Place3: Normal4: High5: Maximum
-REG_USERMODE_FIREPLACE_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1140,1,3,Fan speed level for mode Fire Place1: Minimum2: Low3: Normal
-REG_USERMODE_AWAY_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1141,0,3,Fan speed level for mode Away.0: Off(1)1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.
-REG_USERMODE_AWAY_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1142,0,3,Fan speed level for mode Away.0: Off(1)1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.
-REG_USERMODE_HOLIDAY_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1143,0,3,Fan speed level for mode Holiday.0: Off(1) 1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.
-REG_USERMODE_HOLIDAY_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1144,0,3,Fan speed level for mode Holiday.0: Off(1) 1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.
-REG_USERMODE_COOKERHOOD_ AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1145,1,5,Fan speed level for mode Cooker Hood2: Low3: Normal4: High
-REG_USERMODE_COOKERHOOD_ AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1146,1,5,Fan speed level for mode Cooker Hood1: Minimum2: Low3: Normal
-REG_USERMODE_VACUUMCLEANER_ AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1147,1,5,Fan speed level for mode Vacuum Cleaner2: Low3: Normal4: High
-REG_USERMODE_VACUUMCLEANER_ AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1148,1,5,Fan speed level for mode Vacuum Cleaner1: Minimum2: Low3: Normal
-REG_USERMODE_CROWDED_T_OFFSET,I*,Holding Register (Function 03/06/16),HOLDING_REG,1151,-100,0,Temperature setpoint offset for user mode Crowded
-REG_USERMODE_MODE,I,Read Input Register (Function 04),INPUT_REG,1161,0,12,Active User mode.0: Auto1: Manual2: Crowded3: Refresh4: Fireplace5: Away6: Holiday7: Cooker Hood8: Vacuum Cleaner9: CDI110: CDI211: CDI312: PressureGuard
-REG_USERMODE_HMI_CHANGE_ REQUEST,I,Holding Register (Function 03/06/16),HOLDING_REG,1162,0,7,New desired user mode as requested by HMI0: None1: AUTO2: Manual 3: Crowded4: Refresh5: Fireplace6: Away7: Holiday
-REG_CDI_1_AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1171,0,5,Fan speed level for configurable digital input 1.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
-REG_CDI_1_AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1172,0,5,Fan speed level for configurable digital input 1.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
-REG_CDI_2_AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1173,0,5,Fan speed level for configurable digital input 2.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
-REG_CDI_2_AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1174,0,5,Fan speed level for configurable digital input 2.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
-REG_CDI_3_AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1175,0,5,Fan speed level for configurable digital input 3.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
-REG_CDI_3_AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1176,0,5,Fan speed level for configurable digital input 3.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
-REG_PRESSURE_GUARD_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1177,0,5,Fan speed level for configurable pressure guard function.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
-REG_PRESSURE_GUARD_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1178,0,5,Fan speed level for configurable pressure guard function.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
-REG_SENSOR_DI_AWAY,I,Read Input Register (Function 04),INPUT_REG,12301,0,1,Value of physical Digital Input of Away function
-REG_SENSOR_DI_HOLIDAY,I,Read Input Register (Function 04),INPUT_REG,12302,0,1,Value of physical Digital Input of Holiday function
-REG_SENSOR_DI_FIREPLACE,I,Read Input Register (Function 04),INPUT_REG,12303,0,1,Value of physical Digital Input of Fireplace function
-REG_SENSOR_DI_REHRESH,I,Read Input Register (Function 04),INPUT_REG,12304,0,1,Value of physical Digital Input of Refresh function
-REG_SENSOR_DI_CROWDED,I,Read Input Register (Function 04),INPUT_REG,12305,0,1,Value of physical Digital Input of Crowded function
-REG_SENSOR_DI_COOKERHOOD,I,Read Input Register (Function 04),INPUT_REG,12306,0,1,Value of physical Digital Input of Cookerhood function
-REG_SENSOR_DI_VACUUMCLEANER,I,Read Input Register (Function 04),INPUT_REG,12307,0,1,Value of physical Digital Input of Vacuum Cleaner function
-REG_USERMODE_HOLIDAY_DI_OFF_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1181,0,365,Off delay for DI
-REG_USERMODE_AWAY_DI_OFF_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1182,0,72,Off delay for DI
-REG_USERMODE_FIRPLACE_DI_OFF_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1183,0,60,Off delay for DI
-REG_USERMODE_REFRESH_DI_OFF_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1184,0,240,Off delay for DI
-REG_USERMODE_CROWDED_DI_OFF_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1185,0,8,Off delay for DI
-REG_CDI1_OFF_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1188,0,240,Off delay for DI
-REG_CDI2_OFF_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1189,0,240,Off delay for DI
-REG_CDI3_OFF_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1190,0,240,Off delay for DI
-REG_SPEED_CDI1_SAF,I,Read Input Register (Function 04),INPUT_REG,1221,,,"SAF speed value for user mode Holiday.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow"
-REG_SPEED_CDI1_EAF,I,Read Input Register (Function 04),INPUT_REG,1222,,,"EAF speed value for user mode Holiday.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow"
-REG_SPEED_CDI2_SAF,I,Read Input Register (Function 04),INPUT_REG,1223,,,"SAF speed value for mode Cooker Hood.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow"
-REG_SPEED_CDI2_EAF,I,Read Input Register (Function 04),INPUT_REG,1224,,,"EAF speed value for mode Cooker Hood.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow"
-REG_SPEED_CDI3_SAF,I,Read Input Register (Function 04),INPUT_REG,1225,,,"SAF speed value for mode Vacuum Cleaner. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow"
-REG_SPEED_CDI3_EAF,I,Read Input Register (Function 04),INPUT_REG,1226,,,"EAF speed value for mode Vacuum Cleaner. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow"
-REG_SPEED_PRESSURE_GUARD_SAF,I,Read Input Register (Function 04),INPUT_REG,1227,,,"SAF speed value for low fan speed.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow"
-REG_SPEED_PRESSURE_GUARD_EAF,I,Read Input Register (Function 04),INPUT_REG,1228,,,"EAF speed value for low fan speed.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow"
-REG_USERMODE_REMAINING_TIME_ CDI1_L,I,Read Input Register (Function 04),INPUT_REG,1621,,,Remaining time
-REG_USERMODE_REMAINING_TIME_ CDI1_H,I,Read Input Register (Function 04),INPUT_REG,1622,,,
-REG_USERMODE_REMAINING_TIME_ CDI2_L,I,Read Input Register (Function 04),INPUT_REG,1623,,,Remaining time
-REG_USERMODE_REMAINING_TIME_ CDI2_H,I,Read Input Register (Function 04),INPUT_REG,1624,,,
-REG_USERMODE_REMAINING_TIME_ CDI3_L,I,Read Input Register (Function 04),INPUT_REG,1625,,,Remaining time
-REG_USERMODE_REMAINING_TIME_ CDI3_H,I,Read Input Register (Function 04),INPUT_REG,1626,,,
-REG_FUNCTION_ACTIVE_PRESSURE_ GUARD,I,Read Input Register (Function 04),INPUT_REG,3114,0,1,Indicates if function is active
-REG_USERMODE_HOLIDAY_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1101,1,365,Time delay setting for user mode Holiday
-REG_USERMODE_AWAY_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1102,1,72,Time delay setting for user mode Away
-REG_USERMODE_FIREPLACE_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1103,1,60,Time delay setting for user mode Fire Place
-REG_USERMODE_REFRESH_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1104,1,240,Time delay setting for user mode Refresh
-REG_USERMODE_CROWDED_TIME,I,Holding Register (Function 03/06/16),HOLDING_REG,1105,1,8,Time delay setting for user mode Crowded
-REG_USERMODE_REMAINING_TIME_L,I,Read Input Register (Function 04),INPUT_REG,1111,,,Remaining time for the state Holiday/ Away/Fire Place/Refresh/Crowded
-REG_USERMODE_REMAINING_TIME_H,I,Read Input Register (Function 04),INPUT_REG,1112,,,Remaining time for the state Holiday/ Away/Fire Place/Refresh/Crowded
-REG_USERMODE_CROWDED_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1135,3,5,Fan speed level for mode Crowded3: Normal4: High5: Maximum
-REG_USERMODE_CROWDED_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1136,3,5,Fan speed level for mode Crowded3: Normal4: High5: Maximum
-REG_USERMODE_REFRESH_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1137,3,5,Fan speed level for mode Refresh3: Normal4: High5: Maximum
-REG_USERMODE_REFRESH_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1138,3,5,Fan speed level for mode Refresh3: Normal4: High5: Maximum
-REG_USERMODE_FIREPLACE_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1139,3,5,Fan speed level for mode Fire Place3: Normal4: High5: Maximum
-REG_USERMODE_FIREPLACE_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1140,1,3,Fan speed level for mode Fire Place1: Minimum2: Low3: Normal
-REG_USERMODE_AWAY_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1141,0,3,Fan speed level for mode Away.0: Off(1)1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.
-REG_USERMODE_AWAY_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1142,0,3,Fan speed level for mode Away.0: Off(1)1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.
-REG_USERMODE_HOLIDAY_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1143,0,3,Fan speed level for mode Holiday.0: Off(1) 1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.
-REG_USERMODE_HOLIDAY_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1144,0,3,Fan speed level for mode Holiday.0: Off(1) 1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.
-REG_USERMODE_COOKERHOOD_ AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1145,1,5,Fan speed level for mode Cooker Hood2: Low3: Normal4: High
-REG_USERMODE_COOKERHOOD_ AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1146,1,5,Fan speed level for mode Cooker Hood1: Minimum2: Low3: Normal
-REG_USERMODE_VACUUMCLEANER_ AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1147,1,5,Fan speed level for mode Vacuum Cleaner2: Low3: Normal4: High
-REG_USERMODE_VACUUMCLEANER_ AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1148,1,5,Fan speed level for mode Vacuum Cleaner1: Minimum2: Low3: Normal
-REG_USERMODE_CROWDED_T_OFFSET,I*,Holding Register (Function 03/06/16),HOLDING_REG,1151,-100,0,Temperature setpoint offset for user mode Crowded
-REG_USERMODE_MODE,I,Read Input Register (Function 04),INPUT_REG,1161,0,12,Active User mode.0: Auto1: Manual2: Crowded3: Refresh4: Fireplace5: Away6: Holiday7: Cooker Hood8: Vacuum Cleaner9: CDI110: CDI211: CDI312: PressureGuard
-REG_USERMODE_HMI_CHANGE_ REQUEST,I,Holding Register (Function 03/06/16),HOLDING_REG,1162,0,7,New desired user mode as requested by HMI0: None1: AUTO2: Manual 3: Crowded4: Refresh5: Fireplace6: Away7: Holiday
-REG_CDI_1_AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1171,0,5,Fan speed level for configurable digital input 1.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
-REG_CDI_1_AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1172,0,5,Fan speed level for configurable digital input 1.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
-REG_CDI_2_AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1173,0,5,Fan speed level for configurable digital input 2.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
-REG_CDI_2_AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1174,0,5,Fan speed level for configurable digital input 2.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
-REG_CDI_3_AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1175,0,5,Fan speed level for configurable digital input 3.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
-REG_CDI_3_AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1176,0,5,Fan speed level for configurable digital input 3.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
-REG_PRESSURE_GUARD_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1177,0,5,Fan speed level for configurable pressure guard function.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
-REG_PRESSURE_GUARD_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1178,0,5,Fan speed level for configurable pressure guard function.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
-REG_SENSOR_DI_AWAY,I,Read Input Register (Function 04),INPUT_REG,12301,0,1,Value of physical Digital Input of Away function
-REG_SENSOR_DI_HOLIDAY,I,Read Input Register (Function 04),INPUT_REG,12302,0,1,Value of physical Digital Input of Holiday function
-REG_SENSOR_DI_FIREPLACE,I,Read Input Register (Function 04),INPUT_REG,12303,0,1,Value of physical Digital Input of Fireplace function
-REG_SENSOR_DI_REHRESH,I,Read Input Register (Function 04),INPUT_REG,12304,0,1,Value of physical Digital Input of Refresh function
-REG_SENSOR_DI_CROWDED,I,Read Input Register (Function 04),INPUT_REG,12305,0,1,Value of physical Digital Input of Crowded function
-REG_SENSOR_DI_COOKERHOOD,I,Read Input Register (Function 04),INPUT_REG,12306,0,1,Value of physical Digital Input of Cookerhood function
-REG_SENSOR_DI_VACUUMCLEANER,I,Read Input Register (Function 04),INPUT_REG,12307,0,1,Value of physical Digital Input of Vacuum Cleaner function
-REG_USERMODE_HOLIDAY_DI_OFF_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1181,0,365,Off delay for DI
-REG_USERMODE_AWAY_DI_OFF_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1182,0,72,Off delay for DI
-REG_USERMODE_FIRPLACE_DI_OFF_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1183,0,60,Off delay for DI
-REG_USERMODE_REFRESH_DI_OFF_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1184,0,240,Off delay for DI
-REG_USERMODE_CROWDED_DI_OFF_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1185,0,8,Off delay for DI
-REG_CDI1_OFF_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1188,0,240,Off delay for DI
-REG_CDI2_OFF_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1189,0,240,Off delay for DI
-REG_CDI3_OFF_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1190,0,240,Off delay for DI
-REG_SPEED_CDI1_SAF,I,Read Input Register (Function 04),INPUT_REG,1221,,,"SAF speed value for user mode Holiday.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow"
-REG_SPEED_CDI1_EAF,I,Read Input Register (Function 04),INPUT_REG,1222,,,"EAF speed value for user mode Holiday.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow"
-REG_SPEED_CDI2_SAF,I,Read Input Register (Function 04),INPUT_REG,1223,,,"SAF speed value for mode Cooker Hood.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow"
-REG_SPEED_CDI2_EAF,I,Read Input Register (Function 04),INPUT_REG,1224,,,"EAF speed value for mode Cooker Hood.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow"
-REG_SPEED_CDI3_SAF,I,Read Input Register (Function 04),INPUT_REG,1225,,,"SAF speed value for mode Vacuum Cleaner. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow"
-REG_SPEED_CDI3_EAF,I,Read Input Register (Function 04),INPUT_REG,1226,,,"EAF speed value for mode Vacuum Cleaner. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow"
-REG_SPEED_PRESSURE_GUARD_SAF,I,Read Input Register (Function 04),INPUT_REG,1227,,,"SAF speed value for low fan speed.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow"
-REG_SPEED_PRESSURE_GUARD_EAF,I,Read Input Register (Function 04),INPUT_REG,1228,,,"EAF speed value for low fan speed.(1): Depends on regulation type. Value can be
-%, RPM, Pressure or Flow"
-REG_USERMODE_REMAINING_TIME_ CDI1_L,I,Read Input Register (Function 04),INPUT_REG,1621,,,Remaining time
-REG_USERMODE_REMAINING_TIME_ CDI1_H,I,Read Input Register (Function 04),INPUT_REG,1622,,,
-REG_USERMODE_REMAINING_TIME_ CDI2_L,I,Read Input Register (Function 04),INPUT_REG,1623,,,Remaining time
-REG_USERMODE_REMAINING_TIME_ CDI2_H,I,Read Input Register (Function 04),INPUT_REG,1624,,,
-REG_USERMODE_REMAINING_TIME_ CDI3_L,I,Read Input Register (Function 04),INPUT_REG,1625,,,Remaining time
-REG_USERMODE_REMAINING_TIME_ CDI3_H,I,Read Input Register (Function 04),INPUT_REG,1626,,,
-REG_FUNCTION_ACTIVE_PRESSURE_ GUARD,I,Read Input Register (Function 04),INPUT_REG,3114,0,1,Indicates if function is active
-REG_SENSOR_RPM_SAF,I,Read Input Register (Function 04),INPUT_REG,12401,0,5000,Supply Air Fan RPM indication from TACHO
-REG_SENSOR_RPM_EAF,I,Read Input Register (Function 04),INPUT_REG,12402,0,5000,Extract Air Fan RPM indication from TACHO
-REG_SYSTEM_UNIT_FLOW,I,Holding Register (Function 03/06/16),HOLDING_REG,9001,0,2,Unit for CAV control mode.0: l/s1: m3/h2: cfm
-REG_SYSTEM_UNIT_PRESSURE,I,Holding Register (Function 03/06/16),HOLDING_REG,9002,0,1,Units for VAV control mode.0: Pa1: InH2O
-REG_MANUAL_OVERRIDE_OUTPUT_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,13601,0,1,SAF Override.0: Auto1: Manual
-REG_MANUAL_OVERRIDE_OUTPUT_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,13602,0,1,EAF Override.0: Auto1: Manual
-REG_MANUAL_OVERRIDE_OUTPUT_ SAF_VALUE,I,Holding Register (Function 03/06/16),HOLDING_REG,13801,0,100,SAF Override value in % if manual (1) selected
-REG_MANUAL_OVERRIDE_OUTPUT_ EAF_VALUE,I,Holding Register (Function 03/06/16),HOLDING_REG,13802,0,100,EAF override value in % if manual (1) selected
 REG_USERMODE_MANUAL_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1131,1,4,"Fan speed level for mode Manual, supply fan.(1): value Off only allowed if contents of register 1352 is 1.(1): Off2: Low3: Normal4: High"
 REG_USERMODE_MANUAL_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1132,2,4,"Fan speed level for mode Manual, extract fan.2: Low3: Normal4: High"
-REG_FAN_MANUAL_STOP_ALLOWED,I,Holding Register (Function 03/06/16),HOLDING_REG,1353,0,1,Allow manual fan stop (also as selection for user modes and Week schedule).0: Manual stop not allowed1: Manual stop allowed
+REG_USERMODE_CROWDED_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1135,3,5,Fan speed level for mode Crowded3: Normal4: High5: Maximum
+REG_USERMODE_CROWDED_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1136,3,5,Fan speed level for mode Crowded3: Normal4: High5: Maximum
+REG_USERMODE_REFRESH_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1137,3,5,Fan speed level for mode Refresh3: Normal4: High5: Maximum
+REG_USERMODE_REFRESH_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1138,3,5,Fan speed level for mode Refresh3: Normal4: High5: Maximum
+REG_USERMODE_FIREPLACE_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1139,3,5,Fan speed level for mode Fire Place3: Normal4: High5: Maximum
+REG_USERMODE_FIREPLACE_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1140,1,3,Fan speed level for mode Fire Place1: Minimum2: Low3: Normal
+REG_USERMODE_AWAY_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1141,0,3,Fan speed level for mode Away.0: Off(1)1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.
+REG_USERMODE_AWAY_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1142,0,3,Fan speed level for mode Away.0: Off(1)1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.
+REG_USERMODE_HOLIDAY_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1143,0,3,Fan speed level for mode Holiday.0: Off(1) 1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.
+REG_USERMODE_HOLIDAY_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1144,0,3,Fan speed level for mode Holiday.0: Off(1) 1: Minimum2: Low3: Normal.(1): value Off only allowed if contents of register REG_ FAN_MANUAL_STOP_ALLOWED is 1.
+REG_USERMODE_COOKERHOOD_ AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1145,1,5,Fan speed level for mode Cooker Hood2: Low3: Normal4: High
+REG_USERMODE_COOKERHOOD_ AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1146,1,5,Fan speed level for mode Cooker Hood1: Minimum2: Low3: Normal
+REG_USERMODE_VACUUMCLEANER_ AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1147,1,5,Fan speed level for mode Vacuum Cleaner2: Low3: Normal4: High
+REG_USERMODE_VACUUMCLEANER_ AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1148,1,5,Fan speed level for mode Vacuum Cleaner1: Minimum2: Low3: Normal
+REG_USERMODE_CROWDED_T_OFFSET,I*,Holding Register (Function 03/06/16),HOLDING_REG,1151,-100,0,Temperature setpoint offset for user mode Crowded
+REG_USERMODE_MODE,I,Read Input Register (Function 04),INPUT_REG,1161,0,12,Active User mode.0: Auto1: Manual2: Crowded3: Refresh4: Fireplace5: Away6: Holiday7: Cooker Hood8: Vacuum Cleaner9: CDI110: CDI211: CDI312: PressureGuard
+REG_USERMODE_HMI_CHANGE_ REQUEST,I,Holding Register (Function 03/06/16),HOLDING_REG,1162,0,7,New desired user mode as requested by HMI0: None1: AUTO2: Manual 3: Crowded4: Refresh5: Fireplace6: Away7: Holiday
+REG_CDI_1_AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1171,0,5,Fan speed level for configurable digital input 1.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
+REG_CDI_1_AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1172,0,5,Fan speed level for configurable digital input 1.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
+REG_CDI_2_AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1173,0,5,Fan speed level for configurable digital input 2.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
+REG_CDI_2_AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1174,0,5,Fan speed level for configurable digital input 2.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
+REG_CDI_3_AIRFLOW_LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1175,0,5,Fan speed level for configurable digital input 3.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
+REG_CDI_3_AIRFLOW_LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1176,0,5,Fan speed level for configurable digital input 3.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
+REG_PRESSURE_GUARD_AIRFLOW_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1177,0,5,Fan speed level for configurable pressure guard function.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
+REG_PRESSURE_GUARD_AIRFLOW_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,1178,0,5,Fan speed level for configurable pressure guard function.0: Off1: Minimum2: Low3: Normal4: High5: Maximum
+REG_USERMODE_HOLIDAY_DI_OFF_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1181,0,365,Off delay for DI
+REG_USERMODE_AWAY_DI_OFF_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1182,0,72,Off delay for DI
+REG_USERMODE_FIRPLACE_DI_OFF_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1183,0,60,Off delay for DI
+REG_USERMODE_REFRESH_DI_OFF_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1184,0,240,Off delay for DI
+REG_USERMODE_CROWDED_DI_OFF_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1185,0,8,Off delay for DI
+REG_CDI1_OFF_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1188,0,240,Off delay for DI
+REG_CDI2_OFF_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1189,0,240,Off delay for DI
+REG_CDI3_OFF_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,1190,0,240,Off delay for DI
+REG_SPEED_CDI1_SAF,I,Read Input Register (Function 04),INPUT_REG,1221,,,"SAF speed value for user mode Holiday.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow"
+REG_SPEED_CDI1_EAF,I,Read Input Register (Function 04),INPUT_REG,1222,,,"EAF speed value for user mode Holiday.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow"
+REG_SPEED_CDI2_SAF,I,Read Input Register (Function 04),INPUT_REG,1223,,,"SAF speed value for mode Cooker Hood.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow"
+REG_SPEED_CDI2_EAF,I,Read Input Register (Function 04),INPUT_REG,1224,,,"EAF speed value for mode Cooker Hood.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow"
+REG_SPEED_CDI3_SAF,I,Read Input Register (Function 04),INPUT_REG,1225,,,"SAF speed value for mode Vacuum Cleaner. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow"
+REG_SPEED_CDI3_EAF,I,Read Input Register (Function 04),INPUT_REG,1226,,,"EAF speed value for mode Vacuum Cleaner. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow"
+REG_SPEED_PRESSURE_GUARD_SAF,I,Read Input Register (Function 04),INPUT_REG,1227,,,"SAF speed value for low fan speed.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow"
+REG_SPEED_PRESSURE_GUARD_EAF,I,Read Input Register (Function 04),INPUT_REG,1228,,,"EAF speed value for low fan speed.(1): Depends on regulation type. Value can be
+%, RPM, Pressure or Flow"
+REG_FAN_OUTDOOR_COMP_TYPE,I,Holding Register (Function 03/06/16),HOLDING_REG,1251,0,1,Compensate only SF or both SF and EF0: SAF1: SAF/EAF
+REG_FAN_OUTDOOR_COMP_MAX_ VALUE,I,Holding Register (Function 03/06/16),HOLDING_REG,1252,0,50,Compensation value at lowest temperature.
+REG_FAN_OUTDOOR_COMP_STOP_T_ WINTER,I*,Holding Register (Function 03/06/16),HOLDING_REG,1253,-300,0,Temperature at which compensation reaches maximum value during the winter period.
+REG_FAN_OUTDOOR_COMP_MAX_TEMP,I*,Holding Register (Function 03/06/16),HOLDING_REG,1254,-300,0,Temperature at which highest compensation is applied.
+REG_FAN_OUTDOOR_COMP_START_T_ WINTER,I,Holding Register (Function 03/06/16),HOLDING_REG,1256,-300,0,Temperature at which compensation starts during the winter period.
+REG_FAN_OUTDOOR_COMP_START_T_ SUMMER,I,Holding Register (Function 03/06/16),HOLDING_REG,1257,150,300,Temperature at which compensation starts during the summer period.
+REG_FAN_OUTDOOR_COMP_STOP_T_ SUMMER,I,Holding Register (Function 03/06/16),HOLDING_REG,1258,150,400,Temperature at which compensation reaches maximum value during the summer period.
+REG_FAN_OUTDOOR_COMP_VALUE_ SUMMER,I,Holding Register (Function 03/06/16),HOLDING_REG,1259,0,50,Compensation value during summer period
 REG_FAN_REGULATION_UNIT,I,Holding Register (Function 03/06/16),HOLDING_REG,1274,0,4,Type of fan control mode.0: Manual1: RPM2: VAV (Constant Pressure)3: CAV (Constant Flow)4: DCV (External)
-REG_SPEED_FANS_RUNNING,I,Read Input Register (Function 04),INPUT_REG,1351,0,1,Indicates that both fans are running
-REG_SPEED_SAF_DESIRED_OFF,I,Read Input Register (Function 04),INPUT_REG,1352,0,1,Indicates that the SAF shall be turned off once the electrical reheater is cooled down.
 REG_FAN_LEVEL_SAF_MIN,I,Read Input Register (Function 04),INPUT_REG,1301,,,"SAF speed value for minimum fan speed. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow"
 REG_FAN_LEVEL_EAF_MIN,I,Read Input Register (Function 04),INPUT_REG,1302,,,"EAF speed value for minimum fan speed. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow"
 REG_FAN_LEVEL_SAF_LOW,I,Read Input Register (Function 04),INPUT_REG,1303,,,"SAF speed value for low fan speed.(1): Depends on regulation type. Value can be
@@ -186,6 +101,12 @@ REG_FAN_LEVEL_EAF_HIGH,I,Read Input Register (Function 04),INPUT_REG,1308,,,"EAF
 %, RPM, Pressure or Flow"
 REG_FAN_LEVEL_SAF_MAX,I,Read Input Register (Function 04),INPUT_REG,1309,,,"SAF speed value for maximum fan speed. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow"
 REG_FAN_LEVEL_EAF_MAX,I,Read Input Register (Function 04),INPUT_REG,1310,,,"EAF speed value for maximum fan speed. (1): Depends on regulation type. Value can be %, RPM, Pressure or Flow"
+REG_SPEED_FANS_RUNNING,I,Read Input Register (Function 04),INPUT_REG,1351,0,1,Indicates that both fans are running
+REG_SPEED_SAF_DESIRED_OFF,I,Read Input Register (Function 04),INPUT_REG,1352,0,1,Indicates that the SAF shall be turned off once the electrical reheater is cooled down.
+REG_FAN_MANUAL_STOP_ALLOWED,I,Holding Register (Function 03/06/16),HOLDING_REG,1353,0,1,Allow manual fan stop (also as selection for user modes and Week schedule).0: Manual stop not allowed1: Manual stop allowed
+REG_SPEED_ELECTRICAL_HEATER_HOT_ COUNTER,I,Read Input Register (Function 04),INPUT_REG,1357,,,Electrical Heater hot counter. Count down from 120 sec.
+REG_FAN_SPEED_AFTER_HEATER_ COOLING_DOWN_SAF,I,Read Input Register (Function 04),INPUT_REG,1358,0,100,Supply Air Fan Speed Level After Heater Cooling Down
+REG_FAN_SPEED_AFTER_HEATER_ COOLING_DOWN_EAF,I,Read Input Register (Function 04),INPUT_REG,1359,0,100,Extract Air Fan Speed Level After Heater Cooling Down
 REG_FAN_LEVEL_SAF_MIN_ PERCENTAGE,I,Holding Register (Function 03/06/16),HOLDING_REG,1401,16,100,SAF speed value for minimum fan speed
 REG_FAN_LEVEL_EAF_MIN_ PERCENTAGE,I,Holding Register (Function 03/06/16),HOLDING_REG,1402,16,100,EAF speed value for minimum fan speed
 REG_FAN_LEVEL_SAF_LOW_ PERCENTAGE,I,Holding Register (Function 03/06/16),HOLDING_REG,1403,16,100,SAF speed value for low fan speed
@@ -226,77 +147,55 @@ REG_FAN_LEVEL_SAF_HIGH_FLOW,I,Holding Register (Function 03/06/16),HOLDING_REG,1
 REG_FAN_LEVEL_EAF_HIGH_FLOW,I,Holding Register (Function 03/06/16),HOLDING_REG,1438,,,EAF speed value for high fan speed
 REG_FAN_LEVEL_SAF_MAX_FLOW,I,Holding Register (Function 03/06/16),HOLDING_REG,1439,,,SAF speed value for maximum fan speed
 REG_FAN_LEVEL_EAF_MAX_FLOW,I,Holding Register (Function 03/06/16),HOLDING_REG,1440,,,EAF speed value for maximum fan speed
-REG_INPUT_EXTERNAL_CTRL_SAF,I,Read Input Register (Function 04),INPUT_REG,2101,0,100,"Value from External Controller Input, SAF. In
-%."
-REG_INPUT_EXTERNAL_CTRL_EAF,I,Read Input Register (Function 04),INPUT_REG,2102,0,100,"Value from External Controller Input, EAF. In
-%."
-REG_OUTPUT_SAF,I,Read Input Register (Function 04),INPUT_REG,14001,0,100,SAF fan speed
-REG_OUTPUT_EAF,I,Read Input Register (Function 04),INPUT_REG,14002,0,100,EAF fan speed
-REG_OUTPUT_FAN_SPEED1,I,Read Input Register (Function 04),INPUT_REG,14371,0,100,Supply air fan control signal in %
-REG_OUTPUT_FAN_SPEED2,I,Read Input Register (Function 04),INPUT_REG,14372,0,100,Extract air fan control signal in %
-REG_FAN_OUTDOOR_COMP_TYPE,I,Holding Register (Function 03/06/16),HOLDING_REG,1251,0,1,Compensate only SF or both SF and EF0: SAF1: SAF/EAF
-REG_FAN_OUTDOOR_COMP_MAX_ VALUE,I,Holding Register (Function 03/06/16),HOLDING_REG,1252,0,50,Compensation value at lowest temperature.
-REG_FAN_OUTDOOR_COMP_STOP_T_ WINTER,I*,Holding Register (Function 03/06/16),HOLDING_REG,1253,-300,0,Temperature at which compensation reaches maximum value during the winter period.
-REG_FAN_OUTDOOR_COMP_MAX_TEMP,I*,Holding Register (Function 03/06/16),HOLDING_REG,1254,-300,0,Temperature at which highest compensation is applied.
-REG_FAN_OUTDOOR_COMP_START_T_ WINTER,I,Holding Register (Function 03/06/16),HOLDING_REG,1256,-300,0,Temperature at which compensation starts during the winter period.
-REG_FAN_OUTDOOR_COMP_START_T_ SUMMER,I,Holding Register (Function 03/06/16),HOLDING_REG,1257,150,300,Temperature at which compensation starts during the summer period.
-REG_FAN_OUTDOOR_COMP_STOP_T_ SUMMER,I,Holding Register (Function 03/06/16),HOLDING_REG,1258,150,400,Temperature at which compensation reaches maximum value during the summer period.
-REG_FAN_OUTDOOR_COMP_VALUE_ SUMMER,I,Holding Register (Function 03/06/16),HOLDING_REG,1259,0,50,Compensation value during summer period
-REG_SYSTEM_UNIT_TEMPERATURE,I,Holding Register (Function 03/06/16),HOLDING_REG,9003,0,1,Units for temperature.0: Celcius1: Fahrenheit
-REG_TC_CONTROL_MODE,I,Holding Register (Function 03/06/16),HOLDING_REG,2031,0,2,Unit temperature control mode0: Supply1: Room2: Extract
+REG_USERMODE_REMAINING_TIME_ CDI1_L,I,Read Input Register (Function 04),INPUT_REG,1621,,,Remaining time
+REG_USERMODE_REMAINING_TIME_ CDI1_H,I,Read Input Register (Function 04),INPUT_REG,1622,,,
+REG_USERMODE_REMAINING_TIME_ CDI2_L,I,Read Input Register (Function 04),INPUT_REG,1623,,,Remaining time
+REG_USERMODE_REMAINING_TIME_ CDI2_H,I,Read Input Register (Function 04),INPUT_REG,1624,,,
+REG_USERMODE_REMAINING_TIME_ CDI3_L,I,Read Input Register (Function 04),INPUT_REG,1625,,,Remaining time
+REG_USERMODE_REMAINING_TIME_ CDI3_H,I,Read Input Register (Function 04),INPUT_REG,1626,,,
 REG_TC_SP,I*,Holding Register (Function 03/06/16),HOLDING_REG,2001,120,300,Temperature setpoint for the supply air temperature
-REG_TC_SP_SATC,I*,Read Input Register (Function 04),INPUT_REG,2054,120,300,Temperature setpoint for the supply air temperature
 REG_TC_CASCADE_SP,I*,Holding Register (Function 03/06/16),HOLDING_REG,2013,120,400,"Temperature set point for SATC, as calculated by RATC/EATC during cascade control"
-REG_TC_ROOM_CTRL_SP_SATC,I*,Read Input Register (Function 04),INPUT_REG,2053,120,400,"Temperature set point for SATC, as calculated by RATC/EATC during cascade control"
 REG_TC_CASCADE_SP_MIN,I*,Holding Register (Function 03/06/16),HOLDING_REG,2021,120,400,Minimum temperature set point for the SATC
 REG_TC_CASCADE_SP_MAX,I*,Holding Register (Function 03/06/16),HOLDING_REG,2022,120,400,Maximum temperature set point for the SATC
+REG_TC_CONTROL_MODE,I,Holding Register (Function 03/06/16),HOLDING_REG,2031,0,2,Unit temperature control mode0: Supply1: Room2: Extract
 REG_TC_EAT_RAT_SP,I*,Read Input Register (Function 04),INPUT_REG,2051,120,400,"EAT or RAT value, used for room/extract air controller."
+REG_TC_ROOM_CTRL_SP_SATC,I*,Read Input Register (Function 04),INPUT_REG,2053,120,400,"Temperature set point for SATC, as calculated by RATC/EATC during cascade control"
+REG_TC_SP_SATC,I*,Read Input Register (Function 04),INPUT_REG,2054,120,300,Temperature setpoint for the supply air temperature
 REG_SATC_HEAT_DEMAND,I,Read Input Register (Function 04),INPUT_REG,2055,0,100,Output of the SATC (0-100%)
 REG_SATC_PI_SP,I*,Read Input Register (Function 04),INPUT_REG,2061,120,300,SATC setpoint value
 REG_SATC_PI_OUTPUT,I*,Read Input Register (Function 04),INPUT_REG,2069,0,100,SATC output signal
 REG_ROOM_CTRL_PI_SP,I*,Read Input Register (Function 04),INPUT_REG,2071,120,300,RATC setpoint value
 REG_ROOM_CTRL_PI_OUTPUT,I*,Read Input Register (Function 04),INPUT_REG,2079,0,100,RATC output signal
-REG_COOLER_FROM_SATC,I,Read Input Register (Function 04),INPUT_REG,2311,0,100,Cooler signal
-REG_COOLER_OAT_INTERLOCK_T,I,Holding Register (Function 03/06/16),HOLDING_REG,2316,120,250,Temperature at which cooling is interlocked
-REG_COOLER_CIRC_PUMP_START_T,I,Holding Register (Function 03/06/16),HOLDING_REG,2314,0,200,Temperature at which the cooler circulation pump is started
-REG_COOLER_CIRC_PUMP_STOP_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,2317,0,60,Off time delay for the cooler circulation pump in minutes
-REG_OUTPUT_Y3_CIRC_PUMP,I,Read Input Register (Function 04),INPUT_REG,14302,,,Cooler circulation pump output
-REG_OUTPUT_Y3_ANALOG,I,Read Input Register (Function 04),INPUT_REG,14201,0,100,Cooler AO state.
-REG_OUTPUT_Y3_DIGITAL,I,Read Input Register (Function 04),INPUT_REG,14202,0,1,Cooler DO state:0: Output not active1: Output active
+REG_INPUT_EXTERNAL_CTRL_SAF,I,Read Input Register (Function 04),INPUT_REG,2101,0,100,"Value from External Controller Input, SAF. In
+%."
+REG_INPUT_EXTERNAL_CTRL_EAF,I,Read Input Register (Function 04),INPUT_REG,2102,0,100,"Value from External Controller Input, EAF. In
+%."
 REG_HEATER_CIRC_PUMP_START_T,I*,Holding Register (Function 03/06/16),HOLDING_REG,2113,0,200,Temperature at which the Heater circulation pump is started
 REG_HEATER_CIRC_PUMP_STOP_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,2122,0,60,Off time delay for the heater circulation pump in minutes
-REG_OUTPUT_Y1_CIRC_PUMP,I,Read Input Register (Function 04),INPUT_REG,14301,,,Heating circulation pump output
-REG_SPEED_ELECTRICAL_HEATER_HOT_ COUNTER,I,Read Input Register (Function 04),INPUT_REG,1357,,,Electrical Heater hot counter. Count down from 120 sec.
-REG_FAN_SPEED_AFTER_HEATER_ COOLING_DOWN_SAF,I,Read Input Register (Function 04),INPUT_REG,1358,0,100,Supply Air Fan Speed Level After Heater Cooling Down
-REG_FAN_SPEED_AFTER_HEATER_ COOLING_DOWN_EAF,I,Read Input Register (Function 04),INPUT_REG,1359,0,100,Extract Air Fan Speed Level After Heater Cooling Down
-REG_FUNCTION_ACTIVE_HEATER_COOL_ DOWN,I,Read Input Register (Function 04),INPUT_REG,3113,0,1,Active Heater Cool Down
-REG_OUTPUT_TRIAC_CONFIGURED,I,Holding Register (Function 03/06/16),HOLDING_REG,13201,0,1,Indicates if the TRIAC shall be used
-REG_PWM_TRIAC_OUTPUT,I,Read Input Register (Function 04),INPUT_REG,2149,0,100,TRIAC after manual override
-REG_OUTPUT_TRIAC,I,Read Input Register (Function 04),INPUT_REG,14381,0,1,TRIAC control signal
-REG_OUTPUT_Y1_ANALOG,I,Read Input Register (Function 04),INPUT_REG,14101,0,100,Heater AO state.
-REG_OUTPUT_Y1_DIGITAL,I,Read Input Register (Function 04),INPUT_REG,14102,0,1,Heater DO state:0: Output not active1: Output active
-REG_EXTRA_CONTROLLER_CIRC_PUMP_ START_T,I*,Holding Register (Function 03/06/16),HOLDING_REG,2404,0,200,Start temperature for extra controller circulation pump
-REG_EXTRA_CONTROLLER_CIRC_PUMP_ STOP_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,2405,0,60,Off time delay for the extra controller circulation pump in minutes
-REG_OUTPUT_Y4_CIRC_PUMP,I,Read Input Register (Function 04),INPUT_REG,14304,,,Extra controller circulation pump output
-REG_EXTRA_CONTROLLER_SET_PI_ SETPOINT,I*,Holding Register (Function 03/06/16),HOLDING_REG,2403,-300,400,Set point value for the extra controller PI regulator
-REG_EXTRA_CONTROLLER_PREHEATER_ SETPOINT_TYPE,I,Holding Register (Function 03/06/16),HOLDING_REG,2418,0,1,Temperature setpoint for the preheater.0: Auto1: Manual
-REG_SENSOR_DI_EXTRA_CONTROLLER_ EMT,I,Read Input Register (Function 04),INPUT_REG,12310,0,1,Extra controller EMT input value
-REG_OUTPUT_Y4_ANALOG,I,Read Input Register (Function 04),INPUT_REG,14203,0,100,Extra controller AO state.
-REG_OUTPUT_Y4_DIGITAL,I,Read Input Register (Function 04),INPUT_REG,14204,0,1,Extra controller DO state:0: Output not active1: Output active
-REG_CHANGE_OVER_CIRC_PUMP_ START_T,I*,Holding Register (Function 03/06/16),HOLDING_REG,2451,0,200,Start temperature for the change-over circulation pump
-REG_CHANGE_OVER_CIRC_PUMP_STOP_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,2452,0,60,Off time delay for the change-over circulation pump in minutes
-REG_OUTPUT_Y1_Y3_CIRC_PUMP,I,Read Input Register (Function 04),INPUT_REG,14303,,,Change-over circulation pump output
+REG_HEAT_EXCHANGER_COOLING_ RECOVERY_ON_OFF,I,Holding Register (Function 03/06/16),HOLDING_REG,2134,0,1,Enabling of cooling recovery
 REG_HEAT_EXCHANGER_RH_ TRANSFER_CTRL_ENABLED,I,Read Input Register (Function 04),INPUT_REG,2147,,,Indicates if RH trasnfer control shall be applied
+REG_PWM_TRIAC_OUTPUT,I,Read Input Register (Function 04),INPUT_REG,2149,0,100,TRIAC after manual override
 REG_ROTOR_RH_TRANSFER_CTRL_ PBAND,I,Holding Register (Function 03/06/16),HOLDING_REG,2201,"100-
 0",40,Pband setting for RH transfer control
 REG_ROTOR_RH_TRANSFER_CTRL_ITIME,I,Holding Register (Function 03/06/16),HOLDING_REG,2202,120,0,Itime setting for RH transfer control
 REG_ROTOR_RH_TRANSFER_CTRL_ SETPOINT,I,Holding Register (Function 03/06/16),HOLDING_REG,2203,100,45,Set point setting for RH transfer control
 REG_ROTOR_RH_TRANSFER_CTRL_ON_ OFF,I,Holding Register (Function 03/06/16),HOLDING_REG,2204,1,1,Enabling of humidity transfer control
+REG_COOLER_FROM_SATC,I,Read Input Register (Function 04),INPUT_REG,2311,0,100,Cooler signal
+REG_COOLER_CIRC_PUMP_START_T,I,Holding Register (Function 03/06/16),HOLDING_REG,2314,0,200,Temperature at which the cooler circulation pump is started
 REG_COOLER_RECOVERY_LIMIT_T,I,Holding Register (Function 03/06/16),HOLDING_REG,2315,0,100,Temperature at which cooling recovery is allowed
-REG_HEAT_EXCHANGER_COOLING_ RECOVERY_ON_OFF,I,Holding Register (Function 03/06/16),HOLDING_REG,2134,0,1,Enabling of cooling recovery
+REG_COOLER_OAT_INTERLOCK_T,I,Holding Register (Function 03/06/16),HOLDING_REG,2316,120,250,Temperature at which cooling is interlocked
+REG_COOLER_CIRC_PUMP_STOP_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,2317,0,60,Off time delay for the cooler circulation pump in minutes
+REG_EXTRA_CONTROLLER_SET_PI_ SETPOINT,I*,Holding Register (Function 03/06/16),HOLDING_REG,2403,-300,400,Set point value for the extra controller PI regulator
+REG_EXTRA_CONTROLLER_CIRC_PUMP_ START_T,I*,Holding Register (Function 03/06/16),HOLDING_REG,2404,0,200,Start temperature for extra controller circulation pump
+REG_EXTRA_CONTROLLER_CIRC_PUMP_ STOP_DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,2405,0,60,Off time delay for the extra controller circulation pump in minutes
+REG_EXTRA_CONTROLLER_PREHEATER_ SETPOINT_TYPE,I,Holding Register (Function 03/06/16),HOLDING_REG,2418,0,1,Temperature setpoint for the preheater.0: Auto1: Manual
+REG_CHANGE_OVER_CIRC_PUMP_ START_T,I*,Holding Register (Function 03/06/16),HOLDING_REG,2451,0,200,Start temperature for the change-over circulation pump
+REG_CHANGE_OVER_CIRC_PUMP_STOP_ DELAY,I,Holding Register (Function 03/06/16),HOLDING_REG,2452,0,60,Off time delay for the change-over circulation pump in minutes
 REG_ECO_T_Y1_OFFSET,I*,Holding Register (Function 03/06/16),HOLDING_REG,2504,0,100,Temperature offset for heating during Eco mode
 REG_ECO_MODE_ON_OFF,I,Holding Register (Function 03/06/16),HOLDING_REG,2505,0,1,Enabling of eco mode
 REG_ECO_FUNCTION_ACTIVE,I,Read Input Register (Function 04),INPUT_REG,2506,0,1,Indicates if conditions for ECO mode are active (low temperature)
+REG_FUNCTION_ACTIVE_HEATER_COOL_ DOWN,I,Read Input Register (Function 04),INPUT_REG,3113,0,1,Active Heater Cool Down
+REG_FUNCTION_ACTIVE_PRESSURE_ GUARD,I,Read Input Register (Function 04),INPUT_REG,3114,0,1,Indicates if function is active
 REG_FREE_COOLING_ON_OFF,I,Holding Register (Function 03/06/16),HOLDING_REG,4101,,1,Indicates if free cooling is enabled
 REG_FREE_COOLING_OUTDOOR_ DAYTIME_T,I*,Holding Register (Function 03/06/16),HOLDING_REG,4102,120,300,Minimum of highest daytime temperature for start of free cooling.
 REG_FREE_COOLING_OUTDOOR_ NIGHTTIME_DEACTIVATION_HIGH_T_ LIMIT,I*,Holding Register (Function 03/06/16),HOLDING_REG,4103,70,300,Highest night temperature limit for termination free cooling
@@ -309,7 +208,6 @@ REG_FREE_COOLING_END_TIME_M,I,Holding Register (Function 03/06/16),HOLDING_REG,4
 REG_FREE_COOLING_ACTIVE,I,Read Input Register (Function 04),INPUT_REG,4111,0,1,Indicates if free cooling is being performed
 REG_FREE_COOLING_MIN_SPEED_ LEVEL_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,4112,3,5,"Minimum speed level during free cooling, SAF.3: Normal4: High5: Maximum"
 REG_FREE_COOLING_MIN_SPEED_ LEVEL_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,4113,3,5,"Minimum speed level during free cooling, EAF.3: Normal4: High5: Maximum"
-REG_FREE_COOLING_ON_OFF,I,Holding Register (Function 03/06/16),HOLDING_REG,4101,,1,Indicates if free cooling is enabled
 REG_WS_T_OFFSET_ACTIVE,I*,Holding Register (Function 03/06/16),HOLDING_REG,5001,-100,0,Temperature offset during active week schedule.
 REG_WS_T_OFFSET_INACTIVE,I*,Holding Register (Function 03/06/16),HOLDING_REG,5002,-100,0,Temperature offset during inactive week schedule.
 REG_WS_DAY1_PRD1_START_H,I,Holding Register (Function 03/06/16),HOLDING_REG,5003,0,23,"Monday, Period 1, start"
@@ -406,6 +304,26 @@ REG_FILTER_REPLACEMENT_TIME_H,I,Holding Register (Function 03/06/16),HOLDING_REG
 REG_FILTER_PERIOD_SET,I,Read Input Register (Function 04),INPUT_REG,7004,,,Indicates that the LastFilterReplacementTime shall be set Now.
 REG_FILTER_REMAINING_TIME_L,I,Read Input Register (Function 04),INPUT_REG,7005,,,"Remaining filter time in seconds, lower 16 bits."
 REG_FILTER_REMAINING_TIME_H,I,Read Input Register (Function 04),INPUT_REG,7006,,,"Remaining filter time in seconds, higher 16 bits."
+REG_FILTER_ALARM_WAS_DETECTED,I,Read Input Register (Function 04),INPUT_REG,7007,,,Indicates if the filter warning alarm was generated.
+REG_SYSTEM_UNIT_FLOW,I,Holding Register (Function 03/06/16),HOLDING_REG,9001,0,2,Unit for CAV control mode.0: l/s1: m3/h2: cfm
+REG_SYSTEM_UNIT_PRESSURE,I,Holding Register (Function 03/06/16),HOLDING_REG,9002,0,1,Units for VAV control mode.0: Pa1: InH2O
+REG_SYSTEM_UNIT_TEMPERATURE,I,Holding Register (Function 03/06/16),HOLDING_REG,9003,0,1,Units for temperature.0: Celcius1: Fahrenheit
+REG_DI_CONNECTION_1,I,Holding Register (Function 03/06/16),HOLDING_REG,11401,0,18,Indicates what kind of DI functionality is connected to DI1.0: None /Away/ BYP/ Vacuum Cleaner/ Cooker Hood/ Crowded/ EMT/ External Stop/ Extra Controller Alarm/ Fireplace/ Holiday/ Refresh/ RGS/ Change Over Feedback/ 14: Fire Alarm/ ConfigurableDI1 / ConfigurableDI2 / ConfigurableDI3 / 18: Pressure Guard
+REG_DI_CONNECTION_2,I,Holding Register (Function 03/06/16),HOLDING_REG,11402,0,18,Indicates what kind of DI functionality is connected to DI1.0: None /Away/ BYP/ Vacuum Cleaner/ Cooker Hood/ Crowded/ EMT/ External Stop/ Extra Controller Alarm/ Fireplace/ Holiday/ Refresh/ RGS/ Change Over Feedback/ 14: Fire Alarm/ ConfigurableDI1 / ConfigurableDI2 / ConfigurableDI3 / 18: Pressure Guard
+REG_DI_CFG_POLARITY_1,I,Holding Register (Function 03/06/16),HOLDING_REG,11421,0,1,Polarity of DI1.0: NO1: NC
+REG_DI_CFG_POLARITY_2,I,Holding Register (Function 03/06/16),HOLDING_REG,11422,0,1,Polarity of DI1.0: NO1: NC
+REG_INPUT_ANALOG_UI_1,I,Holding Register (Function 03/06/16),HOLDING_REG,12011,,,mV
+REG_INPUT_ANALOG_UI_2,I,Holding Register (Function 03/06/16),HOLDING_REG,12012,,,mV
+REG_INPUT_ANALOG_UI_3,I,Holding Register (Function 03/06/16),HOLDING_REG,12013,,,mV
+REG_INPUT_ANALOG_UI_4,I,Holding Register (Function 03/06/16),HOLDING_REG,12014,,,mV
+REG_INPUT_ANALOG_UI_5,I,Holding Register (Function 03/06/16),HOLDING_REG,12015,,,mV
+REG_INPUT_DIGITAL_UI_1,I,Holding Register (Function 03/06/16),HOLDING_REG,12021,0,1,State of UI1
+REG_INPUT_DIGITAL_UI_2,I,Holding Register (Function 03/06/16),HOLDING_REG,12022,0,1,State of UI2
+REG_INPUT_DIGITAL_UI_3,I,Holding Register (Function 03/06/16),HOLDING_REG,12023,0,1,State of UI3
+REG_INPUT_DIGITAL_UI_4,I,Holding Register (Function 03/06/16),HOLDING_REG,12024,0,1,State of UI4
+REG_INPUT_DIGITAL_UI_5,I,Holding Register (Function 03/06/16),HOLDING_REG,12025,0,1,State of UI5
+REG_INPUT_DIGITAL_DI_1,I,Read Input Register (Function 04),INPUT_REG,12031,0,1,Boolean
+REG_INPUT_DIGITAL_DI_2,I,Read Input Register (Function 04),INPUT_REG,12032,0,1,Boolean
 REG_SENSOR_FPT,I*,Holding Register (Function 03/06/16),HOLDING_REG,12101,-400,800,Frost Protection Temperature sensor value (Water Heater)
 REG_SENSOR_OAT,I*,Holding Register (Function 03/06/16),HOLDING_REG,12102,-400,800,Outdoor Air Temperature sensor (standard)
 REG_SENSOR_SAT,I*,Holding Register (Function 03/06/16),HOLDING_REG,12103,-400,800,Supply Air Temperature sensor (standard)
@@ -415,8 +333,8 @@ REG_SENSOR_ECT,I*,Holding Register (Function 03/06/16),HOLDING_REG,12106,-400,80
 REG_SENSOR_EFT,I*,Holding Register (Function 03/06/16),HOLDING_REG,12107,-400,800,Efficiency temperature sensor (accessory)
 REG_SENSOR_OHT,I*,Holding Register (Function 03/06/16),HOLDING_REG,12108,-400,800,Over Heat Temperature sensor (Electrical Heater)
 REG_SENSOR_RHS,I,Holding Register (Function 03/06/16),HOLDING_REG,12109,0,100,Relative Humidity Sensor (Accessory)
+REG_SENSOR_RGS,I,Read Input Register (Function 04),INPUT_REG,12112,0,1,Rotating guard Sensor input
 REG_SENSOR_CO2S,I,Holding Register (Function 03/06/16),HOLDING_REG,12115,0,2000,CO2 value (accessory)
-REG_SENSOR_PDM_EAT_VALUE,I,Holding Register (Function 03/06/16),HOLDING_REG,12544,-400,800,PDM EAT sensor value (standard)
 REG_SENSOR_RHS_PDM,I,Holding Register (Function 03/06/16),HOLDING_REG,12136,0,100,PDM RHS sensor value (standard)
 REG_SENSOR_CO2S_1,I,Holding Register (Function 03/06/16),HOLDING_REG,12151,0,2000,CO2 sensor value - UI1 (accessory)
 REG_SENSOR_CO2S_2,I,Holding Register (Function 03/06/16),HOLDING_REG,12152,0,2000,CO2 sensor value - UI2 (accessory)
@@ -428,28 +346,22 @@ REG_SENSOR_RHS_2,I,Holding Register (Function 03/06/16),HOLDING_REG,12162,0,100,
 REG_SENSOR_RHS_3,I,Holding Register (Function 03/06/16),HOLDING_REG,12163,0,100,RH sensor value - UI3 (accessory)
 REG_SENSOR_RHS_4,I,Holding Register (Function 03/06/16),HOLDING_REG,12164,0,100,RH sensor value - UI4 (accessory)
 REG_SENSOR_RHS_5,I,Holding Register (Function 03/06/16),HOLDING_REG,12165,0,100,RH sensor value - UI5 (accessory)
-REG_INPUT_ANALOG_UI_1,I,Holding Register (Function 03/06/16),HOLDING_REG,12011,,,mV
-REG_INPUT_ANALOG_UI_2,I,Holding Register (Function 03/06/16),HOLDING_REG,12012,,,mV
-REG_INPUT_ANALOG_UI_3,I,Holding Register (Function 03/06/16),HOLDING_REG,12013,,,mV
-REG_INPUT_ANALOG_UI_4,I,Holding Register (Function 03/06/16),HOLDING_REG,12014,,,mV
-REG_INPUT_ANALOG_UI_5,I,Holding Register (Function 03/06/16),HOLDING_REG,12015,,,mV
-REG_INPUT_DIGITAL_UI_1,I,Holding Register (Function 03/06/16),HOLDING_REG,12021,0,1,State of UI1
-REG_INPUT_DIGITAL_UI_2,I,Holding Register (Function 03/06/16),HOLDING_REG,12022,0,1,State of UI2
-REG_INPUT_DIGITAL_UI_3,I,Holding Register (Function 03/06/16),HOLDING_REG,12023,0,1,State of UI3
-REG_INPUT_DIGITAL_UI_4,I,Holding Register (Function 03/06/16),HOLDING_REG,12024,0,1,State of UI4
-REG_INPUT_DIGITAL_UI_5,I,Holding Register (Function 03/06/16),HOLDING_REG,12025,0,1,State of UI5
-REG_SENSOR_RGS,I,Read Input Register (Function 04),INPUT_REG,12112,0,1,Rotating guard Sensor input
+REG_SENSOR_DI_AWAY,I,Read Input Register (Function 04),INPUT_REG,12301,0,1,Value of physical Digital Input of Away function
+REG_SENSOR_DI_HOLIDAY,I,Read Input Register (Function 04),INPUT_REG,12302,0,1,Value of physical Digital Input of Holiday function
+REG_SENSOR_DI_FIREPLACE,I,Read Input Register (Function 04),INPUT_REG,12303,0,1,Value of physical Digital Input of Fireplace function
+REG_SENSOR_DI_REHRESH,I,Read Input Register (Function 04),INPUT_REG,12304,0,1,Value of physical Digital Input of Refresh function
+REG_SENSOR_DI_CROWDED,I,Read Input Register (Function 04),INPUT_REG,12305,0,1,Value of physical Digital Input of Crowded function
+REG_SENSOR_DI_COOKERHOOD,I,Read Input Register (Function 04),INPUT_REG,12306,0,1,Value of physical Digital Input of Cookerhood function
+REG_SENSOR_DI_VACUUMCLEANER,I,Read Input Register (Function 04),INPUT_REG,12307,0,1,Value of physical Digital Input of Vacuum Cleaner function
 REG_SENSOR_DI_EXTERNAL_STOP,I,Read Input Register (Function 04),INPUT_REG,12308,0,1,External Stop input value
 REG_SENSOR_DI_LOAD_DETECTED,I,Read Input Register (Function 04),INPUT_REG,12309,0,1,Load Detected input value
+REG_SENSOR_DI_EXTRA_CONTROLLER_ EMT,I,Read Input Register (Function 04),INPUT_REG,12310,0,1,Extra controller EMT input value
 REG_SENSOR_DI_FIRE_ALARM,I,Read Input Register (Function 04),INPUT_REG,12311,0,1,Fire Alarm input value
 REG_SENSOR_DI_CHANGE_OVER_ FEEDBACK,I,Read Input Register (Function 04),INPUT_REG,12312,0,1,Change over feedback value
-REG_DI_CONNECTION_1,I,Holding Register (Function 03/06/16),HOLDING_REG,11401,0,18,Indicates what kind of DI functionality is connected to DI1.0: None /Away/ BYP/ Vacuum Cleaner/ Cooker Hood/ Crowded/ EMT/ External Stop/ Extra Controller Alarm/ Fireplace/ Holiday/ Refresh/ RGS/ Change Over Feedback/ 14: Fire Alarm/ ConfigurableDI1 / ConfigurableDI2 / ConfigurableDI3 / 18: Pressure Guard
-REG_DI_CONNECTION_2,I,Holding Register (Function 03/06/16),HOLDING_REG,11402,0,18,Indicates what kind of DI functionality is connected to DI1.0: None /Away/ BYP/ Vacuum Cleaner/ Cooker Hood/ Crowded/ EMT/ External Stop/ Extra Controller Alarm/ Fireplace/ Holiday/ Refresh/ RGS/ Change Over Feedback/ 14: Fire Alarm/ ConfigurableDI1 / ConfigurableDI2 / ConfigurableDI3 / 18: Pressure Guard
-REG_DI_CFG_POLARITY_1,I,Holding Register (Function 03/06/16),HOLDING_REG,11421,0,1,Polarity of DI1.0: NO1: NC
-REG_DI_CFG_POLARITY_2,I,Holding Register (Function 03/06/16),HOLDING_REG,11422,0,1,Polarity of DI1.0: NO1: NC
-REG_INPUT_DIGITAL_DI_1,I,Read Input Register (Function 04),INPUT_REG,12031,0,1,Boolean
-REG_INPUT_DIGITAL_DI_2,I,Read Input Register (Function 04),INPUT_REG,12032,0,1,Boolean
-REG_SENSOR_RGS,I,Read Input Register (Function 04),INPUT_REG,12112,0,1,Rotating guard Sensor input
+REG_SENSOR_RPM_SAF,I,Read Input Register (Function 04),INPUT_REG,12401,0,5000,Supply Air Fan RPM indication from TACHO
+REG_SENSOR_RPM_EAF,I,Read Input Register (Function 04),INPUT_REG,12402,0,5000,Extract Air Fan RPM indication from TACHO
+REG_SENSOR_PDM_EAT_VALUE,I,Holding Register (Function 03/06/16),HOLDING_REG,12544,-400,800,PDM EAT sensor value (standard)
+REG_OUTPUT_TRIAC_CONFIGURED,I,Holding Register (Function 03/06/16),HOLDING_REG,13201,0,1,Indicates if the TRIAC shall be used
 REG_DO1_AFTER_MUX,I,Read Input Register (Function 04),INPUT_REG,13301,0,1,Digital output after multiplexer
 REG_DO2_AFTER_MUX,I,Read Input Register (Function 04),INPUT_REG,13302,0,1,Digital output after multiplexer
 REG_DO3_AFTER_MUX,I,Read Input Register (Function 04),INPUT_REG,13303,0,1,Digital output after multiplexer
@@ -459,9 +371,27 @@ REG_AO2_AFTER_MUX,I,Read Input Register (Function 04),INPUT_REG,13312,0,100,Anal
 REG_AO3_AFTER_MUX,I,Read Input Register (Function 04),INPUT_REG,13313,0,100,Analog output after multiplexer
 REG_AO4_AFTER_MUX,I,Read Input Register (Function 04),INPUT_REG,13314,0,100,Analog output after multiplexer
 REG_AO5_AFTER_MUX,I,Read Input Register (Function 04),INPUT_REG,13315,0,100,Analog output after multiplexer
+REG_MANUAL_OVERRIDE_OUTPUT_SAF,I,Holding Register (Function 03/06/16),HOLDING_REG,13601,0,1,SAF Override.0: Auto1: Manual
+REG_MANUAL_OVERRIDE_OUTPUT_EAF,I,Holding Register (Function 03/06/16),HOLDING_REG,13602,0,1,EAF Override.0: Auto1: Manual
+REG_MANUAL_OVERRIDE_OUTPUT_ SAF_VALUE,I,Holding Register (Function 03/06/16),HOLDING_REG,13801,0,100,SAF Override value in % if manual (1) selected
+REG_MANUAL_OVERRIDE_OUTPUT_ EAF_VALUE,I,Holding Register (Function 03/06/16),HOLDING_REG,13802,0,100,EAF override value in % if manual (1) selected
+REG_OUTPUT_SAF,I,Read Input Register (Function 04),INPUT_REG,14001,0,100,SAF fan speed
+REG_OUTPUT_EAF,I,Read Input Register (Function 04),INPUT_REG,14002,0,100,EAF fan speed
+REG_OUTPUT_ALARM,I,Read Input Register (Function 04),INPUT_REG,14003,0,1,"Sum Alarm DO
+0: Output not active 1: Output active"
 REG_OUTPUT_OUTDOOR_EXTRACT_ DAMPER,I,Read Input Register (Function 04),INPUT_REG,14004,0,1,Indicates if Outdoor/Exhaust air damper signal is On/Off
+REG_OUTPUT_Y1_ANALOG,I,Read Input Register (Function 04),INPUT_REG,14101,0,100,Heater AO state.
+REG_OUTPUT_Y1_DIGITAL,I,Read Input Register (Function 04),INPUT_REG,14102,0,1,Heater DO state:0: Output not active1: Output active
 REG_OUTPUT_Y2_ANALOG,I,Read Input Register (Function 04),INPUT_REG,14103,0,100,Heat Exchanger AO state.
 REG_OUTPUT_Y2_DIGITAL,I,Read Input Register (Function 04),INPUT_REG,14104,0,1,Heat Exchanger DO state.0: Output not active1: Output active
+REG_OUTPUT_Y3_ANALOG,I,Read Input Register (Function 04),INPUT_REG,14201,0,100,Cooler AO state.
+REG_OUTPUT_Y3_DIGITAL,I,Read Input Register (Function 04),INPUT_REG,14202,0,1,Cooler DO state:0: Output not active1: Output active
+REG_OUTPUT_Y4_ANALOG,I,Read Input Register (Function 04),INPUT_REG,14203,0,100,Extra controller AO state.
+REG_OUTPUT_Y4_DIGITAL,I,Read Input Register (Function 04),INPUT_REG,14204,0,1,Extra controller DO state:0: Output not active1: Output active
+REG_OUTPUT_Y1_CIRC_PUMP,I,Read Input Register (Function 04),INPUT_REG,14301,,,Heating circulation pump output
+REG_OUTPUT_Y3_CIRC_PUMP,I,Read Input Register (Function 04),INPUT_REG,14302,,,Cooler circulation pump output
+REG_OUTPUT_Y1_Y3_CIRC_PUMP,I,Read Input Register (Function 04),INPUT_REG,14303,,,Change-over circulation pump output
+REG_OUTPUT_Y4_CIRC_PUMP,I,Read Input Register (Function 04),INPUT_REG,14304,,,Extra controller circulation pump output
 REG_OUTPUT_AO1,I,Read Input Register (Function 04),INPUT_REG,14351,,,Voltage signal from AO1
 REG_OUTPUT_AO2,I,Read Input Register (Function 04),INPUT_REG,14352,,,Voltage signal from AO2
 REG_OUTPUT_AO3,I,Read Input Register (Function 04),INPUT_REG,14353,,,Voltage signal from AO3
@@ -471,9 +401,9 @@ REG_OUTPUT_DO1,I,Read Input Register (Function 04),INPUT_REG,14361,0,1,State of 
 REG_OUTPUT_DO2,I,Read Input Register (Function 04),INPUT_REG,14362,0,1,State of DO2
 REG_OUTPUT_DO3,I,Read Input Register (Function 04),INPUT_REG,14363,0,1,State of DO3
 REG_OUTPUT_DO4,I,Read Input Register (Function 04),INPUT_REG,14364,0,1,State of DO4
-REG_FILTER_ALARM_WAS_DETECTED,I,Read Input Register (Function 04),INPUT_REG,7007,,,Indicates if the filter warning alarm was generated.
-REG_OUTPUT_ALARM,I,Read Input Register (Function 04),INPUT_REG,14003,0,1,"Sum Alarm DO
-0: Output not active 1: Output active"
+REG_OUTPUT_FAN_SPEED1,I,Read Input Register (Function 04),INPUT_REG,14371,0,100,Supply air fan control signal in %
+REG_OUTPUT_FAN_SPEED2,I,Read Input Register (Function 04),INPUT_REG,14372,0,100,Extract air fan control signal in %
+REG_OUTPUT_TRIAC,I,Read Input Register (Function 04),INPUT_REG,14381,0,1,TRIAC control signal
 REG_ALARM_SAF_CTRL_ALARM,I,Read Input Register (Function 04),INPUT_REG,15002,0,3,"Alarm active/inactive. 0: Inactive
 1: Active
 2: Waiting
